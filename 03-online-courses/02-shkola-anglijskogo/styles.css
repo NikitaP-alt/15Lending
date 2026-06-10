@@ -20,7 +20,7 @@ body { font-family: 'Nunito Sans', sans-serif; }
 .bubble-float-3 { animation: floaty 4.5s ease-in-out infinite 1.2s; }
 
 /* ---------- Tilt + magnetic ---------- */
-[data-tilt] { position: relative; }
+[data-tilt] { position: relative; transition: box-shadow 0.4s ease; }
 [data-magnetic] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
 
 /* ---------- Marquee ---------- */
@@ -75,4 +75,4 @@ body { font-family: 'Nunito Sans', sans-serif; }
 [data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
 
 
-[data-tilt]:hover { z-index: 5; }
+[data-tilt]:hover { z-index: 5; box-shadow: 0 22px 45px -26px rgba(0,0,0,0.30); }

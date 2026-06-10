@@ -118,5 +118,5 @@ gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
 
 /* ---------- Tilt smoothing (transition only while interacting, avoids reveal conflict) ---------- */
 document.querySelectorAll('[data-tilt]').forEach((el) => {
-  el.addEventListener('pointerenter', () => { el.style.transition = 'transform 0.4s cubic-bezier(0.22,1,0.36,1)'; });
+  el.addEventListener('pointerenter', () => { el.style.transition = 'transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease'; });
 });

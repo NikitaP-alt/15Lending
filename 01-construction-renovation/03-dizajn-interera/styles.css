@@ -10,7 +10,7 @@ body { font-family: 'Jost', sans-serif; }
 #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: #9C7A45; z-index: 60; }
 
 /* ---------- Tilt + magnetic ---------- */
-[data-tilt] { position: relative; }
+[data-tilt] { position: relative; transition: box-shadow 0.4s ease; }
 [data-magnetic] { transition: transform 0.5s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
 
 /* ---------- Form success pop ---------- */
@@ -58,4 +58,4 @@ body { font-family: 'Jost', sans-serif; }
 [data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
 
 
-[data-tilt]:hover { z-index: 5; }
+[data-tilt]:hover { z-index: 5; box-shadow: 0 22px 45px -26px rgba(0,0,0,0.30); }

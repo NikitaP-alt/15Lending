@@ -95,4 +95,4 @@ body { font-family: 'Inter', sans-serif; }
 [data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
 
 
-[data-tilt]:hover { z-index: 5; }
+[data-tilt]:hover { z-index: 5; box-shadow: 0 22px 45px -26px rgba(0,0,0,0.30); }

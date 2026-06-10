@@ -30,7 +30,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; }
 .blob-drift-2 { animation: drift2 20s ease-in-out infinite; }
 
 /* ---------- Tilt + magnetic ---------- */
-[data-tilt] { position: relative; }
+[data-tilt] { position: relative; transition: box-shadow 0.4s ease; }
 [data-magnetic] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
 
 /* ---------- Marquee ---------- */
@@ -85,4 +85,4 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; }
 [data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
 
 
-[data-tilt]:hover { z-index: 5; }
+[data-tilt]:hover { z-index: 5; box-shadow: 0 22px 45px -26px rgba(0,0,0,0.30); }

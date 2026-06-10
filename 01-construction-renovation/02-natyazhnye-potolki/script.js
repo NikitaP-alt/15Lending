@@ -80,7 +80,7 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 // ---------- Magnetic buttons ----------
 if (!reduceMotion) {
   document.querySelectorAll('[data-magnetic]').forEach((el) => {
-    const strength = 0.15;
+    const strength = 0.075;
     el.addEventListener('pointermove', (e) => {
       const r = el.getBoundingClientRect();
       const x = e.clientX - r.left - r.width / 2;
@@ -99,7 +99,7 @@ if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
       const r = el.getBoundingClientRect();
       const px = (e.clientX - r.left) / r.width - 0.5;
       const py = (e.clientY - r.top) / r.height - 0.5;
-      el.style.transform = `perspective(900px) rotateY(${px * max}deg) rotateX(${-py * max}deg)`;
+      el.style.transform = `perspective(900px) translateY(-6px) rotateY(${px * max}deg) rotateX(${-py * max}deg)`;
     });
     el.addEventListener('pointerleave', () => { el.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)'; });
   });
@@ -194,5 +194,5 @@ document.querySelectorAll('[data-count]').forEach(initCount);
 
 /* ---------- Tilt smoothing (transition only while interacting, avoids reveal conflict) ---------- */
 document.querySelectorAll('[data-tilt]').forEach((el) => {
-  el.addEventListener('pointerenter', () => { el.style.transition = 'transform 0.4s cubic-bezier(0.22,1,0.36,1)'; });
+  el.addEventListener('pointerenter', () => { el.style.transition = 'transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease'; });
 });
