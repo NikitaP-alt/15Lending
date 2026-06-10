@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Светло — натяжные потолки под ключ за 1 день</title>
+<meta name="description" content="Натяжные потолки «Светло»: матовые, глянцевые, сатиновые и многоуровневые от 390 ₽/м². Монтаж за 1 день, без пыли и грязи, гарантия 15 лет." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#FFFFFF',
+          surface: '#F0F9FF',
+          ink: '#0F172A',
+          muted: '#64748B',
+          accent: '#0284C7',
+          accentdark: '#0369A1',
+          line: '#E2E8F0',
+        },
+        fontFamily: {
+          display: ['Onest', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+        borderRadius: { shell: '1.5rem', core: '1.25rem' },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}.word{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="font-sans bg-bg text-ink antialiased">
+
+<div id="scroll-progress"></div>
+
+<!-- NAVIGATION -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-ink">
+      <span class="grid place-items-center w-9 h-9 rounded-xl bg-accent text-white"><i class="ph-fill ph-lightbulb-filament text-lg"></i></span>
+      Светло
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+      <a href="#types" class="hover:text-accent transition-colors duration-300">Типы потолков</a>
+      <a href="#calc" class="hover:text-accent transition-colors duration-300">Калькулятор</a>
+      <a href="#works" class="hover:text-accent transition-colors duration-300">Работы</a>
+      <a href="#faq" class="hover:text-accent transition-colors duration-300">Вопросы</a>
+    </div>
+    <a href="#calc" data-magnetic class="hidden md:inline-flex items-center gap-2 rounded-xl bg-accent text-white text-sm font-semibold px-5 py-2.5 hover:bg-accentdark transition-colors duration-300">
+      Рассчитать стоимость
+    </a>
+    <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
+      <span class="menu-line top"></span>
+      <span class="menu-line bottom"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/97 backdrop-blur-xl flex flex-col items-center justify-center gap-7 opacity-0 pointer-events-none">
+  <a href="#types" class="menu-item font-display text-3xl font-bold text-ink">Типы потолков</a>
+  <a href="#calc" class="menu-item font-display text-3xl font-bold text-ink">Калькулятор</a>
+  <a href="#works" class="menu-item font-display text-3xl font-bold text-ink">Работы</a>
+  <a href="#faq" class="menu-item font-display text-3xl font-bold text-ink">Вопросы</a>
+  <a href="#calc" class="menu-item mt-4 inline-flex rounded-xl bg-accent text-white font-semibold px-7 py-3.5">Рассчитать</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative pt-28 md:pt-36 pb-20 px-4 md:px-8 overflow-hidden">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="blob-drift absolute -top-32 -right-24 w-[36rem] h-[36rem] rounded-full bg-accent/10 blur-[110px]"></div>
+    </div>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 rounded-full bg-accent/10 text-accentdark text-sm font-semibold px-4 py-1.5">
+          <i class="ph-fill ph-timer"></i> Монтаж за 1 день, без пыли и грязи
+        </span>
+        <h1 class="word-reveal mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.04] text-ink">
+          Натяжные потолки под ключ от 390 ₽/м²
+        </h1>
+        <p class="mt-6 text-base md:text-lg text-muted leading-relaxed max-w-xl">
+          Своё производство, профессиональный монтаж и гарантия 15 лет. Замерщик приедет бесплатно и рассчитает точную стоимость на месте.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#calc" data-magnetic class="inline-flex items-center gap-2 rounded-xl bg-accent text-white font-semibold px-7 py-3.5 hover:bg-accentdark transition-colors duration-300">
+            Рассчитать стоимость
+            <i class="ph-bold ph-arrow-right"></i>
+          </a>
+          <a href="#works" class="inline-flex items-center gap-2 rounded-xl ring-1 ring-line bg-white text-ink font-semibold px-7 py-3.5 hover:ring-accent hover:text-accent transition-colors duration-300">
+            Смотреть работы
+          </a>
+        </div>
+        <div class="mt-9 grid grid-cols-3 gap-4 max-w-md">
+          <div><div class="font-display text-2xl md:text-3xl font-bold text-ink"><span data-count="15">0</span></div><div class="text-xs text-muted mt-1">лет гарантии</div></div>
+          <div><div class="font-display text-2xl md:text-3xl font-bold text-ink"><span data-count="9000" data-suffix="+">0</span></div><div class="text-xs text-muted mt-1">потолков смонтировано</div></div>
+          <div><div class="font-display text-2xl md:text-3xl font-bold text-ink"><span data-count="1">0</span></div><div class="text-xs text-muted mt-1">день на монтаж</div></div>
+        </div>
+      </div>
+      <div class="reveal relative">
+        <div class="rounded-shell overflow-hidden ring-1 ring-line shadow-[0_40px_80px_-40px_rgba(2,132,199,0.4)]">
+          <img src="https://picsum.photos/seed/svetlo-hero-ceiling/900/760" alt="Глянцевый натяжной потолок с подсветкой" class="w-full h-[360px] md:h-[480px] object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -left-4 sm:-left-6 flex items-center gap-3 bg-white rounded-2xl ring-1 ring-line shadow-xl px-5 py-4">
+          <div class="grid place-items-center w-11 h-11 rounded-full bg-accent/10 text-accent"><i class="ph-fill ph-broom text-2xl"></i></div>
+          <div><div class="font-display font-bold text-ink leading-none">Убираем за собой</div><div class="text-sm text-muted mt-1">никакой пыли после монтажа</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="py-5 border-y border-line bg-surface overflow-hidden">
+    <div class="marquee">
+      <div class="marquee__track font-display font-semibold text-lg text-ink/70">
+        <span class="flex items-center gap-3"><i class="ph-fill ph-circle text-accent"></i> Матовые</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-sparkle text-accent"></i> Глянцевые</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-square text-accent"></i> Сатиновые</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-stack text-accent"></i> Многоуровневые</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-lightbulb text-accent"></i> С подсветкой</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-cloud text-accent"></i> Парящие</span>
+      </div>
+      <div class="marquee__track font-display font-semibold text-lg text-ink/70" aria-hidden="true">
+        <span class="flex items-center gap-3"><i class="ph-fill ph-circle text-accent"></i> Матовые</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-sparkle text-accent"></i> Глянцевые</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-square text-accent"></i> Сатиновые</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-stack text-accent"></i> Многоуровневые</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-lightbulb text-accent"></i> С подсветкой</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-cloud text-accent"></i> Парящие</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPES -->
+  <section id="types" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Типы потолков</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Подберём под комнату и бюджет</h2>
+      </div>
+      <div class="reveal-group mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <article data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/svetlo-matte/500/360" alt="Матовый потолок" class="w-full h-40 object-cover" />
+          <div class="p-6"><h3 class="font-display text-lg font-bold text-ink">Матовые</h3><p class="mt-2 text-sm text-muted leading-relaxed">Классика без бликов, как идеально ровная штукатурка.</p><div class="mt-4 font-display text-xl font-bold text-accent">от 390 ₽/м²</div></div>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/svetlo-gloss/500/360" alt="Глянцевый потолок" class="w-full h-40 object-cover" />
+          <div class="p-6"><h3 class="font-display text-lg font-bold text-ink">Глянцевые</h3><p class="mt-2 text-sm text-muted leading-relaxed">Зеркальный блеск, визуально поднимает потолок выше.</p><div class="mt-4 font-display text-xl font-bold text-accent">от 550 ₽/м²</div></div>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/svetlo-satin/500/360" alt="Сатиновый потолок" class="w-full h-40 object-cover" />
+          <div class="p-6"><h3 class="font-display text-lg font-bold text-ink">Сатиновые</h3><p class="mt-2 text-sm text-muted leading-relaxed">Мягкое сияние, благородный перламутровый оттенок.</p><div class="mt-4 font-display text-xl font-bold text-accent">от 650 ₽/м²</div></div>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/svetlo-multi/500/360" alt="Многоуровневый потолок" class="w-full h-40 object-cover" />
+          <div class="p-6"><h3 class="font-display text-lg font-bold text-ink">Многоуровневые</h3><p class="mt-2 text-sm text-muted leading-relaxed">Сложные формы с подсветкой и нишами под характер интерьера.</p><div class="mt-4 font-display text-xl font-bold text-accent">от 1 200 ₽/м²</div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calc" class="px-4 md:px-8 py-24 md:py-32 bg-ink text-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="reveal text-center max-w-2xl mx-auto mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Калькулятор</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Рассчитайте стоимость за минуту</h2>
+        <p class="mt-4 text-white/60">Предварительная цена. Точную назовёт замерщик бесплатно на объекте.</p>
+      </div>
+      <div class="reveal rounded-shell bg-white/5 ring-1 ring-white/10 p-6 md:p-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <label class="block text-sm font-medium text-white/80 mb-3">Площадь помещения: <span id="calc-area-label" class="text-accent font-bold">20 м²</span></label>
+          <input id="calc-area" type="range" min="5" max="100" value="20" step="1" class="w-full accent-accent" />
+          <div class="flex justify-between text-xs text-white/40 mt-1"><span>5 м²</span><span>100 м²</span></div>
+
+          <label class="block text-sm font-medium text-white/80 mt-8 mb-3">Тип потолка</label>
+          <div id="calc-types" class="grid grid-cols-2 gap-2">
+            <button type="button" data-price="390" class="calc-type is-active rounded-lg ring-1 ring-white/15 px-4 py-3 text-sm font-medium text-left transition-colors">Матовый<span class="block text-xs text-white/50">390 ₽/м²</span></button>
+            <button type="button" data-price="550" class="calc-type rounded-lg ring-1 ring-white/15 px-4 py-3 text-sm font-medium text-left transition-colors">Глянцевый<span class="block text-xs text-white/50">550 ₽/м²</span></button>
+            <button type="button" data-price="650" class="calc-type rounded-lg ring-1 ring-white/15 px-4 py-3 text-sm font-medium text-left transition-colors">Сатиновый<span class="block text-xs text-white/50">650 ₽/м²</span></button>
+            <button type="button" data-price="1200" class="calc-type rounded-lg ring-1 ring-white/15 px-4 py-3 text-sm font-medium text-left transition-colors">Многоуровневый<span class="block text-xs text-white/50">1200 ₽/м²</span></button>
+          </div>
+        </div>
+        <div class="rounded-core bg-accent p-8 text-center">
+          <div class="text-sm font-medium text-white/80">Примерная стоимость</div>
+          <div id="calc-total" class="font-display text-4xl md:text-5xl font-extrabold my-3">7 800 ₽</div>
+          <div class="text-sm text-white/80">с материалом и монтажом</div>
+          <a href="#contact" data-magnetic class="mt-6 inline-flex w-full justify-center items-center gap-2 rounded-xl bg-white text-accentdark font-semibold px-6 py-3.5 hover:bg-ink hover:text-white transition-colors duration-300">Вызвать замерщика</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Как мы работаем</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">От замера до уборки — за один день</h2>
+      </div>
+      <div class="reveal-group mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-7"><div class="font-display text-3xl font-extrabold text-accent/30">01</div><div class="grid place-items-center w-12 h-12 rounded-xl bg-accent text-white -mt-2 mb-4"><i class="ph ph-ruler text-2xl"></i></div><h3 class="font-display text-lg font-bold text-ink">Бесплатный замер</h3><p class="mt-2 text-sm text-muted leading-relaxed">Замерщик приедет в удобное время и назовёт точную цену.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-7"><div class="font-display text-3xl font-extrabold text-accent/30">02</div><div class="grid place-items-center w-12 h-12 rounded-xl bg-accent text-white -mt-2 mb-4"><i class="ph ph-note-pencil text-2xl"></i></div><h3 class="font-display text-lg font-bold text-ink">Договор и смета</h3><p class="mt-2 text-sm text-muted leading-relaxed">Фиксируем цвет, фактуру, освещение и итоговую цену.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-7"><div class="font-display text-3xl font-extrabold text-accent/30">03</div><div class="grid place-items-center w-12 h-12 rounded-xl bg-accent text-white -mt-2 mb-4"><i class="ph ph-wrench text-2xl"></i></div><h3 class="font-display text-lg font-bold text-ink">Монтаж за день</h3><p class="mt-2 text-sm text-muted leading-relaxed">Чистая установка без пыли, мебель можно не выносить.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-7"><div class="font-display text-3xl font-extrabold text-accent/30">04</div><div class="grid place-items-center w-12 h-12 rounded-xl bg-accent text-white -mt-2 mb-4"><i class="ph ph-broom text-2xl"></i></div><h3 class="font-display text-lg font-bold text-ink">Уборка и гарантия</h3><p class="mt-2 text-sm text-muted leading-relaxed">Убираем за собой и выдаём гарантию на 15 лет.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS GALLERY -->
+  <section id="works" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Наши работы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Более 9 000 потолков по Москве и области</h2>
+      </div>
+      <div class="reveal-group grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="reveal overflow-hidden rounded-core"><img src="https://picsum.photos/seed/svetlo-w1/600/500" alt="Работа" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" /></div>
+        <div class="reveal overflow-hidden rounded-core"><img src="https://picsum.photos/seed/svetlo-w2/600/500" alt="Работа" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" /></div>
+        <div class="reveal overflow-hidden rounded-core"><img src="https://picsum.photos/seed/svetlo-w3/600/500" alt="Работа" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" /></div>
+        <div class="reveal overflow-hidden rounded-core"><img src="https://picsum.photos/seed/svetlo-w4/600/500" alt="Работа" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" /></div>
+        <div class="reveal overflow-hidden rounded-core"><img src="https://picsum.photos/seed/svetlo-w5/600/500" alt="Работа" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" /></div>
+        <div class="reveal overflow-hidden rounded-core"><img src="https://picsum.photos/seed/svetlo-w6/600/500" alt="Работа" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Отзывы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Что говорят клиенты</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5">
+        <figure data-tilt class="reveal rounded-shell bg-surface p-7"><div class="flex gap-1 text-accent mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><blockquote class="text-ink leading-relaxed">«Приехали утром, к обеду уже стоял глянцевый потолок с подсветкой. Ни пылинки после себя».</blockquote><figcaption class="mt-5 font-semibold text-sm text-ink">Ирина, Одинцово</figcaption></figure>
+        <figure data-tilt class="reveal rounded-shell bg-surface p-7"><div class="flex gap-1 text-accent mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><blockquote class="text-ink leading-relaxed">«Цена в договоре совпала с расчётом замерщика до рубля. Сделали два уровня в гостиной».</blockquote><figcaption class="mt-5 font-semibold text-sm text-ink">Павел, Москва</figcaption></figure>
+        <figure data-tilt class="reveal rounded-shell bg-surface p-7"><div class="flex gap-1 text-accent mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><blockquote class="text-ink leading-relaxed">«Заказывала во всю квартиру. Бригада аккуратная, мебель не выносили, всё накрыли плёнкой».</blockquote><figcaption class="mt-5 font-semibold text-sm text-ink">Светлана, Химки</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal mb-10">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Вопросы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="reveal divide-y divide-line">
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-bold text-ink">Правда монтаж за один день?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да, стандартную комнату ставим за 2-4 часа. Вся квартира — за один день. Многоуровневые конструкции могут занять чуть дольше.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-bold text-ink">Будет ли грязь и пыль?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Монтаж практически без пыли. Мебель накрываем плёнкой и выносить её не нужно. После работы убираем за собой.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-bold text-ink">Что входит в гарантию 15 лет?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Гарантия на само полотно и качество монтажа. Если появится провисание или разойдётся шов — устраним бесплатно.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-bold text-ink">Можно ли встроить светильники и карниз?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да. Устанавливаем точечные светильники, люстры, скрытый карниз и LED-подсветку по периметру. Обсудим на замере.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-5xl mx-auto rounded-shell bg-accent text-white overflow-hidden grid md:grid-cols-2">
+      <div class="p-8 md:p-12 reveal">
+        <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Вызовите замерщика бесплатно</h2>
+        <p class="mt-4 text-white/80 leading-relaxed">Приедем в удобное время, покажем образцы и назовём точную цену. Замер ни к чему не обязывает.</p>
+        <ul class="mt-6 space-y-3 text-sm text-white/90">
+          <li class="flex items-center gap-2"><i class="ph-bold ph-check-circle"></i> Выезд по Москве и области бесплатно</li>
+          <li class="flex items-center gap-2"><i class="ph-bold ph-check-circle"></i> Работаем ежедневно с 8:00 до 22:00</li>
+        </ul>
+      </div>
+      <div class="p-8 md:p-12 bg-white/10 reveal">
+        <form id="lead-form" novalidate class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm text-white/80 mb-1.5">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Ирина" class="w-full rounded-xl bg-white text-ink placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white" />
+            <p class="error-text hidden mt-1.5 text-sm text-amber-200"></p>
+          </div>
+          <div>
+            <label for="phone" class="block text-sm text-white/80 mb-1.5">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full rounded-xl bg-white text-ink placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white" />
+            <p class="error-text hidden mt-1.5 text-sm text-amber-200"></p>
+          </div>
+          <button type="submit" data-magnetic class="w-full rounded-xl bg-ink text-white font-semibold py-3.5 hover:bg-accentdark transition-colors duration-300">Вызвать замерщика</button>
+          <p class="text-xs text-white/60">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+        </form>
+        <div id="form-success" class="hidden text-center py-10">
+          <div class="check-pop mx-auto grid place-items-center w-16 h-16 rounded-full bg-white text-accent"><i class="ph-bold ph-check text-3xl"></i></div>
+          <p class="mt-4 font-medium">Заявка принята. Перезвоним в течение 15 минут.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-4 md:px-8 py-16 bg-ink text-white/60">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
+    <div>
+      <div class="flex items-center gap-2 font-display text-xl font-bold text-white"><span class="grid place-items-center w-9 h-9 rounded-xl bg-accent text-white"><i class="ph-fill ph-lightbulb-filament text-lg"></i></span>Светло</div>
+      <p class="mt-4 text-sm max-w-[34ch] leading-relaxed">Натяжные потолки под ключ в Москве и области. Своё производство, монтаж за день, гарантия 15 лет.</p>
+      <div class="mt-5 flex items-center gap-3">
+        <a href="#" aria-label="Telegram" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-telegram-logo"></i></a>
+        <a href="#" aria-label="WhatsApp" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-whatsapp-logo"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Разделы</div>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="#types" class="hover:text-accent transition-colors">Типы потолков</a></li>
+        <li><a href="#calc" class="hover:text-accent transition-colors">Калькулятор</a></li>
+        <li><a href="#works" class="hover:text-accent transition-colors">Работы</a></li>
+        <li><a href="#faq" class="hover:text-accent transition-colors">Вопросы</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Контакты</div>
+      <ul class="space-y-2.5 text-sm">
+        <li class="flex items-center gap-2"><i class="ph ph-phone"></i> +7 (495) 120-45-67</li>
+        <li class="flex items-center gap-2"><i class="ph ph-map-pin"></i> Москва и область</li>
+        <li class="flex items-center gap-2"><i class="ph ph-clock"></i> Ежедневно, 8:00–22:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-sm">© 2026 Натяжные потолки «Светло». Все права защищены.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

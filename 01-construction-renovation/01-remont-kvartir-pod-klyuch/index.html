@@ -43,6 +43,8 @@
 </head>
 <body class="font-sans bg-bg text-ink antialiased">
 
+<div id="scroll-progress"></div>
+
 <!-- NAVIGATION -->
 <header class="fixed top-0 inset-x-0 z-50 flex justify-center px-4">
   <nav class="mt-4 md:mt-6 w-full max-w-3xl flex items-center justify-between gap-4 rounded-full bg-white/80 backdrop-blur-xl ring-1 ring-black/5 px-4 py-2 md:px-6 md:py-3 shadow-[0_8px_30px_-15px_rgba(0,0,0,0.15)]">
@@ -53,7 +55,7 @@
       <a href="#testimonial" class="hover:text-ink transition-colors duration-300">Отзывы</a>
       <a href="#faq" class="hover:text-ink transition-colors duration-300">Вопросы</a>
     </div>
-    <a href="#contact" class="hidden md:inline-flex group items-center gap-2 rounded-full bg-ink text-white text-sm font-medium pl-5 pr-1.5 py-1.5 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-accent active:scale-[0.98]">
+    <a href="#contact" data-magnetic class="hidden md:inline-flex group items-center gap-2 rounded-full bg-ink text-white text-sm font-medium pl-5 pr-1.5 py-1.5 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-accent active:scale-[0.98]">
       Рассчитать стоимость
       <span class="grid place-items-center w-7 h-7 rounded-full bg-white/15 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]">
         <i class="ph-light ph-arrow-up-right text-base"></i>
@@ -83,7 +85,7 @@
   <!-- HERO -->
   <section class="relative min-h-[100dvh] flex items-center pt-28 pb-16 px-4 md:px-8 overflow-hidden">
     <div class="absolute inset-0 -z-10">
-      <div class="absolute -top-32 -right-32 w-[34rem] h-[34rem] rounded-full bg-accent/10 blur-[100px]"></div>
+      <div class="blob-drift absolute -top-32 -right-32 w-[34rem] h-[34rem] rounded-full bg-accent/10 blur-[100px]"></div>
     </div>
     <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-14 md:gap-16 items-center">
       <div class="reveal">
@@ -94,7 +96,7 @@
           Один договор на дизайн, материалы и работу бригады. Фиксированная смета и сроки, прописанные на бумаге.
         </p>
         <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-          <a href="#contact" class="group inline-flex items-center gap-2 rounded-full bg-ink text-white font-medium pl-6 pr-2 py-2 text-base transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-accent active:scale-[0.98]">
+          <a href="#contact" data-magnetic class="group inline-flex items-center gap-2 rounded-full bg-ink text-white font-medium pl-6 pr-2 py-2 text-base transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-accent active:scale-[0.98]">
             Рассчитать стоимость
             <span class="grid place-items-center w-10 h-10 rounded-full bg-white/15 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]">
               <i class="ph-light ph-arrow-up-right text-lg"></i>
@@ -135,28 +137,28 @@
         </p>
       </div>
       <div class="reveal-group mt-12 grid sm:grid-cols-2 gap-5">
-        <div class="reveal rounded-shell bg-surface ring-1 ring-black/5 p-7 md:p-8">
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-black/5 p-7 md:p-8">
           <div class="grid place-items-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-5">
             <i class="ph-light ph-calendar-x text-2xl"></i>
           </div>
           <h3 class="font-display text-xl font-medium text-ink">Сроки сдвигаются на месяцы</h3>
           <p class="mt-2 text-muted leading-relaxed">Бригада берёт ещё один объект параллельно, и ваш ремонт уходит на второй план.</p>
         </div>
-        <div class="reveal rounded-shell bg-surface ring-1 ring-black/5 p-7 md:p-8">
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-black/5 p-7 md:p-8">
           <div class="grid place-items-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-5">
             <i class="ph-light ph-trend-up text-2xl"></i>
           </div>
           <h3 class="font-display text-xl font-medium text-ink">Смета растёт после старта</h3>
           <p class="mt-2 text-muted leading-relaxed">В договоре одна цифра, а после демонтажа выясняется, что нужно доплатить за «непредвиденное».</p>
         </div>
-        <div class="reveal rounded-shell bg-surface ring-1 ring-black/5 p-7 md:p-8">
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-black/5 p-7 md:p-8">
           <div class="grid place-items-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-5">
             <i class="ph-light ph-users-three text-2xl"></i>
           </div>
           <h3 class="font-display text-xl font-medium text-ink">Бригаду меняют посреди объекта</h3>
           <p class="mt-2 text-muted leading-relaxed">Один состав делает черновую отделку, другой чистовую, и качество скачет от комнаты к комнате.</p>
         </div>
-        <div class="reveal rounded-shell bg-surface ring-1 ring-black/5 p-7 md:p-8">
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-black/5 p-7 md:p-8">
           <div class="grid place-items-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-5">
             <i class="ph-light ph-shield-warning text-2xl"></i>
           </div>
@@ -176,7 +178,7 @@
         </h2>
       </div>
       <div class="reveal-group mt-12 grid md:grid-cols-2 gap-5">
-        <div class="reveal relative overflow-hidden rounded-shell bg-accent/5 ring-1 ring-accent/10 p-8 md:p-10">
+        <div data-tilt class="reveal relative overflow-hidden rounded-shell bg-accent/5 ring-1 ring-accent/10 p-8 md:p-10">
           <span class="absolute -top-3 right-6 font-display text-7xl md:text-8xl font-medium text-accent/10 select-none">01</span>
           <div class="relative grid place-items-center w-12 h-12 rounded-full bg-accent text-white mb-6">
             <i class="ph-light ph-ruler text-2xl"></i>
@@ -184,7 +186,7 @@
           <h3 class="relative font-display text-xl font-medium text-ink">Замер и дизайн-проект</h3>
           <p class="relative mt-2 text-muted leading-relaxed max-w-[40ch]">Инженер выезжает на объект, снимает точные размеры и собирает 3D-визуализацию будущей квартиры.</p>
         </div>
-        <div class="reveal relative overflow-hidden rounded-shell bg-surface ring-1 ring-black/5 p-8 md:p-10">
+        <div data-tilt class="reveal relative overflow-hidden rounded-shell bg-surface ring-1 ring-black/5 p-8 md:p-10">
           <span class="absolute -top-3 right-6 font-display text-7xl md:text-8xl font-medium text-ink/5 select-none">02</span>
           <div class="relative grid place-items-center w-12 h-12 rounded-full bg-ink text-white mb-6">
             <i class="ph-light ph-file-text text-2xl"></i>
@@ -192,7 +194,7 @@
           <h3 class="relative font-display text-xl font-medium text-ink">Смета и договор</h3>
           <p class="relative mt-2 text-muted leading-relaxed max-w-[40ch]">Фиксируем итоговую цену и сроки в договоре. После подписания цифры не меняются.</p>
         </div>
-        <div class="reveal relative overflow-hidden rounded-shell bg-surface ring-1 ring-black/5 p-8 md:p-10">
+        <div data-tilt class="reveal relative overflow-hidden rounded-shell bg-surface ring-1 ring-black/5 p-8 md:p-10">
           <span class="absolute -top-3 right-6 font-display text-7xl md:text-8xl font-medium text-ink/5 select-none">03</span>
           <div class="relative grid place-items-center w-12 h-12 rounded-full bg-ink text-white mb-6">
             <i class="ph-light ph-hard-hat text-2xl"></i>
@@ -200,7 +202,7 @@
           <h3 class="relative font-display text-xl font-medium text-ink">Ремонт под контролем прораба</h3>
           <p class="relative mt-2 text-muted leading-relaxed max-w-[40ch]">Прораб ведёт объект каждый день и присылает фотоотчёт после завершения каждого этапа работ.</p>
         </div>
-        <div class="reveal relative overflow-hidden rounded-shell bg-accent/5 ring-1 ring-accent/10 p-8 md:p-10">
+        <div data-tilt class="reveal relative overflow-hidden rounded-shell bg-accent/5 ring-1 ring-accent/10 p-8 md:p-10">
           <span class="absolute -top-3 right-6 font-display text-7xl md:text-8xl font-medium text-accent/10 select-none">04</span>
           <div class="relative grid place-items-center w-12 h-12 rounded-full bg-accent text-white mb-6">
             <i class="ph-light ph-seal-check text-2xl"></i>
@@ -276,7 +278,7 @@
         </p>
       </div>
       <div class="reveal-group grid md:grid-cols-3 gap-5 md:gap-6 items-stretch">
-        <div class="reveal rounded-shell bg-bg ring-1 ring-black/5 p-8 flex flex-col">
+        <div data-tilt class="reveal rounded-shell bg-bg ring-1 ring-black/5 p-8 flex flex-col">
           <h3 class="font-display text-xl font-medium text-ink">База</h3>
           <p class="mt-1 text-sm text-muted">Типовой проект, материалы эконом-класса</p>
           <div class="mt-6 font-display text-4xl font-medium text-ink">от 9 500 ₽<span class="text-base text-muted font-sans font-normal"> / м²</span></div>
@@ -299,7 +301,7 @@
           </ul>
           <a href="#contact" class="mt-8 inline-flex justify-center items-center gap-2 rounded-full bg-accent text-white font-medium px-6 py-3 hover:bg-white hover:text-ink transition-colors duration-500">Рассчитать стоимость</a>
         </div>
-        <div class="reveal rounded-shell bg-bg ring-1 ring-black/5 p-8 flex flex-col">
+        <div data-tilt class="reveal rounded-shell bg-bg ring-1 ring-black/5 p-8 flex flex-col">
           <h3 class="font-display text-xl font-medium text-ink">Премиум</h3>
           <p class="mt-1 text-sm text-muted">Авторский надзор, премиальные материалы и мебель</p>
           <div class="mt-6 font-display text-4xl font-medium text-ink">от 22 000 ₽<span class="text-base text-muted font-sans font-normal"> / м²</span></div>
@@ -421,7 +423,7 @@
           <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full rounded-2xl bg-white/10 ring-1 ring-white/15 placeholder:text-white/30 text-white px-5 py-3.5 focus:outline-none focus:ring-2 focus:ring-accent transition-shadow duration-300" />
           <p class="error-text hidden mt-1.5 text-sm text-rose-300"></p>
         </div>
-        <button type="submit" class="rounded-2xl bg-accent text-white font-medium px-8 py-3.5 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-white hover:text-ink active:scale-[0.98] sm:self-end">Рассчитать стоимость</button>
+        <button type="submit" data-magnetic class="rounded-2xl bg-accent text-white font-medium px-8 py-3.5 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-white hover:text-ink active:scale-[0.98] sm:self-end">Рассчитать стоимость</button>
       </form>
       <p id="form-success" class="hidden mt-6 text-accent font-medium">Заявка отправлена. Мы перезвоним в течение часа.</p>
       <p class="reveal mt-6 text-sm text-white/40">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных.</p>

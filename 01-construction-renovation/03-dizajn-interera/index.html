@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Контур — студия дизайна интерьера в Москве</title>
+<meta name="description" content="Студия «Контур»: дизайн интерьера квартир и домов под ключ. Планировка, 3D-визуализация, авторский надзор и комплектация. Интерьеры, продуманные до миллиметра." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#F2F1ED',
+          surface: '#FBFAF7',
+          ink: '#1A1A19',
+          muted: '#837D72',
+          accent: '#9C7A45',
+          line: '#DEDBD2',
+        },
+        fontFamily: {
+          display: ['Cormorant Garamond', 'serif'],
+          sans: ['Jost', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}.word{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="font-sans bg-bg text-ink antialiased">
+
+<div id="scroll-progress"></div>
+
+<!-- NAVIGATION -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
+    <a href="#top" class="font-display text-3xl font-semibold tracking-tight text-ink leading-none">Контур</a>
+    <div class="hidden md:flex items-center gap-9 text-sm tracking-wide text-ink/70">
+      <a href="#services" class="hover:text-accent transition-colors duration-300">Услуги</a>
+      <a href="#portfolio" class="hover:text-accent transition-colors duration-300">Портфолио</a>
+      <a href="#about" class="hover:text-accent transition-colors duration-300">О студии</a>
+      <a href="#pricing" class="hover:text-accent transition-colors duration-300">Стоимость</a>
+    </div>
+    <a href="#contact" data-magnetic class="hidden md:inline-flex items-center gap-2 rounded-full bg-ink text-bg text-sm tracking-wide px-5 py-2.5 hover:bg-accent transition-colors duration-300">
+      Обсудить проект
+    </a>
+    <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
+      <span class="menu-line top"></span>
+      <span class="menu-line bottom"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-bg/97 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none">
+  <a href="#services" class="menu-item font-display text-4xl font-medium text-ink">Услуги</a>
+  <a href="#portfolio" class="menu-item font-display text-4xl font-medium text-ink">Портфолио</a>
+  <a href="#about" class="menu-item font-display text-4xl font-medium text-ink">О студии</a>
+  <a href="#pricing" class="menu-item font-display text-4xl font-medium text-ink">Стоимость</a>
+  <a href="#contact" class="menu-item mt-4 inline-flex rounded-full bg-ink text-bg tracking-wide px-7 py-3.5">Обсудить проект</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="px-4 md:px-8 pt-32 md:pt-44 pb-16 md:pb-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-4xl">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Студия дизайна интерьера · Москва</span>
+        <h1 class="word-reveal mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-[-0.01em] leading-[1.04] text-ink">
+          Интерьеры, в которых продумано всё — до миллиметра
+        </h1>
+        <p class="mt-7 text-lg text-muted leading-relaxed max-w-xl font-light">
+          Создаём проекты квартир и домов, где красиво и удобно жить каждый день. От планировки до последнего светильника.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-6">
+          <a href="#contact" data-magnetic class="inline-flex items-center gap-2 rounded-full bg-ink text-bg tracking-wide px-7 py-3.5 hover:bg-accent transition-colors duration-300">Обсудить проект</a>
+          <a href="#portfolio" class="inline-flex items-center gap-2 text-ink tracking-wide border-b border-ink/30 pb-0.5 hover:text-accent hover:border-accent transition-colors duration-300">Смотреть портфолио</a>
+        </div>
+      </div>
+      <div class="reveal mt-14 md:mt-20 overflow-hidden">
+        <img src="https://picsum.photos/seed/kontur-hero-interior/1800/900" alt="Дизайн интерьера гостиной" class="w-full h-[340px] sm:h-[460px] md:h-[580px] object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal grid md:grid-cols-12 gap-8 md:gap-12 items-end mb-14">
+        <div class="md:col-span-7">
+          <span class="text-xs uppercase tracking-[0.25em] text-accent">Услуги</span>
+          <h2 class="mt-4 font-display text-4xl md:text-5xl font-medium tracking-tight text-ink leading-tight">Полный цикл — от идеи до готового интерьера</h2>
+        </div>
+        <p class="md:col-span-5 text-muted leading-relaxed font-light">Работаем под ключ: можно заказать отдельный этап или весь проект целиком, от планировки до закупки мебели.</p>
+      </div>
+      <div class="reveal-group grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line rounded-2xl overflow-hidden ring-1 ring-line">
+        <div data-tilt class="reveal bg-bg p-8 md:p-10">
+          <span class="font-display text-2xl text-accent">01</span>
+          <h3 class="mt-4 font-display text-2xl font-medium text-ink">Планировочное решение</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed font-light">Перепланировка под ваш сценарий жизни: зонирование, эргономика, маршруты.</p>
+        </div>
+        <div data-tilt class="reveal bg-bg p-8 md:p-10">
+          <span class="font-display text-2xl text-accent">02</span>
+          <h3 class="mt-4 font-display text-2xl font-medium text-ink">Дизайн-проект</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed font-light">Полный пакет чертежей и решений: от развёрток стен до ведомостей материалов.</p>
+        </div>
+        <div data-tilt class="reveal bg-bg p-8 md:p-10">
+          <span class="font-display text-2xl text-accent">03</span>
+          <h3 class="mt-4 font-display text-2xl font-medium text-ink">3D-визуализация</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed font-light">Фотореалистичные изображения каждой комнаты — увидите интерьер до ремонта.</p>
+        </div>
+        <div data-tilt class="reveal bg-bg p-8 md:p-10">
+          <span class="font-display text-2xl text-accent">04</span>
+          <h3 class="mt-4 font-display text-2xl font-medium text-ink">Авторский надзор</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed font-light">Контролируем стройку, чтобы результат совпал с проектом до детали.</p>
+        </div>
+        <div data-tilt class="reveal bg-bg p-8 md:p-10">
+          <span class="font-display text-2xl text-accent">05</span>
+          <h3 class="mt-4 font-display text-2xl font-medium text-ink">Комплектация</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed font-light">Подбираем и закупаем мебель, свет и декор. Вам остаётся только заехать.</p>
+        </div>
+        <div class="reveal bg-ink text-bg p-8 md:p-10 flex flex-col justify-between">
+          <span class="font-display text-2xl text-accent">→</span>
+          <div>
+            <h3 class="mt-4 font-display text-2xl font-medium">Не знаете, с чего начать?</h3>
+            <a href="#contact" class="mt-3 inline-block text-sm tracking-wide border-b border-bg/40 pb-0.5 hover:text-accent hover:border-accent transition-colors">Запишитесь на консультацию</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Портфолио</span>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl font-medium tracking-tight text-ink leading-tight">Избранные проекты</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-2 gap-x-6 gap-y-12">
+        <figure class="reveal">
+          <div class="overflow-hidden"><img src="https://picsum.photos/seed/kontur-p1/900/680" alt="Проект" class="w-full h-[300px] md:h-[420px] object-cover hover:scale-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.32,0.72,0,1)]" /></div>
+          <figcaption class="mt-4 flex items-baseline justify-between gap-4 border-t border-line pt-4"><span class="font-display text-2xl text-ink">Квартира в скандинавском стиле</span><span class="text-sm text-muted shrink-0">86 м²</span></figcaption>
+        </figure>
+        <figure class="reveal md:mt-16">
+          <div class="overflow-hidden"><img src="https://picsum.photos/seed/kontur-p2/900/680" alt="Проект" class="w-full h-[300px] md:h-[420px] object-cover hover:scale-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.32,0.72,0,1)]" /></div>
+          <figcaption class="mt-4 flex items-baseline justify-between gap-4 border-t border-line pt-4"><span class="font-display text-2xl text-ink">Пентхаус в минимализме</span><span class="text-sm text-muted shrink-0">140 м²</span></figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="overflow-hidden"><img src="https://picsum.photos/seed/kontur-p3/900/680" alt="Проект" class="w-full h-[300px] md:h-[420px] object-cover hover:scale-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.32,0.72,0,1)]" /></div>
+          <figcaption class="mt-4 flex items-baseline justify-between gap-4 border-t border-line pt-4"><span class="font-display text-2xl text-ink">Загородный дом, тёплый минимализм</span><span class="text-sm text-muted shrink-0">210 м²</span></figcaption>
+        </figure>
+        <figure class="reveal md:mt-16">
+          <div class="overflow-hidden"><img src="https://picsum.photos/seed/kontur-p4/900/680" alt="Проект" class="w-full h-[300px] md:h-[420px] object-cover hover:scale-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.32,0.72,0,1)]" /></div>
+          <figcaption class="mt-4 flex items-baseline justify-between gap-4 border-t border-line pt-4"><span class="font-display text-2xl text-ink">Студия в стиле джапанди</span><span class="text-sm text-muted shrink-0">42 м²</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+      <div class="reveal overflow-hidden">
+        <img src="https://picsum.photos/seed/kontur-designer/800/900" alt="Дизайнер студии Контур" class="w-full h-[420px] md:h-[560px] object-cover" />
+      </div>
+      <div class="reveal">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">О студии</span>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl font-medium tracking-tight text-ink leading-tight">Дизайн без модных штампов</h2>
+        <p class="mt-6 text-lg text-ink/80 leading-relaxed font-light">Студию основала Елена Багрова — дизайнер с архитектурным образованием. Мы не гонимся за трендами ради картинки: интерьер должен оставаться удобным и красивым через десять лет.</p>
+        <p class="mt-4 text-muted leading-relaxed font-light">Каждый проект начинается с разговора о том, как вы живёте: кто готовит, где работаете, как принимаете гостей. Из этого рождается планировка, а не наоборот.</p>
+        <div class="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8">
+          <div><div class="font-display text-4xl md:text-5xl font-medium text-ink"><span data-count="120" data-suffix="+">0</span></div><div class="mt-1 text-sm text-muted">проектов</div></div>
+          <div><div class="font-display text-4xl md:text-5xl font-medium text-ink"><span data-count="11">0</span></div><div class="mt-1 text-sm text-muted">лет в профессии</div></div>
+          <div><div class="font-display text-4xl md:text-5xl font-medium text-ink"><span data-count="8">0</span></div><div class="mt-1 text-sm text-muted">городов</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="px-4 md:px-8 py-24 md:py-32 bg-ink text-bg">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Как мы работаем</span>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl font-medium tracking-tight leading-tight">Четыре этапа спокойной работы</h2>
+      </div>
+      <div class="reveal-group grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+        <div class="reveal border-t border-bg/20 pt-6"><div class="font-display text-2xl text-accent">01</div><h3 class="mt-3 font-display text-2xl font-medium">Бриф и обмер</h3><p class="mt-2 text-sm text-bg/60 leading-relaxed font-light">Узнаём ваши привычки и снимаем точные размеры помещения.</p></div>
+        <div class="reveal border-t border-bg/20 pt-6"><div class="font-display text-2xl text-accent">02</div><h3 class="mt-3 font-display text-2xl font-medium">Концепция</h3><p class="mt-2 text-sm text-bg/60 leading-relaxed font-light">Планировка, стилевое решение и 3D-визуализация будущего интерьера.</p></div>
+        <div class="reveal border-t border-bg/20 pt-6"><div class="font-display text-2xl text-accent">03</div><h3 class="mt-3 font-display text-2xl font-medium">Документация</h3><p class="mt-2 text-sm text-bg/60 leading-relaxed font-light">Рабочие чертежи, по которым бригада соберёт всё без догадок.</p></div>
+        <div class="reveal border-t border-bg/20 pt-6"><div class="font-display text-2xl text-accent">04</div><h3 class="mt-3 font-display text-2xl font-medium">Реализация</h3><p class="mt-2 text-sm text-bg/60 leading-relaxed font-light">Авторский надзор и комплектация — до полностью готового интерьера.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Стоимость</span>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl font-medium tracking-tight text-ink leading-tight">Пакеты услуг</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-px bg-line ring-1 ring-line rounded-2xl overflow-hidden">
+        <div class="reveal bg-bg p-8 md:p-10 flex flex-col">
+          <h3 class="font-display text-3xl font-medium text-ink">Планировка</h3>
+          <p class="mt-2 text-sm text-muted font-light">Только планировочное решение</p>
+          <div class="mt-6 font-display text-4xl font-medium text-ink">от 1 500 ₽<span class="text-base text-muted font-sans"> / м²</span></div>
+          <ul class="mt-6 space-y-3 text-sm text-ink/80 font-light flex-1">
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Варианты планировок</li>
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Расстановка мебели</li>
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Эргономика и зонирование</li>
+          </ul>
+          <a href="#contact" data-magnetic class="mt-8 inline-flex justify-center rounded-full ring-1 ring-ink/20 text-ink tracking-wide px-6 py-3 hover:bg-ink hover:text-bg transition-colors duration-300">Выбрать</a>
+        </div>
+        <div class="reveal bg-ink text-bg p-8 md:p-10 flex flex-col">
+          <div class="inline-flex w-fit items-center rounded-full bg-accent text-bg text-xs uppercase tracking-[0.15em] px-3 py-1">Популярный</div>
+          <h3 class="mt-4 font-display text-3xl font-medium">Полный проект</h3>
+          <p class="mt-2 text-sm text-bg/60 font-light">Дизайн-проект «под реализацию»</p>
+          <div class="mt-6 font-display text-4xl font-medium">от 3 500 ₽<span class="text-base text-bg/60 font-sans"> / м²</span></div>
+          <ul class="mt-6 space-y-3 text-sm text-bg/80 font-light flex-1">
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Всё из пакета «Планировка»</li>
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>3D-визуализация всех комнат</li>
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Полный комплект чертежей</li>
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Ведомости материалов</li>
+          </ul>
+          <a href="#contact" data-magnetic class="mt-8 inline-flex justify-center rounded-full bg-accent text-bg tracking-wide px-6 py-3 hover:bg-bg hover:text-ink transition-colors duration-300">Выбрать</a>
+        </div>
+        <div class="reveal bg-bg p-8 md:p-10 flex flex-col">
+          <h3 class="font-display text-3xl font-medium text-ink">Под ключ</h3>
+          <p class="mt-2 text-sm text-muted font-light">Проект, надзор и комплектация</p>
+          <div class="mt-6 font-display text-4xl font-medium text-ink">от 6 000 ₽<span class="text-base text-muted font-sans"> / м²</span></div>
+          <ul class="mt-6 space-y-3 text-sm text-ink/80 font-light flex-1">
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Всё из «Полного проекта»</li>
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Авторский надзор</li>
+            <li class="flex gap-2"><i class="ph ph-check text-accent mt-0.5 shrink-0"></i>Комплектация и закупка</li>
+          </ul>
+          <a href="#contact" data-magnetic class="mt-8 inline-flex justify-center rounded-full ring-1 ring-ink/20 text-ink tracking-wide px-6 py-3 hover:bg-ink hover:text-bg transition-colors duration-300">Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-4xl mx-auto text-center reveal">
+      <i class="ph ph-quotes text-5xl text-accent/40"></i>
+      <blockquote class="mt-8 font-display text-3xl md:text-4xl font-medium leading-[1.3] tracking-tight text-ink">
+        Боялись, что дизайнер навяжет «своё». А получили интерьер, в котором узнаём себя в каждой детали — и при этом он красивее, чем мы могли придумать.
+      </blockquote>
+      <div class="mt-10 flex items-center justify-center gap-4">
+        <img src="https://picsum.photos/seed/kontur-client/120/120" class="w-14 h-14 rounded-full object-cover" alt="" />
+        <div class="text-left"><div class="font-medium text-ink">Мария и Андрей</div><div class="text-sm text-muted">квартира 86 м², Москва</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal mb-10">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Вопросы</span>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl font-medium tracking-tight text-ink leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="reveal divide-y divide-line">
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-2xl font-medium text-ink">Сколько длится разработка проекта?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-surface text-accent"><i class="ph ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed font-light">Полный дизайн-проект квартиры занимает в среднем 6-10 недель в зависимости от площади и сложности. Точный срок зафиксируем в договоре.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-2xl font-medium text-ink">Можно ли заказать только визуализацию?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-surface text-accent"><i class="ph ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed font-light">Да, услуги можно брать по отдельности. Но визуализация без планировки и чертежей — это только картинка, по ней нельзя строить. Подскажем оптимальный набор под вашу задачу.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-2xl font-medium text-ink">Вы работаете в других городах?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-surface text-accent"><i class="ph ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed font-light">Да. Дизайн-проект делаем удалённо для любого города, общаемся онлайн. Авторский надзор — по Москве и области либо выездами по согласованию.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-2xl font-medium text-ink">Поможете уложиться в бюджет?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-surface text-accent"><i class="ph ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed font-light">Да. На старте обсуждаем бюджет на ремонт и мебель, и подбираем решения внутри него. Покажем, где разумно сэкономить, а где лучше вложиться.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="px-4 md:px-8 py-24 md:py-32 bg-ink text-bg">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20">
+      <div class="reveal">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Контакты</span>
+        <h2 class="mt-4 font-display text-4xl md:text-6xl font-medium tracking-tight leading-[1.02]">Расскажите о вашем пространстве</h2>
+        <p class="mt-6 text-bg/70 leading-relaxed font-light max-w-md">Оставьте контакты — обсудим задачу, покажем похожие проекты и предложим формат работы. Первая консультация бесплатна.</p>
+        <div class="mt-10 space-y-4 text-bg/90 font-light">
+          <div class="flex items-center gap-3"><i class="ph ph-phone text-accent text-xl"></i> +7 (495) 770-22-18</div>
+          <div class="flex items-center gap-3"><i class="ph ph-envelope-simple text-accent text-xl"></i> studio@kontur-design.ru</div>
+          <div class="flex items-center gap-3"><i class="ph ph-map-pin text-accent text-xl"></i> Москва, Дизайн-завод «Флакон»</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form id="lead-form" novalidate class="bg-bg text-ink p-7 md:p-9">
+          <div class="space-y-5">
+            <div>
+              <label for="name" class="block text-sm text-muted mb-2">Ваше имя</label>
+              <input id="name" name="name" type="text" placeholder="Мария" class="w-full border-b border-line bg-transparent px-1 py-2.5 focus:outline-none focus:border-accent transition-colors" />
+              <p class="error-text hidden mt-1.5 text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label for="phone" class="block text-sm text-muted mb-2">Телефон</label>
+              <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full border-b border-line bg-transparent px-1 py-2.5 focus:outline-none focus:border-accent transition-colors" />
+              <p class="error-text hidden mt-1.5 text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label for="area" class="block text-sm text-muted mb-2">Площадь объекта, м²</label>
+              <input id="area" name="area" type="text" placeholder="86" class="w-full border-b border-line bg-transparent px-1 py-2.5 focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <button type="submit" data-magnetic class="w-full rounded-full bg-ink text-bg tracking-wide py-3.5 hover:bg-accent transition-colors duration-300">Обсудить проект</button>
+            <p class="text-xs text-muted">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          </div>
+        </form>
+        <div id="form-success" class="hidden text-center py-10">
+          <div class="check-pop mx-auto grid place-items-center w-16 h-16 rounded-full bg-accent text-bg"><i class="ph ph-check text-3xl"></i></div>
+          <p class="mt-4 font-display text-2xl text-bg">Спасибо!</p>
+          <p class="mt-1 text-sm text-bg/60 font-light">Свяжемся с вами в ближайшее время.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-4 md:px-8 py-12 bg-bg border-t border-line">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="font-display text-3xl font-semibold text-ink">Контур</div>
+    <div class="flex items-center gap-7 text-sm text-muted">
+      <a href="#services" class="hover:text-accent transition-colors">Услуги</a>
+      <a href="#portfolio" class="hover:text-accent transition-colors">Портфолио</a>
+      <a href="#pricing" class="hover:text-accent transition-colors">Стоимость</a>
+      <a href="#contact" class="hover:text-accent transition-colors">Контакты</a>
+    </div>
+    <div class="text-sm text-muted">© 2026 Студия «Контур»</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
