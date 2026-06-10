@@ -72,18 +72,21 @@ leadForm.addEventListener('submit', (event) => {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
-  document.querySelectorAll('.reveal').forEach((el) => {
-    gsap.to(el, {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      duration: 0.9,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 88%',
-      },
-    });
+  // Batch reveals so items that enter together (e.g. a row of cards)
+  // animate as one coordinated, staggered group instead of each firing
+  // its own trigger out of sync. Transform + opacity only = smooth.
+  ScrollTrigger.batch('.reveal', {
+    start: 'top 90%',
+    once: true,
+    onEnter: (elements) =>
+      gsap.to(elements, {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: 'power2.out',
+        stagger: 0.09,
+        overwrite: true,
+      }),
   });
 
   gsap.to('.hero-image', {
