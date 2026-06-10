@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Визит — онлайн-консультация врача за 5 минут</title>
+<meta name="description" content="Визит — телемедицина: видеоконсультация с врачом за 5 минут, рецепты онлайн, электронная медкарта. Более 500 врачей, круглосуточно." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#FAFAFA',
+          surface: '#FFFFFF',
+          soft: '#EEF2FF',
+          ink: '#1E1B2E',
+          muted: '#6B7280',
+          accent: '#4F46E5',
+          accentdark: '#4338CA',
+          line: '#E5E7EB',
+        },
+        fontFamily: {
+          display: ['Sora', 'sans-serif'],
+          sans: ['Manrope', 'sans-serif'],
+        },
+        borderRadius: {
+          shell: '1.5rem',
+          core: '1.25rem',
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="font-sans bg-bg text-ink antialiased">
+
+<!-- NAVIGATION -->
+<header class="fixed top-0 inset-x-0 z-50 px-4 pt-4">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between gap-4 rounded-2xl bg-white/90 backdrop-blur-xl ring-1 ring-line px-4 md:px-6 h-14 md:h-16 shadow-[0_10px_40px_-20px_rgba(30,27,46,0.3)]">
+    <a href="#top" class="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-ink">
+      <span class="grid place-items-center w-8 h-8 rounded-lg bg-accent text-white"><i class="ph-fill ph-video-camera text-base"></i></span>
+      Визит
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+      <a href="#how" class="hover:text-accent transition-colors duration-300">Как это работает</a>
+      <a href="#features" class="hover:text-accent transition-colors duration-300">Возможности</a>
+      <a href="#pricing" class="hover:text-accent transition-colors duration-300">Тарифы</a>
+      <a href="#faq" class="hover:text-accent transition-colors duration-300">Вопросы</a>
+    </div>
+    <a href="#download" class="hidden md:inline-flex items-center gap-2 rounded-xl bg-accent text-white text-sm font-semibold px-5 py-2.5 hover:bg-accentdark transition-colors duration-300">
+      Начать
+    </a>
+    <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
+      <span class="menu-line top"></span>
+      <span class="menu-line bottom"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/97 backdrop-blur-xl flex flex-col items-center justify-center gap-7 opacity-0 pointer-events-none">
+  <a href="#how" class="menu-item font-display text-3xl font-semibold text-ink">Как это работает</a>
+  <a href="#features" class="menu-item font-display text-3xl font-semibold text-ink">Возможности</a>
+  <a href="#pricing" class="menu-item font-display text-3xl font-semibold text-ink">Тарифы</a>
+  <a href="#faq" class="menu-item font-display text-3xl font-semibold text-ink">Вопросы</a>
+  <a href="#download" class="menu-item mt-4 inline-flex items-center gap-2 rounded-xl bg-accent text-white font-semibold px-7 py-3.5">Начать</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative pt-28 md:pt-36 pb-20 px-4 md:px-8 overflow-hidden">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute -top-40 -left-32 w-[40rem] h-[40rem] rounded-full bg-accent/10 blur-[120px]"></div>
+      <div class="absolute top-20 -right-40 w-[34rem] h-[34rem] rounded-full bg-indigo-300/20 blur-[120px]"></div>
+    </div>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 rounded-full bg-soft text-accent text-sm font-semibold px-4 py-1.5">
+          <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span></span>
+          Врачи на связи прямо сейчас
+        </span>
+        <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.04] text-ink">
+          Консультация врача за 5 минут, не выходя из дома
+        </h1>
+        <p class="mt-6 text-base md:text-lg text-muted leading-relaxed max-w-xl">
+          Видеосвязь с дипломированным врачом, электронный рецепт и медкарта в одном приложении. Круглосуточно, без записи и очередей.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#download" class="inline-flex items-center gap-2 rounded-xl bg-accent text-white font-semibold px-7 py-3.5 hover:bg-accentdark transition-colors duration-300">
+            Начать консультацию
+            <i class="ph-bold ph-arrow-right"></i>
+          </a>
+          <a href="#how" class="inline-flex items-center gap-2 rounded-xl ring-1 ring-line bg-white text-ink font-semibold px-7 py-3.5 hover:ring-accent hover:text-accent transition-colors duration-300">
+            <i class="ph-fill ph-play-circle text-lg"></i>
+            Как это работает
+          </a>
+        </div>
+        <div class="mt-9 flex items-center gap-6">
+          <div>
+            <div class="flex items-center gap-1 text-accent"><i class="ph-fill ph-star"></i><span class="font-display font-bold text-ink">4.8</span></div>
+            <div class="text-xs text-muted mt-1">в App Store и Google Play</div>
+          </div>
+          <div class="w-px h-10 bg-line"></div>
+          <div>
+            <div class="font-display font-bold text-ink">500+</div>
+            <div class="text-xs text-muted mt-1">врачей 30 специальностей</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHONE MOCKUP -->
+      <div class="reveal flex justify-center lg:justify-end">
+        <div class="phone relative w-[280px]">
+          <div class="rounded-[2.6rem] bg-ink p-2.5 shadow-[0_40px_80px_-30px_rgba(79,70,229,0.5)]">
+            <div class="relative rounded-[2.1rem] overflow-hidden bg-white" style="aspect-ratio:9/19">
+              <!-- doctor video -->
+              <div class="relative h-[62%]">
+                <img src="https://picsum.photos/seed/vizit-doctor-call/600/700" alt="Видеоконсультация с врачом" class="w-full h-full object-cover" />
+                <div class="absolute inset-x-0 top-0 p-4 flex items-center justify-between text-white">
+                  <span class="rounded-full bg-black/30 backdrop-blur px-3 py-1 text-xs font-medium">12:04</span>
+                  <span class="flex items-center gap-1.5 rounded-full bg-black/30 backdrop-blur px-3 py-1 text-xs font-medium"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Идёт приём</span>
+                </div>
+                <div class="absolute bottom-3 left-4 text-white">
+                  <div class="font-display font-semibold text-sm">Ирина Петрова</div>
+                  <div class="text-xs text-white/80">Терапевт · стаж 12 лет</div>
+                </div>
+                <div class="absolute bottom-3 right-4 w-16 h-20 rounded-lg overflow-hidden ring-2 ring-white/60">
+                  <img src="https://picsum.photos/seed/vizit-self/200/260" alt="" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <!-- controls -->
+              <div class="h-[38%] p-4 flex flex-col">
+                <div class="flex items-center justify-center gap-4">
+                  <span class="grid place-items-center w-12 h-12 rounded-full bg-soft text-accent"><i class="ph-fill ph-microphone text-xl"></i></span>
+                  <span class="grid place-items-center w-14 h-14 rounded-full bg-rose-500 text-white shadow-lg"><i class="ph-fill ph-phone-x text-2xl"></i></span>
+                  <span class="grid place-items-center w-12 h-12 rounded-full bg-soft text-accent"><i class="ph-fill ph-chat-circle text-xl"></i></span>
+                </div>
+                <div class="mt-4 rounded-xl bg-soft p-3">
+                  <div class="flex items-center gap-2 text-xs text-accent font-semibold"><i class="ph-fill ph-file-text"></i> Рецепт готов</div>
+                  <div class="mt-1 text-xs text-muted leading-snug">Электронный рецепт отправлен в приложение</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- floating chip -->
+          <div class="absolute -left-6 top-24 hidden sm:flex items-center gap-2 rounded-xl bg-white shadow-xl ring-1 ring-line px-3 py-2">
+            <span class="grid place-items-center w-8 h-8 rounded-full bg-emerald-100 text-emerald-600"><i class="ph-fill ph-check"></i></span>
+            <span class="text-xs font-semibold text-ink leading-tight">Подключение<br>за 5 минут</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAND -->
+  <section class="px-4 md:px-8 pb-8">
+    <div class="reveal-group max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="reveal flex items-center gap-3 rounded-2xl bg-surface ring-1 ring-line px-5 py-4">
+        <i class="ph-fill ph-clock text-2xl text-accent"></i>
+        <div><div class="font-display font-bold text-ink">24/7</div><div class="text-xs text-muted">без выходных</div></div>
+      </div>
+      <div class="reveal flex items-center gap-3 rounded-2xl bg-surface ring-1 ring-line px-5 py-4">
+        <i class="ph-fill ph-timer text-2xl text-accent"></i>
+        <div><div class="font-display font-bold text-ink">5 минут</div><div class="text-xs text-muted">до связи с врачом</div></div>
+      </div>
+      <div class="reveal flex items-center gap-3 rounded-2xl bg-surface ring-1 ring-line px-5 py-4">
+        <i class="ph-fill ph-users-three text-2xl text-accent"></i>
+        <div><div class="font-display font-bold text-ink">1.2 млн</div><div class="text-xs text-muted">консультаций</div></div>
+      </div>
+      <div class="reveal flex items-center gap-3 rounded-2xl bg-surface ring-1 ring-line px-5 py-4">
+        <i class="ph-fill ph-lock-key text-2xl text-accent"></i>
+        <div><div class="font-display font-bold text-ink">152-ФЗ</div><div class="text-xs text-muted">защита данных</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Как это работает</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">
+          Три шага до приёма
+        </h2>
+      </div>
+      <div class="reveal-group mt-12 grid md:grid-cols-3 gap-6">
+        <div class="reveal relative rounded-shell bg-surface ring-1 ring-line p-8">
+          <div class="font-display text-5xl font-bold text-soft">01</div>
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-accent text-white -mt-4 mb-4"><i class="ph ph-chat-teardrop-text text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink">Опишите проблему</h3>
+          <p class="mt-2 text-muted leading-relaxed">Ответьте на пару вопросов в приложении — что беспокоит и как давно. Это займёт минуту.</p>
+        </div>
+        <div class="reveal relative rounded-shell bg-surface ring-1 ring-line p-8">
+          <div class="font-display text-5xl font-bold text-soft">02</div>
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-accent text-white -mt-4 mb-4"><i class="ph ph-user-circle-check text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink">Выберите врача</h3>
+          <p class="mt-2 text-muted leading-relaxed">Подберём подходящего специалиста или выберите сами по рейтингу и отзывам.</p>
+        </div>
+        <div class="reveal relative rounded-shell bg-surface ring-1 ring-line p-8">
+          <div class="font-display text-5xl font-bold text-soft">03</div>
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-accent text-white -mt-4 mb-4"><i class="ph ph-video-camera text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink">Выйдите на связь</h3>
+          <p class="mt-2 text-muted leading-relaxed">Видеозвонок, рекомендации и электронный рецепт. Запись приёма сохранится в карте.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES BENTO -->
+  <section id="features" class="px-4 md:px-8 py-24 md:py-32 bg-ink text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-indigo-300">Возможности</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+          Всё здоровье семьи в одном приложении
+        </h2>
+      </div>
+      <div class="reveal-group mt-12 grid md:grid-cols-4 gap-4">
+        <div class="reveal md:col-span-2 rounded-shell bg-accent p-8 flex flex-col justify-between min-h-[16rem] overflow-hidden relative">
+          <div>
+            <i class="ph-fill ph-video-camera text-3xl"></i>
+            <h3 class="mt-4 font-display text-2xl font-semibold">Видеоконсультация 24/7</h3>
+            <p class="mt-2 text-white/80 leading-relaxed max-w-sm">Связь с врачом в любое время дня и ночи. Терапевты, педиатры и узкие специалисты.</p>
+          </div>
+          <img src="https://picsum.photos/seed/vizit-feat-video/500/300" alt="" class="absolute -right-6 -bottom-6 w-44 rounded-xl opacity-30 rotate-6" />
+        </div>
+        <div class="reveal md:col-span-2 rounded-shell bg-white/5 ring-1 ring-white/10 p-8 min-h-[16rem] flex flex-col justify-between">
+          <div>
+            <i class="ph-fill ph-folder-user text-3xl text-indigo-300"></i>
+            <h3 class="mt-4 font-display text-2xl font-semibold">Электронная медкарта</h3>
+            <p class="mt-2 text-white/60 leading-relaxed max-w-sm">История консультаций, анализы и рецепты всей семьи хранятся в одном месте.</p>
+          </div>
+          <div class="flex gap-2">
+            <span class="rounded-full bg-white/10 px-3 py-1 text-xs">Анализы</span>
+            <span class="rounded-full bg-white/10 px-3 py-1 text-xs">Рецепты</span>
+            <span class="rounded-full bg-white/10 px-3 py-1 text-xs">Заключения</span>
+          </div>
+        </div>
+        <div class="reveal rounded-shell bg-white/5 ring-1 ring-white/10 p-7">
+          <i class="ph-fill ph-file-text text-3xl text-indigo-300"></i>
+          <h3 class="mt-4 font-display text-lg font-semibold">Рецепты онлайн</h3>
+          <p class="mt-2 text-sm text-white/60 leading-relaxed">Электронный рецепт сразу после приёма.</p>
+        </div>
+        <div class="reveal rounded-shell bg-white/5 ring-1 ring-white/10 p-7">
+          <i class="ph-fill ph-chat-circle-dots text-3xl text-indigo-300"></i>
+          <h3 class="mt-4 font-display text-lg font-semibold">Чат с врачом</h3>
+          <p class="mt-2 text-sm text-white/60 leading-relaxed">Дополнительные вопросы — текстом, без доплат.</p>
+        </div>
+        <div class="reveal md:col-span-2 rounded-shell bg-white/5 ring-1 ring-white/10 p-7 flex items-center gap-5">
+          <i class="ph-fill ph-shield-plus text-4xl text-indigo-300 shrink-0"></i>
+          <div>
+            <h3 class="font-display text-lg font-semibold">Второе мнение специалиста</h3>
+            <p class="mt-1 text-sm text-white/60 leading-relaxed">Сомневаетесь в диагнозе? Получите независимую оценку у профильного эксперта.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALISTS -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Специалисты</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">
+          Врачи 30 специальностей
+        </h2>
+        <p class="mt-4 text-muted leading-relaxed">От терапевта до узкого специалиста — все врачи с подтверждёнными дипломами и опытом от 5 лет.</p>
+      </div>
+      <div class="reveal-group grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="reveal rounded-2xl bg-surface ring-1 ring-line p-4 text-center"><img src="https://picsum.photos/seed/vizit-sp-1/120/120" class="w-16 h-16 rounded-full object-cover mx-auto" alt="" /><div class="mt-3 font-semibold text-sm text-ink">Терапевт</div><div class="text-xs text-muted">от 990 ₽</div></div>
+        <div class="reveal rounded-2xl bg-surface ring-1 ring-line p-4 text-center"><img src="https://picsum.photos/seed/vizit-sp-2/120/120" class="w-16 h-16 rounded-full object-cover mx-auto" alt="" /><div class="mt-3 font-semibold text-sm text-ink">Педиатр</div><div class="text-xs text-muted">от 1 200 ₽</div></div>
+        <div class="reveal rounded-2xl bg-surface ring-1 ring-line p-4 text-center"><img src="https://picsum.photos/seed/vizit-sp-3/120/120" class="w-16 h-16 rounded-full object-cover mx-auto" alt="" /><div class="mt-3 font-semibold text-sm text-ink">Дерматолог</div><div class="text-xs text-muted">от 1 400 ₽</div></div>
+        <div class="reveal rounded-2xl bg-surface ring-1 ring-line p-4 text-center"><img src="https://picsum.photos/seed/vizit-sp-4/120/120" class="w-16 h-16 rounded-full object-cover mx-auto" alt="" /><div class="mt-3 font-semibold text-sm text-ink">Психолог</div><div class="text-xs text-muted">от 1 800 ₽</div></div>
+        <div class="reveal rounded-2xl bg-surface ring-1 ring-line p-4 text-center"><img src="https://picsum.photos/seed/vizit-sp-5/120/120" class="w-16 h-16 rounded-full object-cover mx-auto" alt="" /><div class="mt-3 font-semibold text-sm text-ink">Кардиолог</div><div class="text-xs text-muted">от 1 600 ₽</div></div>
+        <div class="reveal rounded-2xl bg-accent text-white p-4 text-center flex flex-col items-center justify-center"><i class="ph-bold ph-dots-three-outline text-2xl"></i><div class="mt-2 font-semibold text-sm">и ещё 25</div><div class="text-xs text-white/70">специальностей</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="px-4 md:px-8 py-24 md:py-32 bg-soft">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Тарифы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">
+          Платите за консультацию или подключите подписку
+        </h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5 items-stretch">
+        <div class="reveal rounded-shell bg-white ring-1 ring-line p-8 flex flex-col">
+          <h3 class="font-display text-xl font-semibold text-ink">Разовая</h3>
+          <p class="mt-1 text-sm text-muted">Одна консультация без подписки</p>
+          <div class="mt-6 font-display text-4xl font-bold text-ink">990 ₽<span class="text-base text-muted font-sans font-medium"> / приём</span></div>
+          <ul class="mt-6 space-y-3 text-sm text-ink/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Видеоконсультация терапевта</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Электронный рецепт</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Заключение в медкарту</li>
+          </ul>
+          <a href="#download" class="mt-8 inline-flex justify-center rounded-xl ring-1 ring-line text-ink font-semibold px-6 py-3 hover:ring-accent hover:text-accent transition-colors duration-300">Выбрать</a>
+        </div>
+        <div class="reveal rounded-shell bg-ink text-white p-8 md:-my-4 shadow-[0_30px_70px_-30px_rgba(79,70,229,0.6)] flex flex-col relative overflow-hidden">
+          <div class="inline-flex w-fit items-center rounded-full bg-accent text-white text-xs font-semibold uppercase tracking-[0.15em] px-3 py-1">Популярный</div>
+          <h3 class="mt-4 font-display text-xl font-semibold">Семья</h3>
+          <p class="mt-1 text-sm text-white/60">Безлимит консультаций для всей семьи</p>
+          <div class="mt-6 font-display text-4xl font-bold">1 490 ₽<span class="text-base text-white/60 font-sans font-medium"> / мес</span></div>
+          <ul class="mt-6 space-y-3 text-sm text-white/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-indigo-300 mt-0.5 shrink-0"></i>Безлимит консультаций</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-indigo-300 mt-0.5 shrink-0"></i>До 4 членов семьи</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-indigo-300 mt-0.5 shrink-0"></i>Все специалисты, включая узких</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-indigo-300 mt-0.5 shrink-0"></i>Чат с врачом без доплат</li>
+          </ul>
+          <a href="#download" class="mt-8 inline-flex justify-center rounded-xl bg-accent text-white font-semibold px-6 py-3 hover:bg-accentdark transition-colors duration-300">Подключить</a>
+        </div>
+        <div class="reveal rounded-shell bg-white ring-1 ring-line p-8 flex flex-col">
+          <h3 class="font-display text-xl font-semibold text-ink">Год</h3>
+          <p class="mt-1 text-sm text-muted">Подписка «Семья» на 12 месяцев</p>
+          <div class="mt-6 font-display text-4xl font-bold text-ink">11 900 ₽<span class="text-base text-muted font-sans font-medium"> / год</span></div>
+          <span class="mt-2 inline-flex w-fit rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1">Экономия 40%</span>
+          <ul class="mt-6 space-y-3 text-sm text-ink/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Всё из тарифа «Семья»</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Два месяца в подарок</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Приоритетная очередь к врачу</li>
+          </ul>
+          <a href="#download" class="mt-8 inline-flex justify-center rounded-xl ring-1 ring-line text-ink font-semibold px-6 py-3 hover:ring-accent hover:text-accent transition-colors duration-300">Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Отзывы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Оценки из App Store</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5">
+        <figure class="reveal rounded-shell bg-surface ring-1 ring-line p-7">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <i class="ph-fill ph-apple-logo text-xl text-ink/40"></i>
+          </div>
+          <blockquote class="text-ink leading-relaxed">«Ребёнок заболел ночью, дозвонилась до педиатра за пару минут. Назначили лечение, утром уже было легче».</blockquote>
+          <figcaption class="mt-5 text-sm font-semibold text-ink">Екатерина, мама двоих детей</figcaption>
+        </figure>
+        <figure class="reveal rounded-shell bg-surface ring-1 ring-line p-7">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <i class="ph-fill ph-google-play-logo text-xl text-ink/40"></i>
+          </div>
+          <blockquote class="text-ink leading-relaxed">«Удобно, что все анализы и рецепты в одном месте. Больше не теряю бумажки и не вожу с собой папку к врачу».</blockquote>
+          <figcaption class="mt-5 text-sm font-semibold text-ink">Михаил, 34 года</figcaption>
+        </figure>
+        <figure class="reveal rounded-shell bg-surface ring-1 ring-line p-7">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <i class="ph-fill ph-apple-logo text-xl text-ink/40"></i>
+          </div>
+          <blockquote class="text-ink leading-relaxed">«Работаю в другом городе вахтой. Подписка на семью — спасение, родители консультируются без меня сами».</blockquote>
+          <figcaption class="mt-5 text-sm font-semibold text-ink">Сергей, вахтовик</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal mb-10">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Вопросы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="reveal divide-y divide-line">
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Это законно? Можно ли доверять онлайн-врачу?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да. Телемедицина разрешена законом 323-ФЗ. Все наши врачи имеют действующие дипломы и сертификаты, которые мы проверяем перед допуском к консультациям.</p></div></div>
+        </div>
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Может ли врач поставить диагноз онлайн?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Врач консультирует, помогает разобраться с симптомами, корректирует лечение и направляет на анализы. Окончательный диагноз по закону ставится на очном приёме, но в большинстве случаев онлайн-консультации достаточно.</p></div></div>
+        </div>
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Как быстро я попаду к врачу?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">К терапевту — в среднем за 5 минут, круглосуточно. К узким специалистам — по записи в ближайшее свободное время, обычно в тот же день.</p></div></div>
+        </div>
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Можно ли отменить подписку?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да, в любой момент в один тап в приложении. Подписка продолжит действовать до конца оплаченного периода, автопродление отключится.</p></div></div>
+        </div>
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Защищены ли мои медицинские данные?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Данные хранятся на серверах в России и шифруются по требованиям 152-ФЗ. Доступ к карте есть только у вас и врача, которого вы выбираете.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section id="download" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="reveal-group max-w-6xl mx-auto rounded-shell bg-accent text-white p-8 md:p-14 grid md:grid-cols-2 gap-10 items-center overflow-hidden">
+      <div class="reveal">
+        <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Скачайте приложение и получите первую консультацию</h2>
+        <p class="mt-4 text-white/80 leading-relaxed max-w-md">Установите «Визит», и врач будет на связи через пять минут. Первая консультация терапевта — со скидкой 50%.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#" class="inline-flex items-center gap-3 rounded-xl bg-ink text-white px-5 py-3 hover:bg-black transition-colors duration-300">
+            <i class="ph-fill ph-apple-logo text-2xl"></i>
+            <span class="text-left leading-none"><span class="block text-[10px] text-white/60">Загрузите в</span><span class="font-semibold">App Store</span></span>
+          </a>
+          <a href="#" class="inline-flex items-center gap-3 rounded-xl bg-ink text-white px-5 py-3 hover:bg-black transition-colors duration-300">
+            <i class="ph-fill ph-google-play-logo text-2xl"></i>
+            <span class="text-left leading-none"><span class="block text-[10px] text-white/60">Доступно в</span><span class="font-semibold">Google Play</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="reveal flex justify-center md:justify-end">
+        <div class="flex items-center gap-5 rounded-shell bg-white/10 backdrop-blur p-6">
+          <div class="grid place-items-center w-28 h-28 rounded-2xl bg-white text-ink">
+            <i class="ph ph-qr-code text-7xl"></i>
+          </div>
+          <div class="max-w-[10rem]">
+            <div class="font-display font-semibold">Наведите камеру</div>
+            <p class="text-sm text-white/70 mt-1">Откроется страница загрузки приложения</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-4 md:px-8 py-16 bg-ink text-white/60">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
+    <div>
+      <div class="flex items-center gap-2 font-display text-xl font-bold text-white">
+        <span class="grid place-items-center w-8 h-8 rounded-lg bg-accent text-white"><i class="ph-fill ph-video-camera text-base"></i></span>
+        Визит
+      </div>
+      <p class="mt-4 text-sm max-w-[34ch] leading-relaxed">Телемедицинский сервис. Консультации врачей онлайн — быстро, безопасно и круглосуточно.</p>
+      <div class="mt-5 flex items-center gap-3">
+        <a href="#" aria-label="Telegram" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-telegram-logo"></i></a>
+        <a href="#" aria-label="VK" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-chat-circle"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Сервис</div>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="#how" class="hover:text-accent transition-colors">Как это работает</a></li>
+        <li><a href="#features" class="hover:text-accent transition-colors">Возможности</a></li>
+        <li><a href="#pricing" class="hover:text-accent transition-colors">Тарифы</a></li>
+        <li><a href="#faq" class="hover:text-accent transition-colors">Вопросы</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Поддержка</div>
+      <ul class="space-y-2.5 text-sm">
+        <li class="flex items-center gap-2"><i class="ph ph-headset"></i> 8 800 555-90-90</li>
+        <li class="flex items-center gap-2"><i class="ph ph-envelope-simple"></i> help@vizit.ru</li>
+        <li class="flex items-center gap-2"><i class="ph ph-clock"></i> Поддержка 24/7</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-sm">© 2026 Визит. Не является заменой очной медицинской помощи при неотложных состояниях.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

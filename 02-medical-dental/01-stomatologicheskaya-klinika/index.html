@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Эмаль — стоматологическая клиника в Москве</title>
+<meta name="description" content="Стоматология «Эмаль»: имплантация, виниры, лечение без боли. Точная диагностика на КТ, фиксированная смета и гарантия 5 лет на работы." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#FFFFFF',
+          surface: '#F1F5F9',
+          ink: '#0F172A',
+          muted: '#64748B',
+          accent: '#0D9488',
+          accentdark: '#0F766E',
+          line: '#E2E8F0',
+        },
+        fontFamily: {
+          display: ['Space Grotesk', 'sans-serif'],
+          sans: ['Plus Jakarta Sans', 'sans-serif'],
+        },
+        borderRadius: {
+          shell: '1.75rem',
+          core: '1.375rem',
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="font-sans bg-bg text-ink antialiased">
+
+<!-- NAVIGATION -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-ink">
+      <span class="grid place-items-center w-9 h-9 rounded-xl bg-accent text-white"><i class="ph-fill ph-tooth text-lg"></i></span>
+      Эмаль
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+      <a href="#services" class="hover:text-accent transition-colors duration-300">Услуги и цены</a>
+      <a href="#doctors" class="hover:text-accent transition-colors duration-300">Врачи</a>
+      <a href="#results" class="hover:text-accent transition-colors duration-300">Результаты</a>
+      <a href="#faq" class="hover:text-accent transition-colors duration-300">Вопросы</a>
+    </div>
+    <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-full bg-accent text-white text-sm font-semibold px-5 py-2.5 hover:bg-accentdark transition-colors duration-300">
+      <i class="ph-bold ph-phone-call"></i>
+      Записаться
+    </a>
+    <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
+      <span class="menu-line top"></span>
+      <span class="menu-line bottom"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/97 backdrop-blur-xl flex flex-col items-center justify-center gap-7 opacity-0 pointer-events-none">
+  <a href="#services" class="menu-item font-display text-3xl font-medium text-ink">Услуги и цены</a>
+  <a href="#doctors" class="menu-item font-display text-3xl font-medium text-ink">Врачи</a>
+  <a href="#results" class="menu-item font-display text-3xl font-medium text-ink">Результаты</a>
+  <a href="#faq" class="menu-item font-display text-3xl font-medium text-ink">Вопросы</a>
+  <a href="#contact" class="menu-item mt-4 inline-flex items-center gap-2 rounded-full bg-accent text-white font-semibold px-7 py-3.5">Записаться</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative pt-28 md:pt-36 pb-16 px-4 md:px-8 overflow-hidden">
+    <div class="absolute inset-x-0 top-0 h-[36rem] -z-10 bg-gradient-to-b from-surface to-bg"></div>
+    <div class="max-w-4xl mx-auto text-center reveal">
+      <span class="inline-flex items-center gap-2 rounded-full bg-accent/10 text-accentdark text-sm font-semibold px-4 py-1.5">
+        <i class="ph-fill ph-star"></i> 4.9 на основе 840 отзывов
+      </span>
+      <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-ink">
+        Лечим зубы без боли и навязанных услуг
+      </h1>
+      <p class="mt-6 text-base md:text-lg text-muted leading-relaxed max-w-2xl mx-auto">
+        Диагностика на 3D-томографе, понятный план лечения с фиксированной сметой и гарантия 5 лет на все работы.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-accent text-white font-semibold px-7 py-3.5 hover:bg-accentdark transition-colors duration-300">
+          Записаться на приём
+          <i class="ph-bold ph-arrow-right"></i>
+        </a>
+        <a href="#services" class="inline-flex items-center gap-2 rounded-full ring-1 ring-line text-ink font-semibold px-7 py-3.5 hover:ring-accent hover:text-accent transition-colors duration-300">
+          Услуги и цены
+        </a>
+      </div>
+    </div>
+    <div class="reveal max-w-6xl mx-auto mt-14 relative">
+      <div class="rounded-shell overflow-hidden ring-1 ring-line shadow-[0_40px_80px_-40px_rgba(15,23,42,0.25)]">
+        <img src="https://picsum.photos/seed/emal-hero-clinic/1600/800" alt="Стоматологическая клиника Эмаль" class="w-full h-[300px] sm:h-[400px] md:h-[480px] object-cover" />
+      </div>
+      <div class="hidden sm:flex absolute -bottom-7 left-6 md:left-10 items-center gap-3 bg-white rounded-2xl ring-1 ring-line shadow-xl px-5 py-4">
+        <div class="grid place-items-center w-11 h-11 rounded-full bg-accent/10 text-accent"><i class="ph-fill ph-shield-check text-2xl"></i></div>
+        <div class="text-left">
+          <div class="font-display text-lg font-semibold text-ink leading-none">Гарантия 5 лет</div>
+          <div class="text-sm text-muted mt-1">на все виды работ</div>
+        </div>
+      </div>
+      <div class="hidden md:flex absolute -bottom-7 right-10 items-center gap-3 bg-white rounded-2xl ring-1 ring-line shadow-xl px-5 py-4">
+        <div class="grid place-items-center w-11 h-11 rounded-full bg-accent/10 text-accent"><i class="ph-fill ph-syringe text-2xl"></i></div>
+        <div class="text-left">
+          <div class="font-display text-lg font-semibold text-ink leading-none">Лечение без боли</div>
+          <div class="text-sm text-muted mt-1">современная анестезия</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="px-4 md:px-8 pt-20 md:pt-28 pb-4">
+    <div class="reveal-group max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6">
+      <div class="reveal text-center md:text-left">
+        <div class="font-display text-4xl md:text-5xl font-bold text-ink">15<span class="text-accent">+</span></div>
+        <div class="mt-2 text-sm text-muted">лет клинике</div>
+      </div>
+      <div class="reveal text-center md:text-left">
+        <div class="font-display text-4xl md:text-5xl font-bold text-ink">12<span class="text-accent">k</span></div>
+        <div class="mt-2 text-sm text-muted">пациентов прошли лечение</div>
+      </div>
+      <div class="reveal text-center md:text-left">
+        <div class="font-display text-4xl md:text-5xl font-bold text-ink">8</div>
+        <div class="mt-2 text-sm text-muted">врачей с профильным опытом</div>
+      </div>
+      <div class="reveal text-center md:text-left">
+        <div class="font-display text-4xl md:text-5xl font-bold text-ink">4.9</div>
+        <div class="mt-2 text-sm text-muted">средняя оценка на картах</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / PRICES -->
+  <section id="services" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Услуги и цены</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">
+          Прозрачные цены без сюрпризов в кресле
+        </h2>
+        <p class="mt-4 text-muted leading-relaxed">
+          Стоимость рассчитываем после диагностики и фиксируем в договоре. Ниже — ориентир по основным направлениям.
+        </p>
+      </div>
+      <div class="reveal-group mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5 transition-colors"><i class="ph ph-tooth text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Имплантация</h3>
+          <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Восстановление зуба под ключ с коронкой. Импланты с пожизненной гарантией производителя.</p>
+          <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 28 000 ₽</div>
+        </div>
+        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-sparkle text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Виниры</h3>
+          <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Керамические виниры для ровной улыбки. Подбираем форму и оттенок под ваше лицо.</p>
+          <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 19 000 ₽</div>
+        </div>
+        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-drop text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Чистка Air Flow</h3>
+          <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Профессиональная гигиена, снятие налёта и камня. Рекомендуем раз в полгода.</p>
+          <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 4 500 ₽</div>
+        </div>
+        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-first-aid-kit text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Лечение кариеса</h3>
+          <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Лечение под микроскопом с сохранением здоровых тканей. Пломба в цвет эмали.</p>
+          <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 3 900 ₽</div>
+        </div>
+        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-smiley text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Брекеты и элайнеры</h3>
+          <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Исправление прикуса в любом возрасте. Прозрачные элайнеры почти незаметны.</p>
+          <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 95 000 ₽</div>
+        </div>
+        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-sun text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Отбеливание</h3>
+          <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Безопасное осветление на 4-8 тонов за один визит. Без вреда для эмали.</p>
+          <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 16 000 ₽</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTORS -->
+  <section id="doctors" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Наши врачи</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">
+          Лечат те, кому вы доверите свою улыбку
+        </h2>
+      </div>
+      <div class="reveal-group mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/emal-doctor-igor/600/520" alt="Игорь Лебедев" class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="font-display text-lg font-semibold text-ink">Игорь Лебедев</h3>
+            <p class="text-sm text-accent font-medium mt-0.5">Имплантолог, хирург</p>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Стаж 16 лет. Более 3 000 установленных имплантов. Член Российской ассоциации имплантологов.</p>
+          </div>
+        </article>
+        <article class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/emal-doctor-marina/600/520" alt="Марина Соколова" class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="font-display text-lg font-semibold text-ink">Марина Соколова</h3>
+            <p class="text-sm text-accent font-medium mt-0.5">Терапевт-стоматолог</p>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Стаж 11 лет. Лечение под микроскопом, эстетическая реставрация. Работает с тревожными пациентами.</p>
+          </div>
+        </article>
+        <article class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/emal-doctor-artem/600/520" alt="Артём Гончаров" class="w-full h-64 object-cover" />
+          <div class="p-6">
+            <h3 class="font-display text-lg font-semibold text-ink">Артём Гончаров</h3>
+            <p class="text-sm text-accent font-medium mt-0.5">Ортодонт</p>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Стаж 9 лет. Исправление прикуса брекетами и элайнерами у подростков и взрослых.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS / BEFORE-AFTER -->
+  <section id="results" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-5xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Результаты</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">
+          До и после: потяните ползунок
+        </h2>
+        <p class="mt-4 text-muted leading-relaxed">
+          Реальные работы наших врачей. Перетащите разделитель, чтобы сравнить состояние до лечения и результат.
+        </p>
+      </div>
+      <div class="reveal mt-12">
+        <div id="ba-slider" class="ba-slider relative w-full aspect-[16/10] rounded-shell overflow-hidden ring-1 ring-line select-none cursor-ew-resize">
+          <img src="https://picsum.photos/seed/emal-after-smile/1200/750" alt="После лечения" class="absolute inset-0 w-full h-full object-cover" draggable="false" />
+          <div class="ba-before absolute inset-0 w-full h-full overflow-hidden" style="width:50%">
+            <img src="https://picsum.photos/seed/emal-before-smile/1200/750" alt="До лечения" class="absolute inset-0 h-full object-cover" style="width:var(--ba-w,100vw);max-width:none" draggable="false" />
+            <span class="absolute top-4 left-4 rounded-full bg-ink/70 text-white text-xs font-semibold px-3 py-1">До</span>
+          </div>
+          <span class="absolute top-4 right-4 rounded-full bg-accent text-white text-xs font-semibold px-3 py-1">После</span>
+          <div class="ba-handle absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_0_1px_rgba(15,23,42,0.1)]" style="left:50%">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid place-items-center w-11 h-11 rounded-full bg-white shadow-lg text-ink">
+              <i class="ph-bold ph-arrows-horizontal"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREATMENT STAGES -->
+  <section class="px-4 md:px-8 py-24 md:py-32 bg-ink text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Как проходит лечение</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+          Четыре шага от первого визита до гарантии
+        </h2>
+      </div>
+      <div class="reveal-group mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        <div class="reveal relative">
+          <div class="font-display text-sm font-bold text-accent">ШАГ 01</div>
+          <div class="grid place-items-center w-12 h-12 rounded-full bg-accent/15 text-accent my-4"><i class="ph ph-scan text-2xl"></i></div>
+          <h3 class="font-display text-lg font-semibold">Консультация и КТ-снимок</h3>
+          <p class="mt-2 text-sm text-white/60 leading-relaxed">Осматриваем, делаем 3D-снимок и находим даже скрытые проблемы.</p>
+        </div>
+        <div class="reveal relative">
+          <div class="font-display text-sm font-bold text-accent">ШАГ 02</div>
+          <div class="grid place-items-center w-12 h-12 rounded-full bg-accent/15 text-accent my-4"><i class="ph ph-clipboard-text text-2xl"></i></div>
+          <h3 class="font-display text-lg font-semibold">План и фиксированная смета</h3>
+          <p class="mt-2 text-sm text-white/60 leading-relaxed">Показываем варианты лечения и цену. Стоимость не меняется по ходу.</p>
+        </div>
+        <div class="reveal relative">
+          <div class="font-display text-sm font-bold text-accent">ШАГ 03</div>
+          <div class="grid place-items-center w-12 h-12 rounded-full bg-accent/15 text-accent my-4"><i class="ph ph-syringe text-2xl"></i></div>
+          <h3 class="font-display text-lg font-semibold">Лечение без боли</h3>
+          <p class="mt-2 text-sm text-white/60 leading-relaxed">Современная анестезия и седация. Можно лечить во сне по желанию.</p>
+        </div>
+        <div class="reveal relative">
+          <div class="font-display text-sm font-bold text-accent">ШАГ 04</div>
+          <div class="grid place-items-center w-12 h-12 rounded-full bg-accent/15 text-accent my-4"><i class="ph ph-seal-check text-2xl"></i></div>
+          <h3 class="font-display text-lg font-semibold">Контроль и гарантия</h3>
+          <p class="mt-2 text-sm text-white/60 leading-relaxed">Бесплатный осмотр после лечения и гарантия 5 лет на работы.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Отзывы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">
+          Что говорят пациенты
+        </h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5">
+        <figure class="reveal rounded-shell bg-surface p-7">
+          <div class="flex gap-1 text-accent mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <blockquote class="text-ink leading-relaxed">«Боялась имплантации много лет. В итоге всё прошло за час и без боли. Через неделю забыла, что был имплант».</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3">
+            <img src="https://picsum.photos/seed/emal-rev-1/80/80" class="w-10 h-10 rounded-full object-cover" alt="" />
+            <div><div class="font-semibold text-sm text-ink">Ольга М.</div><div class="text-xs text-muted">имплантация</div></div>
+          </figcaption>
+        </figure>
+        <figure class="reveal rounded-shell bg-surface p-7">
+          <div class="flex gap-1 text-accent mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <blockquote class="text-ink leading-relaxed">«Поставил виниры, цвет подобрали идеально. Смета не выросла ни на рубль от того, что озвучили вначале».</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3">
+            <img src="https://picsum.photos/seed/emal-rev-2/80/80" class="w-10 h-10 rounded-full object-cover" alt="" />
+            <div><div class="font-semibold text-sm text-ink">Денис К.</div><div class="text-xs text-muted">виниры</div></div>
+          </figcaption>
+        </figure>
+        <figure class="reveal rounded-shell bg-surface p-7">
+          <div class="flex gap-1 text-accent mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <blockquote class="text-ink leading-relaxed">«Вожу сюда всю семью. Детский врач находит подход к сыну, он перестал бояться стоматолога совсем».</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3">
+            <img src="https://picsum.photos/seed/emal-rev-3/80/80" class="w-10 h-10 rounded-full object-cover" alt="" />
+            <div><div class="font-semibold text-sm text-ink">Анна В.</div><div class="text-xs text-muted">семейное лечение</div></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal mb-10">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Вопросы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="reveal divide-y divide-line">
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Лечение действительно проходит без боли?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-ink"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да. Мы используем современные анестетики и аппликационную анестезию перед уколом. Для тревожных пациентов доступна седация и лечение во сне.</p></div></div>
+        </div>
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Можно ли оплатить лечение в рассрочку?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-ink"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да, оформляем рассрочку 0% на срок до 12 месяцев на лечение от 30 000 ₽. Также можно вернуть 13% налогового вычета — поможем с документами.</p></div></div>
+        </div>
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Что входит в гарантию 5 лет?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-ink"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Гарантия распространяется на пломбы, коронки, виниры и импланты. Если в течение срока возникнут проблемы по нашей вине — переделаем бесплатно.</p></div></div>
+        </div>
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Сколько визитов нужно для импланта?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-ink"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Установка самого импланта — один визит на 40-60 минут. Затем 2-4 месяца на приживление, после чего ставим постоянную коронку за один-два визита.</p></div></div>
+        </div>
+        <div class="faq-item py-5">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left">
+            <span class="font-display text-lg font-semibold text-ink">Принимаете ли вы детей?</span>
+            <span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-bg text-ink"><i class="ph-bold ph-plus"></i></span>
+          </button>
+          <div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да, у нас есть детский стоматолог. Первый приём проходит в игровой форме, чтобы ребёнок привык к кабинету и не боялся последующих визитов.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-5xl mx-auto rounded-shell bg-accent text-white overflow-hidden">
+      <div class="grid md:grid-cols-2">
+        <div class="p-8 md:p-12 reveal">
+          <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Запишитесь на бесплатную консультацию</h2>
+          <p class="mt-4 text-white/80 leading-relaxed">Осмотр, 3D-снимок и план лечения со сметой — бесплатно. Оставьте телефон, администратор подберёт удобное время.</p>
+          <ul class="mt-6 space-y-3 text-sm text-white/90">
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check-circle"></i> Без очередей, приём строго по записи</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check-circle"></i> Работаем ежедневно с 9:00 до 21:00</li>
+          </ul>
+        </div>
+        <div class="p-8 md:p-12 bg-white/10 reveal">
+          <form id="lead-form" novalidate class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm text-white/80 mb-1.5">Ваше имя</label>
+              <input id="name" name="name" type="text" placeholder="Александр" class="w-full rounded-xl bg-white text-ink placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white" />
+              <p class="error-text hidden mt-1.5 text-sm text-amber-200"></p>
+            </div>
+            <div>
+              <label for="phone" class="block text-sm text-white/80 mb-1.5">Телефон</label>
+              <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full rounded-xl bg-white text-ink placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white" />
+              <p class="error-text hidden mt-1.5 text-sm text-amber-200"></p>
+            </div>
+            <button type="submit" class="w-full rounded-xl bg-ink text-white font-semibold py-3.5 hover:bg-accentdark transition-colors duration-300">Записаться на приём</button>
+            <p class="text-xs text-white/60">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          </form>
+          <p id="form-success" class="hidden text-center font-medium py-10">Заявка принята. Администратор перезвонит в течение 15 минут.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-4 md:px-8 py-16 bg-ink text-white/70">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
+    <div>
+      <div class="flex items-center gap-2 font-display text-xl font-bold text-white">
+        <span class="grid place-items-center w-9 h-9 rounded-xl bg-accent text-white"><i class="ph-fill ph-tooth text-lg"></i></span>
+        Эмаль
+      </div>
+      <p class="mt-4 text-sm max-w-[32ch] leading-relaxed">Стоматологическая клиника в Москве. Лечим бережно, работаем по договору с фиксированной сметой.</p>
+      <div class="mt-5 flex items-center gap-3">
+        <a href="#" aria-label="Telegram" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-telegram-logo"></i></a>
+        <a href="#" aria-label="WhatsApp" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-whatsapp-logo"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Разделы</div>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="#services" class="hover:text-accent transition-colors">Услуги и цены</a></li>
+        <li><a href="#doctors" class="hover:text-accent transition-colors">Врачи</a></li>
+        <li><a href="#results" class="hover:text-accent transition-colors">Результаты</a></li>
+        <li><a href="#faq" class="hover:text-accent transition-colors">Вопросы</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Контакты</div>
+      <ul class="space-y-2.5 text-sm">
+        <li class="flex items-center gap-2"><i class="ph ph-phone"></i> +7 (495) 240-18-50</li>
+        <li class="flex items-center gap-2"><i class="ph ph-map-pin"></i> Москва, ул. Малая Бронная, 24</li>
+        <li class="flex items-center gap-2"><i class="ph ph-clock"></i> Ежедневно, 9:00–21:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-sm">© 2026 Стоматология «Эмаль». Лицензия № ЛО-77-01-000000.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

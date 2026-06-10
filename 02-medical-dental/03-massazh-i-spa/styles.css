@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-display {
+  font-family: 'Fraunces', serif;
+}
+
+/* ---------- Scroll reveal (gentle, transform + opacity only) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.25rem);
+}
+
+/* ---------- Sticky nav scroll state ---------- */
+#nav.is-scrolled {
+  background: rgba(246, 244, 239, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #E7E3DA;
+}
+
+/* ---------- Price-menu dotted leader ---------- */
+.leader {
+  align-self: flex-end;
+  border-bottom: 1px dotted #C9C3B5;
+  transform: translateY(-0.35rem);
+}
+
+/* ---------- Hamburger morph ---------- */
+.menu-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 1.5px;
+  background: #26241F;
+  border-radius: 1px;
+  transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.3s ease;
+}
+.menu-line.top { transform: translate(-50%, calc(-50% - 4px)); }
+.menu-line.bottom { transform: translate(-50%, calc(-50% + 4px)); }
+#menu-toggle.is-open .menu-line.top { transform: translate(-50%, -50%) rotate(45deg); }
+#menu-toggle.is-open .menu-line.bottom { transform: translate(-50%, -50%) rotate(-45deg); }
+
+/* ---------- Mobile menu ---------- */
+#mobile-menu { transition: opacity 0.4s cubic-bezier(0.32, 0.72, 0, 1); }
+#mobile-menu.is-open { opacity: 1; pointer-events: auto; }
+.menu-item {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.5s cubic-bezier(0.32, 0.72, 0, 1), transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+#mobile-menu.is-open .menu-item { opacity: 1; transform: translateY(0); }
+#mobile-menu.is-open .menu-item:nth-child(1) { transition-delay: 0.06s; }
+#mobile-menu.is-open .menu-item:nth-child(2) { transition-delay: 0.12s; }
+#mobile-menu.is-open .menu-item:nth-child(3) { transition-delay: 0.18s; }
+#mobile-menu.is-open .menu-item:nth-child(4) { transition-delay: 0.24s; }
+#mobile-menu.is-open .menu-item:nth-child(5) { transition-delay: 0.30s; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
