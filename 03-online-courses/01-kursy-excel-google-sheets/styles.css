@@ -89,3 +89,10 @@ body { font-family: 'Inter', sans-serif; }
   .marquee__track { animation: none !important; }
   [data-tilt], [data-magnetic] { transition: none !important; }
 }
+
+/* ---------- Perf: transient GPU promotion (avoid permanent layers) ---------- */
+[data-tilt], [data-magnetic], .word-reveal .word { will-change: auto; }
+[data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
+
+
+[data-tilt]:hover { z-index: 5; }

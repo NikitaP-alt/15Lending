@@ -80,7 +80,7 @@ body {
 
 /* ---------- Flourishes ---------- */
 #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: #0D9488; z-index: 60; }
-[data-tilt] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); transform-style: preserve-3d; will-change: transform; }
+[data-tilt] { position: relative; }
 [data-magnetic] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
 @keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(4%,-3%) scale(1.08); } }
 .blob-drift { animation: drift 16s ease-in-out infinite; }
@@ -88,3 +88,10 @@ body {
   .blob-drift { animation: none !important; }
   [data-tilt], [data-magnetic] { transition: none !important; }
 }
+
+/* ---------- Perf: transient GPU promotion (avoid permanent layers) ---------- */
+[data-tilt], [data-magnetic], .word-reveal .word { will-change: auto; }
+[data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
+
+
+[data-tilt]:hover { z-index: 5; }

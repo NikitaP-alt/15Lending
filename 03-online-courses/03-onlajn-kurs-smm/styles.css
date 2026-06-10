@@ -30,7 +30,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; }
 .blob-drift-2 { animation: drift2 20s ease-in-out infinite; }
 
 /* ---------- Tilt + magnetic ---------- */
-[data-tilt] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); transform-style: preserve-3d; will-change: transform; }
+[data-tilt] { position: relative; }
 [data-magnetic] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
 
 /* ---------- Marquee ---------- */
@@ -79,3 +79,10 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; }
   .marquee__track, .blob-drift, .blob-drift-2, .gradient-text { animation: none !important; }
   [data-tilt], [data-magnetic] { transition: none !important; }
 }
+
+/* ---------- Perf: transient GPU promotion (avoid permanent layers) ---------- */
+[data-tilt], [data-magnetic], .word-reveal .word { will-change: auto; }
+[data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
+
+
+[data-tilt]:hover { z-index: 5; }

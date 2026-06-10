@@ -90,7 +90,7 @@ gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
     document.querySelectorAll('[data-magnetic]').forEach((el) => {
       const s = 0.25;
       el.addEventListener('pointermove', (e) => { const r = el.getBoundingClientRect(); el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * s}px, ${(e.clientY - r.top - r.height / 2) * s}px)`; });
-      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+      el.addEventListener('pointerleave', () => { el.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)'; });
     });
   }
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -104,3 +104,19 @@ gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
     });
   }
 })();
+
+/* ---------- Perf: pause offscreen infinite animations ---------- */
+(function () {
+  const els = document.querySelectorAll('.blob-drift, .blob-drift-2, .marquee__track, .gradient-text, .bubble-float, .bubble-float-2, .bubble-float-3');
+  if (!('IntersectionObserver' in window) || !els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { e.target.style.animationPlayState = e.isIntersecting ? 'running' : 'paused'; });
+  }, { rootMargin: '120px' });
+  els.forEach((el) => io.observe(el));
+})();
+
+
+/* ---------- Tilt smoothing (transition only while interacting, avoids reveal conflict) ---------- */
+document.querySelectorAll('[data-tilt]').forEach((el) => {
+  el.addEventListener('pointerenter', () => { el.style.transition = 'transform 0.4s cubic-bezier(0.22,1,0.36,1)'; });
+});

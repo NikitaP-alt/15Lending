@@ -73,3 +73,10 @@ body {
 @media (prefers-reduced-motion: reduce) {
   [data-magnetic] { transition: none !important; }
 }
+
+/* ---------- Perf: transient GPU promotion (avoid permanent layers) ---------- */
+[data-tilt], [data-magnetic], .word-reveal .word { will-change: auto; }
+[data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
+
+
+[data-tilt]:hover { z-index: 5; }

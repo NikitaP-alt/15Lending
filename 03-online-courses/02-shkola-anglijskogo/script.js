@@ -53,28 +53,28 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 // ---------- Magnetic buttons ----------
 if (!reduceMotion) {
   document.querySelectorAll('[data-magnetic]').forEach((el) => {
-    const strength = 0.3;
+    const strength = 0.15;
     el.addEventListener('pointermove', (e) => {
       const r = el.getBoundingClientRect();
       const x = e.clientX - r.left - r.width / 2;
       const y = e.clientY - r.top - r.height / 2;
       el.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
     });
-    el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    el.addEventListener('pointerleave', () => { el.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)'; });
   });
 }
 
 // ---------- Tilt cards ----------
 if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
   document.querySelectorAll('[data-tilt]').forEach((el) => {
-    const max = 5;
+    const max = 4;
     el.addEventListener('pointermove', (e) => {
       const r = el.getBoundingClientRect();
       const px = (e.clientX - r.left) / r.width - 0.5;
       const py = (e.clientY - r.top) / r.height - 0.5;
       el.style.transform = `perspective(900px) rotateY(${px * max}deg) rotateX(${-py * max}deg)`;
     });
-    el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    el.addEventListener('pointerleave', () => { el.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)'; });
   });
 }
 
@@ -170,3 +170,19 @@ gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
 });
 
 document.querySelectorAll('[data-count]').forEach(initCount);
+
+/* ---------- Perf: pause offscreen infinite animations ---------- */
+(function () {
+  const els = document.querySelectorAll('.blob-drift, .blob-drift-2, .marquee__track, .gradient-text, .bubble-float, .bubble-float-2, .bubble-float-3');
+  if (!('IntersectionObserver' in window) || !els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { e.target.style.animationPlayState = e.isIntersecting ? 'running' : 'paused'; });
+  }, { rootMargin: '120px' });
+  els.forEach((el) => io.observe(el));
+})();
+
+
+/* ---------- Tilt smoothing (transition only while interacting, avoids reveal conflict) ---------- */
+document.querySelectorAll('[data-tilt]').forEach((el) => {
+  el.addEventListener('pointerenter', () => { el.style.transition = 'transform 0.4s cubic-bezier(0.22,1,0.36,1)'; });
+});

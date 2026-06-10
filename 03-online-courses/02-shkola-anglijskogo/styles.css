@@ -20,7 +20,7 @@ body { font-family: 'Nunito Sans', sans-serif; }
 .bubble-float-3 { animation: floaty 4.5s ease-in-out infinite 1.2s; }
 
 /* ---------- Tilt + magnetic ---------- */
-[data-tilt] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); transform-style: preserve-3d; will-change: transform; }
+[data-tilt] { position: relative; }
 [data-magnetic] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
 
 /* ---------- Marquee ---------- */
@@ -69,3 +69,10 @@ body { font-family: 'Nunito Sans', sans-serif; }
   .marquee__track, .blob-drift, .bubble-float, .bubble-float-2, .bubble-float-3 { animation: none !important; }
   [data-tilt], [data-magnetic] { transition: none !important; }
 }
+
+/* ---------- Perf: transient GPU promotion (avoid permanent layers) ---------- */
+[data-tilt], [data-magnetic], .word-reveal .word { will-change: auto; }
+[data-tilt]:hover, [data-magnetic]:hover { will-change: transform; }
+
+
+[data-tilt]:hover { z-index: 5; }
