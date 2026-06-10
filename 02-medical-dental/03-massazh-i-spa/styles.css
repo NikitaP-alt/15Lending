@@ -66,3 +66,10 @@ body {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1 !important; transform: none !important; }
 }
+
+/* ---------- Flourishes ---------- */
+#scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: #6B7256; z-index: 60; }
+[data-magnetic] { transition: transform 0.5s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
+@media (prefers-reduced-motion: reduce) {
+  [data-magnetic] { transition: none !important; }
+}

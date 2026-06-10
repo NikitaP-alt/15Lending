@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Охват — онлайн-курс по SMM с нуля до дохода</title>
+<meta name="description" content="Курс по SMM «Охват»: научитесь вести соцсети, снимать Reels, настраивать таргет и зарабатывать на блоге или клиентах. С куратором и реальными кейсами." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0E0A1A',
+          surface: '#17122A',
+          card: '#1C1633',
+          muted: '#A29DB5',
+          accent: '#E11D8F',
+          violet: '#7C3AED',
+          lime: '#C4F000',
+          line: '#2A2440',
+        },
+        fontFamily: {
+          display: ['Unbounded', 'sans-serif'],
+          sans: ['Plus Jakarta Sans', 'sans-serif'],
+        },
+        borderRadius: {
+          shell: '1.5rem',
+          core: '1.25rem',
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}.word{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="font-sans bg-bg text-white antialiased">
+
+<div id="scroll-progress"></div>
+
+<!-- NAVIGATION -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-white">
+      <span class="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-violet"><i class="ph-fill ph-rocket-launch text-lg"></i></span>
+      Охват
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
+      <a href="#program" class="hover:text-white transition-colors duration-300">Программа</a>
+      <a href="#results" class="hover:text-white transition-colors duration-300">Кейсы</a>
+      <a href="#speakers" class="hover:text-white transition-colors duration-300">Спикеры</a>
+      <a href="#pricing" class="hover:text-white transition-colors duration-300">Тарифы</a>
+    </div>
+    <a href="#enroll" data-magnetic class="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-violet text-white text-sm font-semibold px-5 py-2.5 hover:opacity-90 transition-opacity duration-300 glow">
+      Записаться
+    </a>
+    <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
+      <span class="menu-line top"></span>
+      <span class="menu-line bottom"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-bg/97 backdrop-blur-xl flex flex-col items-center justify-center gap-7 opacity-0 pointer-events-none">
+  <a href="#program" class="menu-item font-display text-3xl font-bold text-white">Программа</a>
+  <a href="#results" class="menu-item font-display text-3xl font-bold text-white">Кейсы</a>
+  <a href="#speakers" class="menu-item font-display text-3xl font-bold text-white">Спикеры</a>
+  <a href="#pricing" class="menu-item font-display text-3xl font-bold text-white">Тарифы</a>
+  <a href="#enroll" class="menu-item mt-4 inline-flex rounded-full bg-gradient-to-r from-accent to-violet text-white font-semibold px-7 py-3.5">Записаться</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative pt-32 md:pt-44 pb-20 px-4 md:px-8 overflow-hidden text-center">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="blob-drift absolute -top-32 left-1/4 w-[34rem] h-[34rem] rounded-full bg-accent/30 blur-[120px]"></div>
+      <div class="blob-drift-2 absolute top-10 right-1/4 w-[30rem] h-[30rem] rounded-full bg-violet/30 blur-[120px]"></div>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <span class="inline-flex items-center gap-2 rounded-full ring-1 ring-line bg-card text-sm font-medium px-4 py-1.5">
+        <span class="w-2 h-2 rounded-full bg-lime"></span> Набор на новый поток открыт
+      </span>
+      <h1 class="word-reveal mt-6 font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
+        Преврати блог в <span class="gradient-text">профессию и доход</span>
+      </h1>
+      <p class="mt-6 text-base md:text-lg text-muted leading-relaxed max-w-2xl mx-auto">
+        Научитесь вести соцсети, снимать вирусные Reels и настраивать таргет. За 10 недель — от первого поста до первых клиентов и заработка на SMM.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+        <a href="#enroll" data-magnetic class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-violet text-white font-semibold px-8 py-4 hover:opacity-90 transition-opacity duration-300 glow">
+          Записаться на курс
+          <i class="ph-bold ph-arrow-right"></i>
+        </a>
+        <a href="#program" class="inline-flex items-center gap-2 rounded-full ring-1 ring-line text-white font-semibold px-8 py-4 hover:bg-card transition-colors duration-300">
+          Смотреть программу
+        </a>
+      </div>
+      <div class="reveal-group mt-14 grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+        <div class="reveal"><div class="font-display text-3xl md:text-4xl font-bold gradient-text"><span data-count="10">0</span></div><div class="mt-1 text-xs md:text-sm text-muted">недель обучения</div></div>
+        <div class="reveal"><div class="font-display text-3xl md:text-4xl font-bold gradient-text"><span data-count="40" data-suffix="+">0</span></div><div class="mt-1 text-xs md:text-sm text-muted">видеоуроков</div></div>
+        <div class="reveal"><div class="font-display text-3xl md:text-4xl font-bold gradient-text"><span data-count="3200" data-suffix="+">0</span></div><div class="mt-1 text-xs md:text-sm text-muted">выпускников</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="py-5 border-y border-line overflow-hidden">
+    <div class="marquee">
+      <div class="marquee__track font-display font-semibold text-lg text-white/80">
+        <span class="flex items-center gap-3"><i class="ph-fill ph-film-strip text-lime"></i> Reels и Shorts</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-target text-lime"></i> Таргетированная реклама</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-calendar-dots text-lime"></i> Контент-план</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-pen-nib text-lime"></i> Сторителлинг</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-chart-line-up text-lime"></i> Аналитика</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-currency-circle-dollar text-lime"></i> Монетизация</span>
+      </div>
+      <div class="marquee__track font-display font-semibold text-lg text-white/80" aria-hidden="true">
+        <span class="flex items-center gap-3"><i class="ph-fill ph-film-strip text-lime"></i> Reels и Shorts</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-target text-lime"></i> Таргетированная реклама</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-calendar-dots text-lime"></i> Контент-план</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-pen-nib text-lime"></i> Сторителлинг</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-chart-line-up text-lime"></i> Аналитика</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-currency-circle-dollar text-lime"></i> Монетизация</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR WHOM -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-lime">Кому подойдёт</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Курс заходит, если вы —</h2>
+      </div>
+      <div class="reveal-group mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-violet mb-5"><i class="ph-fill ph-user-plus text-2xl"></i></div>
+          <h3 class="font-display text-lg font-semibold">Новичок</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Хотите освоить востребованную онлайн-профессию с нуля.</p>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-violet mb-5"><i class="ph-fill ph-storefront text-2xl"></i></div>
+          <h3 class="font-display text-lg font-semibold">Предприниматель</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Хотите сами продвигать свой бизнес и не переплачивать агентствам.</p>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-violet mb-5"><i class="ph-fill ph-camera text-2xl"></i></div>
+          <h3 class="font-display text-lg font-semibold">Блогер</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Хотите вырасти в охватах и начать зарабатывать на блоге.</p>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7">
+          <div class="grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-violet mb-5"><i class="ph-fill ph-briefcase text-2xl"></i></div>
+          <h3 class="font-display text-lg font-semibold">В поиске работы</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Хотите сменить профессию на удалённую и денежную.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section id="program" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-lime">Программа</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">6 модулей с практикой на реальных проектах</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7"><span class="font-display text-2xl font-bold gradient-text">01</span><h3 class="mt-3 font-display text-lg font-semibold">Стратегия и упаковка</h3><p class="mt-2 text-sm text-muted leading-relaxed">Позиционирование, оформление профиля и контент-стратегия под цель.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7"><span class="font-display text-2xl font-bold gradient-text">02</span><h3 class="mt-3 font-display text-lg font-semibold">Контент, который смотрят</h3><p class="mt-2 text-sm text-muted leading-relaxed">Сценарии, тренды, сторителлинг и контент-план на месяц.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7"><span class="font-display text-2xl font-bold gradient-text">03</span><h3 class="mt-3 font-display text-lg font-semibold">Reels и видеомонтаж</h3><p class="mt-2 text-sm text-muted leading-relaxed">Съёмка с телефона и монтаж вирусных роликов в простых приложениях.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7"><span class="font-display text-2xl font-bold gradient-text">04</span><h3 class="mt-3 font-display text-lg font-semibold">Таргет и продвижение</h3><p class="mt-2 text-sm text-muted leading-relaxed">Настройка рекламы, тесты креативов и работа с бюджетом.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7"><span class="font-display text-2xl font-bold gradient-text">05</span><h3 class="mt-3 font-display text-lg font-semibold">Аналитика и рост</h3><p class="mt-2 text-sm text-muted leading-relaxed">Метрики, отслеживание результата и масштабирование охватов.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-7"><span class="font-display text-2xl font-bold gradient-text">06</span><h3 class="mt-3 font-display text-lg font-semibold">Деньги в SMM</h3><p class="mt-2 text-sm text-muted leading-relaxed">Поиск клиентов, цены на услуги, монетизация блога и фриланс.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS / CASES -->
+  <section id="results" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-lime">Результаты студентов</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Цифры, ради которых всё затевалось</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5">
+        <article data-tilt class="reveal rounded-shell bg-gradient-to-br from-accent/20 to-violet/20 ring-1 ring-line p-7">
+          <div class="font-display text-4xl md:text-5xl font-bold gradient-text"><span data-count="48" data-suffix="k">0</span></div>
+          <p class="mt-2 text-sm text-muted">подписчиков за 4 месяца с нуля</p>
+          <div class="mt-6 flex items-center gap-3"><img src="https://picsum.photos/seed/ohvat-case1/80/80" class="w-10 h-10 rounded-full object-cover" alt="" /><div><div class="font-semibold text-sm">Алина</div><div class="text-xs text-muted">бьюти-блог</div></div></div>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-gradient-to-br from-violet/20 to-accent/20 ring-1 ring-line p-7">
+          <div class="font-display text-4xl md:text-5xl font-bold gradient-text"><span data-count="180" data-suffix="k ₽">0</span></div>
+          <p class="mt-2 text-sm text-muted">доход в месяц на SMM-услугах</p>
+          <div class="mt-6 flex items-center gap-3"><img src="https://picsum.photos/seed/ohvat-case2/80/80" class="w-10 h-10 rounded-full object-cover" alt="" /><div><div class="font-semibold text-sm">Кирилл</div><div class="text-xs text-muted">SMM на фрилансе</div></div></div>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-gradient-to-br from-accent/20 to-violet/20 ring-1 ring-line p-7">
+          <div class="font-display text-4xl md:text-5xl font-bold gradient-text">×<span data-count="12">0</span></div>
+          <p class="mt-2 text-sm text-muted">рост заявок для своего магазина</p>
+          <div class="mt-6 flex items-center gap-3"><img src="https://picsum.photos/seed/ohvat-case3/80/80" class="w-10 h-10 rounded-full object-cover" alt="" /><div><div class="font-semibold text-sm">Дарья</div><div class="text-xs text-muted">магазин керамики</div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section id="speakers" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-lime">Спикеры</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Учат практики, а не теоретики</h2>
+      </div>
+      <div class="reveal-group grid sm:grid-cols-3 gap-6">
+        <article data-tilt class="reveal rounded-shell bg-card ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/ohvat-speaker1/600/520" alt="Спикер" class="w-full h-60 object-cover" />
+          <div class="p-6"><h3 class="font-display text-lg font-semibold">Вика Седова</h3><p class="text-sm text-accent font-medium">Блогер, 1.2 млн подписчиков</p><p class="mt-2 text-sm text-muted">Контент и работа с трендами</p></div>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-card ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/ohvat-speaker2/600/520" alt="Спикер" class="w-full h-60 object-cover" />
+          <div class="p-6"><h3 class="font-display text-lg font-semibold">Антон Реков</h3><p class="text-sm text-accent font-medium">Таргетолог, 8 лет в рекламе</p><p class="mt-2 text-sm text-muted">Реклама и аналитика</p></div>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-card ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/ohvat-speaker3/600/520" alt="Спикер" class="w-full h-60 object-cover" />
+          <div class="p-6"><h3 class="font-display text-lg font-semibold">Лена Гай</h3><p class="text-sm text-accent font-medium">Контент-маркетолог</p><p class="mt-2 text-sm text-muted">Стратегия и монетизация</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-lime">Тарифы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Выберите глубину прокачки</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5 items-stretch">
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-8 flex flex-col">
+          <h3 class="font-display text-xl font-bold">Самостоятельно</h3>
+          <p class="mt-1 text-sm text-muted">Курс в записи, свой темп</p>
+          <div class="mt-6 font-display text-4xl font-bold">14 900 ₽</div>
+          <ul class="mt-6 space-y-3 text-sm text-white/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>40+ видеоуроков</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Шаблоны и чек-листы</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Доступ навсегда</li>
+          </ul>
+          <a href="#enroll" data-magnetic class="mt-8 inline-flex justify-center rounded-full ring-1 ring-line text-white font-semibold px-6 py-3 hover:bg-surface transition-colors duration-300">Выбрать</a>
+        </div>
+        <div class="reveal rounded-shell bg-gradient-to-br from-accent to-violet p-8 md:-my-4 flex flex-col relative glow">
+          <div class="inline-flex w-fit items-center rounded-full bg-lime text-bg text-xs font-bold uppercase tracking-[0.1em] px-3 py-1">Хит продаж</div>
+          <h3 class="mt-4 font-display text-xl font-bold">С куратором</h3>
+          <p class="mt-1 text-sm text-white/80">Обратная связь и проверка работ</p>
+          <div class="mt-6 font-display text-4xl font-bold">29 900 ₽</div>
+          <ul class="mt-6 space-y-3 text-sm text-white/90 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Всё из «Самостоятельно»</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Проверка домашних заданий</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Чат с куратором</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Сертификат и помощь с резюме</li>
+          </ul>
+          <a href="#enroll" data-magnetic class="mt-8 inline-flex justify-center rounded-full bg-white text-bg font-semibold px-6 py-3 hover:bg-lime transition-colors duration-300">Выбрать</a>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-card ring-1 ring-line p-8 flex flex-col">
+          <h3 class="font-display text-xl font-bold">VIP</h3>
+          <p class="mt-1 text-sm text-muted">Личное сопровождение</p>
+          <div class="mt-6 font-display text-4xl font-bold">59 900 ₽</div>
+          <ul class="mt-6 space-y-3 text-sm text-white/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Всё из тарифа «С куратором»</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Личные созвоны со спикером</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-lime mt-0.5 shrink-0"></i>Разбор вашего проекта</li>
+          </ul>
+          <a href="#enroll" data-magnetic class="mt-8 inline-flex justify-center rounded-full ring-1 ring-line text-white font-semibold px-6 py-3 hover:bg-surface transition-colors duration-300">Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal mb-10">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-lime">Вопросы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="reveal divide-y divide-line">
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-base md:text-lg font-semibold">Нужен ли опыт и большая аудитория?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-card text-lime"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Нет. Начинаем с нуля — даже если у вас пустой профиль. Многие студенты запускают первый блог прямо во время курса.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-base md:text-lg font-semibold">Какое оборудование нужно?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-card text-lime"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Достаточно смартфона. Учим снимать и монтировать на телефоне в бесплатных приложениях — дорогая техника не нужна.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-base md:text-lg font-semibold">Помогаете ли найти клиентов после курса?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-card text-lime"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">На тарифах с куратором и VIP помогаем собрать портфолио, оформить резюме и даём доступ к базе вакансий и заказов.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-base md:text-lg font-semibold">Что если не понравится курс?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-card text-lime"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Первые 7 дней — гарантия возврата. Если поймёте, что формат не ваш, вернём деньги без вопросов.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROLL CTA -->
+  <section id="enroll" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-5xl mx-auto rounded-shell bg-gradient-to-br from-accent to-violet p-1 glow">
+      <div class="rounded-[1.4rem] bg-bg grid md:grid-cols-2 overflow-hidden">
+        <div class="p-8 md:p-12 reveal">
+          <span class="inline-flex items-center gap-2 rounded-full bg-lime/15 text-lime text-sm font-semibold px-3 py-1"><i class="ph-bold ph-fire"></i> Старт потока через 6 дней</span>
+          <h2 class="mt-4 font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Займите место на потоке</h2>
+          <p class="mt-4 text-muted leading-relaxed">Оставьте контакты — расскажем про тарифы, рассрочку и пришлём бесплатный гайд «50 идей для Reels».</p>
+          <ul class="mt-6 space-y-3 text-sm text-white/90">
+            <li class="flex items-center gap-2"><i class="ph-bold ph-gift text-lime"></i> Гайд в подарок за заявку</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-credit-card text-lime"></i> Рассрочка 0% на 12 месяцев</li>
+          </ul>
+        </div>
+        <div class="p-8 md:p-12 bg-card reveal">
+          <form id="lead-form" novalidate class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm text-white/80 mb-1.5">Имя</label>
+              <input id="name" name="name" type="text" placeholder="Алина" class="w-full rounded-core bg-surface ring-1 ring-line text-white placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent" />
+              <p class="error-text hidden mt-1.5 text-sm text-accent"></p>
+            </div>
+            <div>
+              <label for="phone" class="block text-sm text-white/80 mb-1.5">Телефон</label>
+              <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full rounded-core bg-surface ring-1 ring-line text-white placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent" />
+              <p class="error-text hidden mt-1.5 text-sm text-accent"></p>
+            </div>
+            <button type="submit" data-magnetic class="w-full rounded-full bg-gradient-to-r from-accent to-violet text-white font-semibold py-4 hover:opacity-90 transition-opacity duration-300">Забрать место и гайд</button>
+            <p class="text-xs text-muted">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          </form>
+          <div id="form-success" class="hidden text-center py-10">
+            <div class="check-pop mx-auto grid place-items-center w-16 h-16 rounded-full bg-gradient-to-br from-accent to-violet text-white"><i class="ph-bold ph-check text-3xl"></i></div>
+            <p class="mt-4 font-display font-semibold text-lg">Вы в деле!</p>
+            <p class="mt-1 text-sm text-muted">Скоро напишем и пришлём гайд.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-4 md:px-8 py-16 border-t border-line text-muted">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
+    <div>
+      <div class="flex items-center gap-2 font-display text-xl font-bold text-white"><span class="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-violet"><i class="ph-fill ph-rocket-launch text-lg"></i></span>Охват</div>
+      <p class="mt-4 text-sm max-w-[34ch] leading-relaxed">Онлайн-курс по SMM для тех, кто хочет превратить соцсети в профессию и доход.</p>
+      <div class="mt-5 flex items-center gap-3">
+        <a href="#" aria-label="Telegram" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-line text-white hover:bg-card transition-colors duration-300"><i class="ph-bold ph-telegram-logo"></i></a>
+        <a href="#" aria-label="YouTube" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-line text-white hover:bg-card transition-colors duration-300"><i class="ph-bold ph-youtube-logo"></i></a>
+        <a href="#" aria-label="TikTok" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-line text-white hover:bg-card transition-colors duration-300"><i class="ph-bold ph-tiktok-logo"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Курс</div>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="#program" class="hover:text-white transition-colors">Программа</a></li>
+        <li><a href="#results" class="hover:text-white transition-colors">Кейсы</a></li>
+        <li><a href="#speakers" class="hover:text-white transition-colors">Спикеры</a></li>
+        <li><a href="#pricing" class="hover:text-white transition-colors">Тарифы</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Контакты</div>
+      <ul class="space-y-2.5 text-sm">
+        <li class="flex items-center gap-2"><i class="ph ph-telegram-logo"></i> @ohvat_course</li>
+        <li class="flex items-center gap-2"><i class="ph ph-envelope-simple"></i> go@ohvat.ru</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-line text-sm">© 2026 Курс «Охват». Все права защищены.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

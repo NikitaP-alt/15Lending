@@ -1,0 +1,71 @@
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito Sans', sans-serif; }
+.font-display { font-family: 'Fredoka', sans-serif; }
+
+/* ---------- Scroll reveal ---------- */
+.reveal { opacity: 0; transform: translateY(1.5rem); }
+.word-reveal .word { display: inline-block; opacity: 0; transform: translateY(0.7em); will-change: transform, opacity; }
+
+/* ---------- Scroll progress ---------- */
+#scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: #FF5A4D; z-index: 60; }
+
+/* ---------- Drifting blobs ---------- */
+@keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(4%,-3%) scale(1.08); } }
+.blob-drift { animation: drift 16s ease-in-out infinite; }
+
+/* ---------- Floating speech bubbles ---------- */
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.bubble-float { animation: floaty 4s ease-in-out infinite; }
+.bubble-float-2 { animation: floaty 5s ease-in-out infinite 0.6s; }
+.bubble-float-3 { animation: floaty 4.5s ease-in-out infinite 1.2s; }
+
+/* ---------- Tilt + magnetic ---------- */
+[data-tilt] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); transform-style: preserve-3d; will-change: transform; }
+[data-magnetic] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
+
+/* ---------- Marquee ---------- */
+.marquee { display: flex; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee__track { display: flex; align-items: center; gap: 3rem; padding-right: 3rem; flex-shrink: 0; min-width: 100%; justify-content: space-around; animation: marquee 22s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-100%); } }
+
+/* ---------- Form success pop ---------- */
+@keyframes pop-in { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.12); } 100% { transform: scale(1); opacity: 1; } }
+.check-pop { animation: pop-in 0.5s cubic-bezier(0.32,0.72,0,1) forwards; }
+
+/* ---------- Sticky nav scroll state ---------- */
+#nav.is-scrolled { background: rgba(255,253,249,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid #EFE7DC; }
+
+/* ---------- Hamburger morph ---------- */
+.menu-line { position: absolute; left: 50%; top: 50%; width: 18px; height: 2px; background: #1E293B; border-radius: 1px; transition: transform 0.45s cubic-bezier(0.32,0.72,0,1), opacity 0.3s ease; }
+.menu-line.top { transform: translate(-50%, calc(-50% - 4px)); }
+.menu-line.bottom { transform: translate(-50%, calc(-50% + 4px)); }
+#menu-toggle.is-open .menu-line.top { transform: translate(-50%, -50%) rotate(45deg); }
+#menu-toggle.is-open .menu-line.bottom { transform: translate(-50%, -50%) rotate(-45deg); }
+
+/* ---------- Mobile menu ---------- */
+#mobile-menu { transition: opacity 0.4s cubic-bezier(0.32,0.72,0,1); }
+#mobile-menu.is-open { opacity: 1; pointer-events: auto; }
+.menu-item { opacity: 0; transform: translateY(1.5rem); transition: opacity 0.5s cubic-bezier(0.32,0.72,0,1), transform 0.5s cubic-bezier(0.32,0.72,0,1); }
+#mobile-menu.is-open .menu-item { opacity: 1; transform: translateY(0); }
+#mobile-menu.is-open .menu-item:nth-child(1) { transition-delay: 0.06s; }
+#mobile-menu.is-open .menu-item:nth-child(2) { transition-delay: 0.12s; }
+#mobile-menu.is-open .menu-item:nth-child(3) { transition-delay: 0.18s; }
+#mobile-menu.is-open .menu-item:nth-child(4) { transition-delay: 0.24s; }
+#mobile-menu.is-open .menu-item:nth-child(5) { transition-delay: 0.30s; }
+
+/* ---------- FAQ accordion ---------- */
+.faq-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s cubic-bezier(0.32,0.72,0,1); }
+.faq-content > div { overflow: hidden; }
+.faq-item.is-open .faq-content { grid-template-rows: 1fr; }
+.faq-icon { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); }
+.faq-item.is-open .faq-icon { transform: rotate(45deg); }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .word-reveal .word { opacity: 1 !important; transform: none !important; }
+  .marquee__track, .blob-drift, .bubble-float, .bubble-float-2, .bubble-float-3 { animation: none !important; }
+  [data-tilt], [data-magnetic] { transition: none !important; }
+}

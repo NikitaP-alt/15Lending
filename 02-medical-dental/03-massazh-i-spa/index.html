@@ -38,6 +38,8 @@
 </head>
 <body class="font-sans bg-bg text-ink antialiased">
 
+<div id="scroll-progress"></div>
+
 <!-- NAVIGATION -->
 <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
   <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
@@ -48,7 +50,7 @@
       <a href="#review" class="hover:text-accent transition-colors duration-300">Отзывы</a>
       <a href="#gift" class="hover:text-accent transition-colors duration-300">Сертификаты</a>
     </div>
-    <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-lg bg-ink text-bg text-sm font-medium px-5 py-2.5 hover:bg-accent transition-colors duration-300">
+    <a href="#contact" data-magnetic class="hidden md:inline-flex items-center gap-2 rounded-lg bg-ink text-bg text-sm font-medium px-5 py-2.5 hover:bg-accent transition-colors duration-300">
       Записаться
     </a>
     <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
@@ -81,7 +83,7 @@
           Приглушённый свет, тёплые руки мастера и полная тишина. Час, за который город отступает, а тело вспоминает, каково это — расслабиться по-настоящему.
         </p>
         <div class="mt-9 flex flex-wrap items-center gap-6">
-          <a href="#contact" class="inline-flex items-center gap-2 rounded-lg bg-ink text-bg font-medium px-7 py-3.5 hover:bg-accent transition-colors duration-300">
+          <a href="#contact" data-magnetic class="inline-flex items-center gap-2 rounded-lg bg-ink text-bg font-medium px-7 py-3.5 hover:bg-accent transition-colors duration-300">
             Записаться на сеанс
           </a>
           <a href="#services" class="inline-flex items-center gap-2 text-ink font-medium border-b border-ink/30 pb-0.5 hover:text-accent hover:border-accent transition-colors duration-300">
@@ -112,15 +114,15 @@
         </p>
         <div class="mt-8 grid grid-cols-3 gap-6 border-t border-line pt-8">
           <div>
-            <div class="font-display text-3xl md:text-4xl font-medium text-accent">9</div>
+            <div class="font-display text-3xl md:text-4xl font-medium text-accent"><span data-count="9">0</span></div>
             <div class="mt-1 text-sm text-muted">лет студии</div>
           </div>
           <div>
-            <div class="font-display text-3xl md:text-4xl font-medium text-accent">12</div>
+            <div class="font-display text-3xl md:text-4xl font-medium text-accent"><span data-count="12">0</span></div>
             <div class="mt-1 text-sm text-muted">мастеров</div>
           </div>
           <div>
-            <div class="font-display text-3xl md:text-4xl font-medium text-accent">100%</div>
+            <div class="font-display text-3xl md:text-4xl font-medium text-accent"><span data-count="100" data-suffix="%">0</span></div>
             <div class="mt-1 text-sm text-muted">натуральные масла</div>
           </div>
         </div>
@@ -256,7 +258,7 @@
           <li class="flex items-center gap-3"><i class="ph ph-envelope-open text-accent text-xl"></i> Бумажный или электронный формат</li>
           <li class="flex items-center gap-3"><i class="ph ph-calendar-check text-accent text-xl"></i> Действует 12 месяцев</li>
         </ul>
-        <a href="#contact" class="mt-8 inline-flex items-center gap-2 rounded-lg bg-ink text-bg font-medium px-7 py-3.5 hover:bg-accent transition-colors duration-300">Подарить сертификат</a>
+        <a href="#contact" data-magnetic class="mt-8 inline-flex items-center gap-2 rounded-lg bg-ink text-bg font-medium px-7 py-3.5 hover:bg-accent transition-colors duration-300">Подарить сертификат</a>
       </div>
       <div class="reveal order-1 md:order-2 overflow-hidden rounded-2xl">
         <img src="https://picsum.photos/seed/tishina-gift/900/760" alt="Подарочный сертификат SPA Тишина" class="w-full h-[300px] md:h-[460px] object-cover" />
@@ -305,7 +307,7 @@
                 <option>Пока не определился(ась)</option>
               </select>
             </div>
-            <button type="submit" class="w-full rounded-lg bg-ink text-bg font-medium py-3.5 hover:bg-accent transition-colors duration-300">Записаться</button>
+            <button type="submit" data-magnetic class="w-full rounded-lg bg-ink text-bg font-medium py-3.5 hover:bg-accent transition-colors duration-300">Записаться</button>
             <p class="text-xs text-muted">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
           </div>
         </form>

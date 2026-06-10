@@ -64,3 +64,16 @@ body {
   .reveal { opacity: 1 !important; transform: none !important; }
   .animate-ping { animation: none !important; }
 }
+
+/* ---------- Flourishes ---------- */
+#scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: #4F46E5; z-index: 60; }
+[data-tilt] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); transform-style: preserve-3d; will-change: transform; }
+[data-magnetic] { transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); will-change: transform; }
+@keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(4%,-3%) scale(1.08); } }
+@keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-4%,3%) scale(1.1); } }
+.blob-drift { animation: drift 18s ease-in-out infinite; }
+.blob-drift-2 { animation: drift2 20s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .blob-drift, .blob-drift-2 { animation: none !important; }
+  [data-tilt], [data-magnetic] { transition: none !important; }
+}

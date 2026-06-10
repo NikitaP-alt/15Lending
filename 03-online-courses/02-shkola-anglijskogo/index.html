@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Бегло — школа английского языка онлайн</title>
+<meta name="description" content="Школа английского «Бегло»: разговорный английский с носителями и русскоязычными преподавателями. Уровни от A1 до C1, гибкое расписание, первый урок бесплатно." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#FFFDF9',
+          surface: '#FFFFFF',
+          ink: '#1E293B',
+          muted: '#64748B',
+          accent: '#FF5A4D',
+          accentdark: '#E8463A',
+          amber: '#FFB020',
+          soft: '#FFF1EF',
+          line: '#EFE7DC',
+        },
+        fontFamily: {
+          display: ['Fredoka', 'sans-serif'],
+          sans: ['Nunito Sans', 'sans-serif'],
+        },
+        borderRadius: {
+          shell: '1.75rem',
+          core: '1.5rem',
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}.word{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="font-sans bg-bg text-ink antialiased">
+
+<div id="scroll-progress"></div>
+
+<!-- NAVIGATION -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-2 font-display text-2xl font-semibold tracking-tight text-ink">
+      <span class="grid place-items-center w-9 h-9 rounded-full bg-accent text-white"><i class="ph-fill ph-chat-circle-dots text-lg"></i></span>
+      Бегло
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-ink/70">
+      <a href="#how" class="hover:text-accent transition-colors duration-300">Как учим</a>
+      <a href="#levels" class="hover:text-accent transition-colors duration-300">Уровни</a>
+      <a href="#teachers" class="hover:text-accent transition-colors duration-300">Преподаватели</a>
+      <a href="#pricing" class="hover:text-accent transition-colors duration-300">Цены</a>
+    </div>
+    <a href="#trial" data-magnetic class="hidden md:inline-flex items-center gap-2 rounded-full bg-accent text-white text-sm font-bold px-5 py-2.5 hover:bg-accentdark transition-colors duration-300">
+      Бесплатный урок
+    </a>
+    <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
+      <span class="menu-line top"></span>
+      <span class="menu-line bottom"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-bg/97 backdrop-blur-xl flex flex-col items-center justify-center gap-7 opacity-0 pointer-events-none">
+  <a href="#how" class="menu-item font-display text-3xl font-semibold text-ink">Как учим</a>
+  <a href="#levels" class="menu-item font-display text-3xl font-semibold text-ink">Уровни</a>
+  <a href="#teachers" class="menu-item font-display text-3xl font-semibold text-ink">Преподаватели</a>
+  <a href="#pricing" class="menu-item font-display text-3xl font-semibold text-ink">Цены</a>
+  <a href="#trial" class="menu-item mt-4 inline-flex rounded-full bg-accent text-white font-bold px-7 py-3.5">Бесплатный урок</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative pt-28 md:pt-36 pb-20 px-4 md:px-8 overflow-hidden">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="blob-drift absolute -top-32 -left-24 w-[32rem] h-[32rem] rounded-full bg-soft blur-[80px]"></div>
+      <div class="blob-drift absolute top-10 -right-32 w-[30rem] h-[30rem] rounded-full bg-amber/15 blur-[90px]"></div>
+    </div>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 rounded-full bg-amber/20 text-ink text-sm font-bold px-4 py-1.5">
+          <i class="ph-fill ph-star text-amber"></i> 9 из 10 учеников начинают говорить за 3 месяца
+        </span>
+        <h1 class="word-reveal mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.02] text-ink">
+          Заговорите по-английски — без страха и зубрёжки
+        </h1>
+        <p class="mt-6 text-lg text-muted leading-relaxed max-w-xl">
+          Живые уроки один на один и в мини-группах. Больше говорим, чем учим правила. Подберём преподавателя под ваш уровень и цель.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#trial" data-magnetic class="inline-flex items-center gap-2 rounded-full bg-accent text-white font-bold px-7 py-4 hover:bg-accentdark transition-colors duration-300">
+            Записаться на бесплатный урок
+            <i class="ph-bold ph-arrow-right"></i>
+          </a>
+          <a href="#how" class="inline-flex items-center gap-2 rounded-full ring-2 ring-line bg-white text-ink font-bold px-7 py-4 hover:ring-accent hover:text-accent transition-colors duration-300">
+            Как проходят уроки
+          </a>
+        </div>
+        <div class="mt-9 flex items-center gap-6 text-sm font-semibold">
+          <div class="flex items-center gap-2"><i class="ph-fill ph-globe-hemisphere-west text-accent"></i> Носители языка</div>
+          <div class="flex items-center gap-2"><i class="ph-fill ph-calendar-check text-accent"></i> Гибкое расписание</div>
+        </div>
+      </div>
+
+      <!-- HERO ILLUSTRATION WITH SPEECH BUBBLES -->
+      <div class="reveal relative flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-md">
+          <div class="overflow-hidden rounded-[2.5rem] ring-4 ring-white shadow-[0_40px_80px_-30px_rgba(255,90,77,0.4)]">
+            <img src="https://picsum.photos/seed/beglo-hero-student/800/900" alt="Ученица на онлайн-уроке английского" class="w-full h-[420px] md:h-[520px] object-cover" />
+          </div>
+          <div class="bubble bubble-float absolute -left-4 top-16 bg-white rounded-2xl rounded-bl-sm shadow-lg px-4 py-2.5 font-display font-semibold text-ink">Hello! 👋<span class="sr-only">Привет</span></div>
+          <div class="bubble bubble-float-2 absolute -right-2 top-40 bg-accent text-white rounded-2xl rounded-br-sm shadow-lg px-4 py-2.5 font-display font-semibold">Let's talk!</div>
+          <div class="bubble bubble-float-3 absolute left-6 bottom-10 bg-amber text-ink rounded-2xl rounded-bl-sm shadow-lg px-4 py-2.5 font-display font-semibold">B2 achieved</div>
+          <div class="absolute -right-3 bottom-24 grid place-items-center w-14 h-14 rounded-full bg-white shadow-lg text-accent"><i class="ph-fill ph-microphone-stage text-2xl"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="py-5 bg-ink text-white overflow-hidden">
+    <div class="marquee">
+      <div class="marquee__track font-display font-medium text-lg">
+        <span class="flex items-center gap-3"><i class="ph-fill ph-chats-circle text-amber"></i> Разговорная практика</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-book-open-text text-amber"></i> Грамматика без зубрёжки</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-globe text-amber"></i> Носители языка</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-exam text-amber"></i> Подготовка к IELTS</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-briefcase text-amber"></i> Английский для работы</span>
+      </div>
+      <div class="marquee__track font-display font-medium text-lg" aria-hidden="true">
+        <span class="flex items-center gap-3"><i class="ph-fill ph-chats-circle text-amber"></i> Разговорная практика</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-book-open-text text-amber"></i> Грамматика без зубрёжки</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-globe text-amber"></i> Носители языка</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-exam text-amber"></i> Подготовка к IELTS</span>
+        <span class="flex items-center gap-3"><i class="ph-fill ph-briefcase text-amber"></i> Английский для работы</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-bold uppercase tracking-[0.15em] text-accent">Как проходят уроки</span>
+        <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold tracking-tight text-ink leading-tight">Просто, живо и про вас</h2>
+      </div>
+      <div class="reveal-group mt-12 grid md:grid-cols-3 gap-6">
+        <div data-tilt class="reveal rounded-shell bg-soft p-8">
+          <div class="grid place-items-center w-14 h-14 rounded-full bg-accent text-white mb-5"><i class="ph-fill ph-user-focus text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink">Определяем уровень</h3>
+          <p class="mt-2 text-muted leading-relaxed">Бесплатный вводный урок: преподаватель оценит уровень и поймёт вашу цель.</p>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-amber/15 p-8">
+          <div class="grid place-items-center w-14 h-14 rounded-full bg-amber text-ink mb-5"><i class="ph-fill ph-chats text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold text-ink">Говорим с первого урока</h3>
+          <p class="mt-2 text-muted leading-relaxed">80% времени — живая речь. Грамматику даём через ситуации, а не таблицы.</p>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-ink text-white p-8">
+          <div class="grid place-items-center w-14 h-14 rounded-full bg-white text-ink mb-5"><i class="ph-fill ph-chart-line-up text-2xl"></i></div>
+          <h3 class="font-display text-xl font-semibold">Видим прогресс</h3>
+          <p class="mt-2 text-white/70 leading-relaxed">Личный кабинет с домашками и отметками. Каждый месяц — срез результата.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEVELS -->
+  <section id="levels" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-bold uppercase tracking-[0.15em] text-accent">Уровни</span>
+        <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold tracking-tight text-ink leading-tight">От первых слов до свободной речи</h2>
+        <p class="mt-4 text-muted leading-relaxed">Берём с любого уровня. Покажем, где вы сейчас и сколько до цели.</p>
+      </div>
+      <div class="reveal-group grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div data-tilt class="reveal rounded-core bg-soft p-6 text-center"><div class="font-display text-3xl font-semibold text-accent">A1</div><div class="mt-2 font-semibold text-ink">Beginner</div><div class="text-xs text-muted mt-1">первые фразы</div></div>
+        <div data-tilt class="reveal rounded-core bg-soft p-6 text-center"><div class="font-display text-3xl font-semibold text-accent">A2</div><div class="mt-2 font-semibold text-ink">Elementary</div><div class="text-xs text-muted mt-1">бытовые темы</div></div>
+        <div data-tilt class="reveal rounded-core bg-amber/15 p-6 text-center"><div class="font-display text-3xl font-semibold text-ink">B1</div><div class="mt-2 font-semibold text-ink">Intermediate</div><div class="text-xs text-muted mt-1">уверенный разговор</div></div>
+        <div data-tilt class="reveal rounded-core bg-amber/15 p-6 text-center"><div class="font-display text-3xl font-semibold text-ink">B2</div><div class="mt-2 font-semibold text-ink">Upper-Inter</div><div class="text-xs text-muted mt-1">работа и учёба</div></div>
+        <div data-tilt class="reveal rounded-core bg-ink text-white p-6 text-center"><div class="font-display text-3xl font-semibold text-amber">C1</div><div class="mt-2 font-semibold">Advanced</div><div class="text-xs text-white/60 mt-1">свободно</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHERS -->
+  <section id="teachers" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-bold uppercase tracking-[0.15em] text-accent">Преподаватели</span>
+        <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold tracking-tight text-ink leading-tight">Носители и русскоязычные — на ваш выбор</h2>
+      </div>
+      <div class="reveal-group grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article data-tilt class="reveal bg-surface rounded-shell ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/beglo-teacher-1/500/520" alt="Emma" class="w-full h-52 object-cover" />
+          <div class="p-5"><h3 class="font-display text-lg font-semibold text-ink">Emma</h3><p class="text-sm text-accent font-semibold">Носитель, Великобритания</p><p class="mt-2 text-sm text-muted">Разговорный и произношение</p></div>
+        </article>
+        <article data-tilt class="reveal bg-surface rounded-shell ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/beglo-teacher-2/500/520" alt="Ольга" class="w-full h-52 object-cover" />
+          <div class="p-5"><h3 class="font-display text-lg font-semibold text-ink">Ольга</h3><p class="text-sm text-accent font-semibold">Преподаватель, C2</p><p class="mt-2 text-sm text-muted">Грамматика с нуля, IELTS</p></div>
+        </article>
+        <article data-tilt class="reveal bg-surface rounded-shell ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/beglo-teacher-3/500/520" alt="James" class="w-full h-52 object-cover" />
+          <div class="p-5"><h3 class="font-display text-lg font-semibold text-ink">James</h3><p class="text-sm text-accent font-semibold">Носитель, США</p><p class="mt-2 text-sm text-muted">Деловой английский</p></div>
+        </article>
+        <article data-tilt class="reveal bg-surface rounded-shell ring-1 ring-line overflow-hidden">
+          <img src="https://picsum.photos/seed/beglo-teacher-4/500/520" alt="Марина" class="w-full h-52 object-cover" />
+          <div class="p-5"><h3 class="font-display text-lg font-semibold text-ink">Марина</h3><p class="text-sm text-accent font-semibold">Преподаватель, C1</p><p class="mt-2 text-sm text-muted">Английский для детей</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="px-4 md:px-8 py-20 bg-accent text-white">
+    <div class="reveal-group max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-center">
+      <div class="reveal"><div class="font-display text-4xl md:text-5xl font-semibold"><span data-count="12" data-suffix=" 000+">0</span></div><div class="mt-2 text-white/80 text-sm">учеников</div></div>
+      <div class="reveal"><div class="font-display text-4xl md:text-5xl font-semibold"><span data-count="3" data-suffix=" мес">0</span></div><div class="mt-2 text-white/80 text-sm">до первого разговора</div></div>
+      <div class="reveal"><div class="font-display text-4xl md:text-5xl font-semibold"><span data-count="60" data-suffix="+">0</span></div><div class="mt-2 text-white/80 text-sm">преподавателей</div></div>
+      <div class="reveal"><div class="font-display text-4xl md:text-5xl font-semibold"><span data-count="4.9">0</span></div><div class="mt-2 text-white/80 text-sm">оценка учеников</div></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-bold uppercase tracking-[0.15em] text-accent">Форматы и цены</span>
+        <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold tracking-tight text-ink leading-tight">Выберите, как удобно учиться</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5 items-stretch">
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8 flex flex-col">
+          <h3 class="font-display text-2xl font-semibold text-ink">В мини-группе</h3>
+          <p class="mt-1 text-sm text-muted">До 5 человек, весело и недорого</p>
+          <div class="mt-6 font-display text-4xl font-semibold text-ink">690 ₽<span class="text-base text-muted font-sans font-semibold"> / урок</span></div>
+          <ul class="mt-6 space-y-3 text-sm text-ink/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>2 урока в неделю</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Разговорная практика</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Доступ к материалам</li>
+          </ul>
+          <a href="#trial" data-magnetic class="mt-8 inline-flex justify-center rounded-full ring-2 ring-line text-ink font-bold px-6 py-3 hover:ring-accent hover:text-accent transition-colors duration-300">Выбрать</a>
+        </div>
+        <div class="reveal rounded-shell bg-ink text-white p-8 md:-my-4 shadow-[0_30px_70px_-30px_rgba(255,90,77,0.5)] flex flex-col relative">
+          <div class="inline-flex w-fit items-center rounded-full bg-amber text-ink text-xs font-bold uppercase tracking-[0.1em] px-3 py-1">Популярный</div>
+          <h3 class="mt-4 font-display text-2xl font-semibold">Индивидуально</h3>
+          <p class="mt-1 text-sm text-white/60">Один на один с преподавателем</p>
+          <div class="mt-6 font-display text-4xl font-semibold">1 290 ₽<span class="text-base text-white/60 font-sans font-semibold"> / урок</span></div>
+          <ul class="mt-6 space-y-3 text-sm text-white/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-amber mt-0.5 shrink-0"></i>Программа под вашу цель</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-amber mt-0.5 shrink-0"></i>Гибкое расписание</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-amber mt-0.5 shrink-0"></i>Выбор преподавателя</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-amber mt-0.5 shrink-0"></i>Носитель или русскоязычный</li>
+          </ul>
+          <a href="#trial" data-magnetic class="mt-8 inline-flex justify-center rounded-full bg-accent text-white font-bold px-6 py-3 hover:bg-accentdark transition-colors duration-300">Выбрать</a>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8 flex flex-col">
+          <h3 class="font-display text-2xl font-semibold text-ink">Интенсив</h3>
+          <p class="mt-1 text-sm text-muted">Быстрый результат к дедлайну</p>
+          <div class="mt-6 font-display text-4xl font-semibold text-ink">19 900 ₽<span class="text-base text-muted font-sans font-semibold"> / мес</span></div>
+          <ul class="mt-6 space-y-3 text-sm text-ink/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>5 уроков в неделю</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Подготовка к экзамену</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Куратор на связи</li>
+          </ul>
+          <a href="#trial" data-magnetic class="mt-8 inline-flex justify-center rounded-full ring-2 ring-line text-ink font-bold px-6 py-3 hover:ring-accent hover:text-accent transition-colors duration-300">Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal mb-10">
+        <span class="text-sm font-bold uppercase tracking-[0.15em] text-accent">Вопросы</span>
+        <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold tracking-tight text-ink leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="reveal divide-y divide-line">
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-semibold text-ink">У меня совсем нулевой уровень, подойдёт?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Конечно. Уровень A1 — это старт с нуля. На вводном уроке преподаватель объяснит первые фразы и составит понятный план.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-semibold text-ink">Что если пропущу урок?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Индивидуальный урок можно перенести, предупредив за несколько часов. Запись и материалы группового урока остаются в личном кабинете.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-semibold text-ink">Как выбрать между носителем и русскоязычным?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Новичкам комфортнее с русскоязычным преподавателем — он объяснит на родном языке. С уровня A2-B1 полезно подключать носителя для произношения и беглости.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-semibold text-ink">Сколько нужно заниматься, чтобы заговорить?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-soft text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">При двух уроках в неделю большинство учеников начинают свободно говорить на бытовые темы за 3-4 месяца. Многое зависит от практики между уроками.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIAL CTA -->
+  <section id="trial" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-5xl mx-auto rounded-shell bg-soft overflow-hidden grid md:grid-cols-2">
+      <div class="p-8 md:p-12 reveal">
+        <h2 class="font-display text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-ink">Первый урок — бесплатно</h2>
+        <p class="mt-4 text-muted leading-relaxed">Познакомитесь с преподавателем, узнаете свой уровень и попробуете формат. Без оплаты и обязательств.</p>
+        <ul class="mt-6 space-y-3 text-sm text-ink/80 font-semibold">
+          <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-accent text-lg"></i> Подберём преподавателя под вас</li>
+          <li class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-accent text-lg"></i> Определим уровень и цель</li>
+        </ul>
+      </div>
+      <div class="p-8 md:p-12 bg-white reveal">
+        <form id="lead-form" novalidate class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-ink mb-1.5">Как вас зовут?</label>
+            <input id="name" name="name" type="text" placeholder="Алиса" class="w-full rounded-core border-2 border-line bg-bg px-4 py-3 focus:outline-none focus:border-accent transition-colors" />
+            <p class="error-text hidden mt-1.5 text-sm text-accent"></p>
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-semibold text-ink mb-1.5">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full rounded-core border-2 border-line bg-bg px-4 py-3 focus:outline-none focus:border-accent transition-colors" />
+            <p class="error-text hidden mt-1.5 text-sm text-accent"></p>
+          </div>
+          <button type="submit" data-magnetic class="w-full rounded-full bg-accent text-white font-bold py-4 hover:bg-accentdark transition-colors duration-300">Записаться на урок</button>
+          <p class="text-xs text-muted">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+        </form>
+        <div id="form-success" class="hidden text-center py-10">
+          <div class="check-pop mx-auto grid place-items-center w-16 h-16 rounded-full bg-accent text-white"><i class="ph-bold ph-check text-3xl"></i></div>
+          <p class="mt-4 font-display font-semibold text-ink text-lg">See you soon!</p>
+          <p class="mt-1 text-sm text-muted">Перезвоним и подберём время урока.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-4 md:px-8 py-16 bg-ink text-white/60">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
+    <div>
+      <div class="flex items-center gap-2 font-display text-2xl font-semibold text-white"><span class="grid place-items-center w-9 h-9 rounded-full bg-accent text-white"><i class="ph-fill ph-chat-circle-dots text-lg"></i></span>Бегло</div>
+      <p class="mt-4 text-sm max-w-[34ch] leading-relaxed">Школа английского языка онлайн. Учим говорить, а не молчать с идеальной грамматикой.</p>
+      <div class="mt-5 flex items-center gap-3">
+        <a href="#" aria-label="Telegram" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-telegram-logo"></i></a>
+        <a href="#" aria-label="Instagram" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-instagram-logo"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-bold text-white mb-4">Школа</div>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="#how" class="hover:text-accent transition-colors">Как учим</a></li>
+        <li><a href="#levels" class="hover:text-accent transition-colors">Уровни</a></li>
+        <li><a href="#teachers" class="hover:text-accent transition-colors">Преподаватели</a></li>
+        <li><a href="#pricing" class="hover:text-accent transition-colors">Цены</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-bold text-white mb-4">Контакты</div>
+      <ul class="space-y-2.5 text-sm">
+        <li class="flex items-center gap-2"><i class="ph ph-phone"></i> +7 (495) 990-12-34</li>
+        <li class="flex items-center gap-2"><i class="ph ph-envelope-simple"></i> hi@beglo.ru</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-sm">© 2026 Школа английского «Бегло».</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

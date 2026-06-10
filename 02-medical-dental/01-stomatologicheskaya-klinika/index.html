@@ -42,6 +42,8 @@
 </head>
 <body class="font-sans bg-bg text-ink antialiased">
 
+<div id="scroll-progress"></div>
+
 <!-- NAVIGATION -->
 <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
   <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
@@ -55,7 +57,7 @@
       <a href="#results" class="hover:text-accent transition-colors duration-300">Результаты</a>
       <a href="#faq" class="hover:text-accent transition-colors duration-300">Вопросы</a>
     </div>
-    <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-full bg-accent text-white text-sm font-semibold px-5 py-2.5 hover:bg-accentdark transition-colors duration-300">
+    <a href="#contact" data-magnetic class="hidden md:inline-flex items-center gap-2 rounded-full bg-accent text-white text-sm font-semibold px-5 py-2.5 hover:bg-accentdark transition-colors duration-300">
       <i class="ph-bold ph-phone-call"></i>
       Записаться
     </a>
@@ -91,7 +93,7 @@
         Диагностика на 3D-томографе, понятный план лечения с фиксированной сметой и гарантия 5 лет на все работы.
       </p>
       <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
-        <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-accent text-white font-semibold px-7 py-3.5 hover:bg-accentdark transition-colors duration-300">
+        <a href="#contact" data-magnetic class="inline-flex items-center gap-2 rounded-full bg-accent text-white font-semibold px-7 py-3.5 hover:bg-accentdark transition-colors duration-300">
           Записаться на приём
           <i class="ph-bold ph-arrow-right"></i>
         </a>
@@ -125,19 +127,19 @@
   <section class="px-4 md:px-8 pt-20 md:pt-28 pb-4">
     <div class="reveal-group max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6">
       <div class="reveal text-center md:text-left">
-        <div class="font-display text-4xl md:text-5xl font-bold text-ink">15<span class="text-accent">+</span></div>
+        <div class="font-display text-4xl md:text-5xl font-bold text-ink"><span data-count="15">0</span><span class="text-accent">+</span></div>
         <div class="mt-2 text-sm text-muted">лет клинике</div>
       </div>
       <div class="reveal text-center md:text-left">
-        <div class="font-display text-4xl md:text-5xl font-bold text-ink">12<span class="text-accent">k</span></div>
+        <div class="font-display text-4xl md:text-5xl font-bold text-ink"><span data-count="12">0</span><span class="text-accent">k</span></div>
         <div class="mt-2 text-sm text-muted">пациентов прошли лечение</div>
       </div>
       <div class="reveal text-center md:text-left">
-        <div class="font-display text-4xl md:text-5xl font-bold text-ink">8</div>
+        <div class="font-display text-4xl md:text-5xl font-bold text-ink"><span data-count="8">0</span></div>
         <div class="mt-2 text-sm text-muted">врачей с профильным опытом</div>
       </div>
       <div class="reveal text-center md:text-left">
-        <div class="font-display text-4xl md:text-5xl font-bold text-ink">4.9</div>
+        <div class="font-display text-4xl md:text-5xl font-bold text-ink"><span data-count="4.9">0</span></div>
         <div class="mt-2 text-sm text-muted">средняя оценка на картах</div>
       </div>
     </div>
@@ -156,37 +158,37 @@
         </p>
       </div>
       <div class="reveal-group mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+        <div data-tilt class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
           <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5 transition-colors"><i class="ph ph-tooth text-2xl"></i></div>
           <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Имплантация</h3>
           <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Восстановление зуба под ключ с коронкой. Импланты с пожизненной гарантией производителя.</p>
           <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 28 000 ₽</div>
         </div>
-        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+        <div data-tilt class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
           <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-sparkle text-2xl"></i></div>
           <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Виниры</h3>
           <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Керамические виниры для ровной улыбки. Подбираем форму и оттенок под ваше лицо.</p>
           <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 19 000 ₽</div>
         </div>
-        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+        <div data-tilt class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
           <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-drop text-2xl"></i></div>
           <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Чистка Air Flow</h3>
           <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Профессиональная гигиена, снятие налёта и камня. Рекомендуем раз в полгода.</p>
           <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 4 500 ₽</div>
         </div>
-        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+        <div data-tilt class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
           <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-first-aid-kit text-2xl"></i></div>
           <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Лечение кариеса</h3>
           <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Лечение под микроскопом с сохранением здоровых тканей. Пломба в цвет эмали.</p>
           <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 3 900 ₽</div>
         </div>
-        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+        <div data-tilt class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
           <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-smiley text-2xl"></i></div>
           <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Брекеты и элайнеры</h3>
           <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Исправление прикуса в любом возрасте. Прозрачные элайнеры почти незаметны.</p>
           <div class="mt-5 font-display text-2xl font-bold text-ink group-hover:text-white transition-colors">от 95 000 ₽</div>
         </div>
-        <div class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
+        <div data-tilt class="reveal group rounded-shell bg-surface p-7 transition-colors duration-300 hover:bg-accent">
           <div class="grid place-items-center w-12 h-12 rounded-xl bg-white text-accent mb-5"><i class="ph ph-sun text-2xl"></i></div>
           <h3 class="font-display text-xl font-semibold text-ink group-hover:text-white transition-colors">Отбеливание</h3>
           <p class="mt-2 text-sm text-muted group-hover:text-white/80 transition-colors leading-relaxed">Безопасное осветление на 4-8 тонов за один визит. Без вреда для эмали.</p>
@@ -206,7 +208,7 @@
         </h2>
       </div>
       <div class="reveal-group mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
+        <article data-tilt class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
           <img src="https://picsum.photos/seed/emal-doctor-igor/600/520" alt="Игорь Лебедев" class="w-full h-64 object-cover" />
           <div class="p-6">
             <h3 class="font-display text-lg font-semibold text-ink">Игорь Лебедев</h3>
@@ -214,7 +216,7 @@
             <p class="mt-3 text-sm text-muted leading-relaxed">Стаж 16 лет. Более 3 000 установленных имплантов. Член Российской ассоциации имплантологов.</p>
           </div>
         </article>
-        <article class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
+        <article data-tilt class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
           <img src="https://picsum.photos/seed/emal-doctor-marina/600/520" alt="Марина Соколова" class="w-full h-64 object-cover" />
           <div class="p-6">
             <h3 class="font-display text-lg font-semibold text-ink">Марина Соколова</h3>
@@ -222,7 +224,7 @@
             <p class="mt-3 text-sm text-muted leading-relaxed">Стаж 11 лет. Лечение под микроскопом, эстетическая реставрация. Работает с тревожными пациентами.</p>
           </div>
         </article>
-        <article class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
+        <article data-tilt class="reveal bg-bg rounded-shell ring-1 ring-line overflow-hidden">
           <img src="https://picsum.photos/seed/emal-doctor-artem/600/520" alt="Артём Гончаров" class="w-full h-64 object-cover" />
           <div class="p-6">
             <h3 class="font-display text-lg font-semibold text-ink">Артём Гончаров</h3>
@@ -411,7 +413,7 @@
               <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full rounded-xl bg-white text-ink placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white" />
               <p class="error-text hidden mt-1.5 text-sm text-amber-200"></p>
             </div>
-            <button type="submit" class="w-full rounded-xl bg-ink text-white font-semibold py-3.5 hover:bg-accentdark transition-colors duration-300">Записаться на приём</button>
+            <button type="submit" data-magnetic class="w-full rounded-xl bg-ink text-white font-semibold py-3.5 hover:bg-accentdark transition-colors duration-300">Записаться на приём</button>
             <p class="text-xs text-white/60">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
           </form>
           <p id="form-success" class="hidden text-center font-medium py-10">Заявка принята. Администратор перезвонит в течение 15 минут.</p>

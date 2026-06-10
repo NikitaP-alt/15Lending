@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Формула — курс по Excel и Google Таблицам</title>
+<meta name="description" content="Онлайн-курс «Формула»: научитесь работать в Excel и Google Таблицах — от формул и сводных таблиц до дашбордов и Power Query. С практикой и наставником." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#FFFFFF',
+          surface: '#F9FAFB',
+          ink: '#18181B',
+          muted: '#6B7280',
+          accent: '#16A34A',
+          accentdark: '#15803D',
+          line: '#E5E7EB',
+        },
+        fontFamily: {
+          display: ['Bricolage Grotesque', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+          mono: ['JetBrains Mono', 'monospace'],
+        },
+        borderRadius: {
+          shell: '1.25rem',
+          core: '1rem',
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}.word{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="font-sans bg-bg text-ink antialiased">
+
+<div id="scroll-progress"></div>
+
+<!-- NAVIGATION -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-ink">
+      <span class="grid place-items-center w-9 h-9 rounded-lg bg-accent text-white"><i class="ph-bold ph-table text-lg"></i></span>
+      Формула
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+      <a href="#program" class="hover:text-accent transition-colors duration-300">Программа</a>
+      <a href="#skills" class="hover:text-accent transition-colors duration-300">Навыки</a>
+      <a href="#mentor" class="hover:text-accent transition-colors duration-300">Преподаватель</a>
+      <a href="#pricing" class="hover:text-accent transition-colors duration-300">Тарифы</a>
+    </div>
+    <a href="#enroll" data-magnetic class="hidden md:inline-flex items-center gap-2 rounded-lg bg-accent text-white text-sm font-semibold px-5 py-2.5 hover:bg-accentdark transition-colors duration-300">
+      Записаться
+    </a>
+    <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
+      <span class="menu-line top"></span>
+      <span class="menu-line bottom"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/97 backdrop-blur-xl flex flex-col items-center justify-center gap-7 opacity-0 pointer-events-none">
+  <a href="#program" class="menu-item font-display text-3xl font-bold text-ink">Программа</a>
+  <a href="#skills" class="menu-item font-display text-3xl font-bold text-ink">Навыки</a>
+  <a href="#mentor" class="menu-item font-display text-3xl font-bold text-ink">Преподаватель</a>
+  <a href="#pricing" class="menu-item font-display text-3xl font-bold text-ink">Тарифы</a>
+  <a href="#enroll" class="menu-item mt-4 inline-flex rounded-lg bg-accent text-white font-semibold px-7 py-3.5">Записаться</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative pt-28 md:pt-36 pb-20 px-4 md:px-8 overflow-hidden">
+    <div class="grid-bg absolute inset-0 -z-10"></div>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 rounded-full bg-accent/10 text-accentdark text-sm font-semibold px-4 py-1.5">
+          <i class="ph-fill ph-certificate"></i> Курс с сертификатом и наставником
+        </span>
+        <h1 class="word-reveal mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] text-ink">
+          Перестаньте бояться таблиц. Начните на них зарабатывать.
+        </h1>
+        <p class="mt-6 text-base md:text-lg text-muted leading-relaxed max-w-xl">
+          За 8 недель освоите Excel и Google Таблицы на уровне, за который доплачивают: формулы, сводные, дашборды и автоматизацию рутины.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#enroll" data-magnetic class="inline-flex items-center gap-2 rounded-lg bg-accent text-white font-semibold px-7 py-3.5 hover:bg-accentdark transition-colors duration-300">
+            Записаться на курс
+            <i class="ph-bold ph-arrow-right"></i>
+          </a>
+          <a href="#program" class="inline-flex items-center gap-2 rounded-lg ring-1 ring-line bg-white text-ink font-semibold px-7 py-3.5 hover:ring-accent hover:text-accent transition-colors duration-300">
+            Программа курса
+          </a>
+        </div>
+        <div class="mt-9 flex items-center gap-6 text-sm">
+          <div class="flex items-center gap-2"><i class="ph-fill ph-clock text-accent"></i> 8 недель</div>
+          <div class="flex items-center gap-2"><i class="ph-fill ph-monitor-play text-accent"></i> 40+ уроков</div>
+          <div class="flex items-center gap-2"><i class="ph-fill ph-infinity text-accent"></i> Доступ навсегда</div>
+        </div>
+      </div>
+
+      <!-- SPREADSHEET MOCKUP -->
+      <div class="reveal flex justify-center lg:justify-end">
+        <div data-tilt class="sheet w-full max-w-md bg-white rounded-shell ring-1 ring-line shadow-[0_40px_80px_-40px_rgba(22,163,74,0.35)] overflow-hidden">
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-line bg-surface">
+            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+            <span class="ml-3 font-mono text-xs text-muted">отчёт_продажи.xlsx</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 border-b border-line">
+            <span class="font-mono text-xs text-accent font-semibold">fx</span>
+            <span class="font-mono text-xs text-ink">=СУММ(C2:C7)</span>
+          </div>
+          <div class="font-mono text-xs">
+            <div class="grid grid-cols-[32px_1fr_1fr_1fr] bg-surface text-muted">
+              <div class="px-2 py-1.5 border-b border-r border-line"></div>
+              <div class="px-2 py-1.5 border-b border-r border-line text-center">A</div>
+              <div class="px-2 py-1.5 border-b border-r border-line text-center">B</div>
+              <div class="px-2 py-1.5 border-b border-line text-center">C</div>
+            </div>
+            <div class="grid grid-cols-[32px_1fr_1fr_1fr]"><div class="px-2 py-1.5 border-b border-r border-line bg-surface text-muted text-center">1</div><div class="px-2 py-1.5 border-b border-r border-line text-ink font-semibold">Месяц</div><div class="px-2 py-1.5 border-b border-r border-line text-ink font-semibold">Менеджер</div><div class="px-2 py-1.5 border-b border-line text-ink font-semibold">Выручка</div></div>
+            <div class="grid grid-cols-[32px_1fr_1fr_1fr]"><div class="px-2 py-1.5 border-b border-r border-line bg-surface text-muted text-center">2</div><div class="px-2 py-1.5 border-b border-r border-line">Январь</div><div class="px-2 py-1.5 border-b border-r border-line">Орлов</div><div class="px-2 py-1.5 border-b border-line">420 000</div></div>
+            <div class="grid grid-cols-[32px_1fr_1fr_1fr]"><div class="px-2 py-1.5 border-b border-r border-line bg-surface text-muted text-center">3</div><div class="px-2 py-1.5 border-b border-r border-line">Февраль</div><div class="px-2 py-1.5 border-b border-r border-line">Седова</div><div class="px-2 py-1.5 border-b border-line">510 000</div></div>
+            <div class="grid grid-cols-[32px_1fr_1fr_1fr]"><div class="px-2 py-1.5 border-b border-r border-line bg-surface text-muted text-center">4</div><div class="px-2 py-1.5 border-b border-r border-line">Март</div><div class="px-2 py-1.5 border-b border-r border-line">Орлов</div><div class="px-2 py-1.5 border-b border-line">638 000</div></div>
+            <div class="grid grid-cols-[32px_1fr_1fr_1fr]"><div class="px-2 py-1.5 border-b border-r border-line bg-surface text-muted text-center">5</div><div class="px-2 py-1.5 border-b border-r border-line">Апрель</div><div class="px-2 py-1.5 border-b border-r border-line">Седова</div><div class="px-2 py-1.5 border-b border-line">712 000</div></div>
+            <div class="grid grid-cols-[32px_1fr_1fr_1fr]"><div class="px-2 py-1.5 border-r border-line bg-surface text-muted text-center">6</div><div class="px-2 py-1.5 border-r border-line font-semibold">Итого</div><div class="px-2 py-1.5 border-r border-line"></div><div class="px-2 py-1.5 bg-accent/15 text-accentdark font-semibold ring-1 ring-accent">2 280 000</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="py-5 border-y border-line bg-surface overflow-hidden">
+    <div class="marquee">
+      <div class="marquee__track font-display font-semibold text-lg text-ink/70">
+        <span class="flex items-center gap-3"><i class="ph-bold ph-function text-accent"></i> ВПР и ГПР</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-table text-accent"></i> Сводные таблицы</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-chart-bar text-accent"></i> Дашборды</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-funnel text-accent"></i> Power Query</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-lightning text-accent"></i> Макросы</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-chart-line-up text-accent"></i> Прогнозы</span>
+      </div>
+      <div class="marquee__track font-display font-semibold text-lg text-ink/70" aria-hidden="true">
+        <span class="flex items-center gap-3"><i class="ph-bold ph-function text-accent"></i> ВПР и ГПР</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-table text-accent"></i> Сводные таблицы</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-chart-bar text-accent"></i> Дашборды</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-funnel text-accent"></i> Power Query</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-lightning text-accent"></i> Макросы</span>
+        <span class="flex items-center gap-3"><i class="ph-bold ph-chart-line-up text-accent"></i> Прогнозы</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN / FOR WHOM -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Знакомо?</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Если таблицы отнимают часы — это не про вас, это про навык</h2>
+      </div>
+      <div class="reveal-group mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-6">
+          <i class="ph ph-clock-countdown text-3xl text-accent"></i>
+          <h3 class="mt-4 font-display text-lg font-semibold text-ink">Считаете вручную</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Сводите отчёт калькулятором, хотя формула сделала бы это за секунду.</p>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-6">
+          <i class="ph ph-files text-3xl text-accent"></i>
+          <h3 class="mt-4 font-display text-lg font-semibold text-ink">Тонете в данных</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Тысячи строк, а нужную цифру ищете глазами по всему листу.</p>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-6">
+          <i class="ph ph-warning-circle text-3xl text-accent"></i>
+          <h3 class="mt-4 font-display text-lg font-semibold text-ink">Боитесь ошибиться</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Одна неверная ячейка — и весь отчёт под вопросом перед руководителем.</p>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-6">
+          <i class="ph ph-presentation-chart text-3xl text-accent"></i>
+          <h3 class="mt-4 font-display text-lg font-semibold text-ink">Не умеете показать</h3>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Данные есть, а наглядного дашборда для руководства — нет.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section id="program" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Программа</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">8 модулей — от азов до автоматизации</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-2 gap-4">
+        <div data-tilt class="reveal flex gap-5 rounded-shell bg-white ring-1 ring-line p-6"><span class="font-mono font-semibold text-accent shrink-0">01</span><div><h3 class="font-display text-lg font-semibold text-ink">Интерфейс и основы</h3><p class="mt-1 text-sm text-muted leading-relaxed">Ячейки, форматы, горячие клавиши и навигация по большим листам.</p></div></div>
+        <div data-tilt class="reveal flex gap-5 rounded-shell bg-white ring-1 ring-line p-6"><span class="font-mono font-semibold text-accent shrink-0">02</span><div><h3 class="font-display text-lg font-semibold text-ink">Формулы и функции</h3><p class="mt-1 text-sm text-muted leading-relaxed">СУММ, ЕСЛИ, ВПР, ИНДЕКС/ПОИСКПОЗ и работа с ошибками.</p></div></div>
+        <div data-tilt class="reveal flex gap-5 rounded-shell bg-white ring-1 ring-line p-6"><span class="font-mono font-semibold text-accent shrink-0">03</span><div><h3 class="font-display text-lg font-semibold text-ink">Сводные таблицы</h3><p class="mt-1 text-sm text-muted leading-relaxed">Группировка, фильтры и срезы для анализа за минуты.</p></div></div>
+        <div data-tilt class="reveal flex gap-5 rounded-shell bg-white ring-1 ring-line p-6"><span class="font-mono font-semibold text-accent shrink-0">04</span><div><h3 class="font-display text-lg font-semibold text-ink">Диаграммы и графики</h3><p class="mt-1 text-sm text-muted leading-relaxed">Подбор визуализации под данные и оформление.</p></div></div>
+        <div data-tilt class="reveal flex gap-5 rounded-shell bg-white ring-1 ring-line p-6"><span class="font-mono font-semibold text-accent shrink-0">05</span><div><h3 class="font-display text-lg font-semibold text-ink">Дашборды</h3><p class="mt-1 text-sm text-muted leading-relaxed">Интерактивные отчёты с фильтрами на одном экране.</p></div></div>
+        <div data-tilt class="reveal flex gap-5 rounded-shell bg-white ring-1 ring-line p-6"><span class="font-mono font-semibold text-accent shrink-0">06</span><div><h3 class="font-display text-lg font-semibold text-ink">Power Query</h3><p class="mt-1 text-sm text-muted leading-relaxed">Сбор и очистка данных из разных источников без рутины.</p></div></div>
+        <div data-tilt class="reveal flex gap-5 rounded-shell bg-white ring-1 ring-line p-6"><span class="font-mono font-semibold text-accent shrink-0">07</span><div><h3 class="font-display text-lg font-semibold text-ink">Google Таблицы</h3><p class="mt-1 text-sm text-muted leading-relaxed">Совместная работа, IMPORTRANGE и функции, которых нет в Excel.</p></div></div>
+        <div data-tilt class="reveal flex gap-5 rounded-shell bg-white ring-1 ring-line p-6"><span class="font-mono font-semibold text-accent shrink-0">08</span><div><h3 class="font-display text-lg font-semibold text-ink">Макросы и автоматизация</h3><p class="mt-1 text-sm text-muted leading-relaxed">Запись макросов и скрипты, чтобы отчёт собирался сам.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS / OUTCOMES -->
+  <section id="skills" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="reveal">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Результат</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Что вы будете уметь после курса</h2>
+        <ul class="mt-8 space-y-4">
+          <li class="flex gap-3"><i class="ph-bold ph-check-circle text-accent text-xl shrink-0"></i><span class="text-ink/80">Собирать отчёт любой сложности за минуты, а не часы</span></li>
+          <li class="flex gap-3"><i class="ph-bold ph-check-circle text-accent text-xl shrink-0"></i><span class="text-ink/80">Находить нужные данные формулами вместо ручного поиска</span></li>
+          <li class="flex gap-3"><i class="ph-bold ph-check-circle text-accent text-xl shrink-0"></i><span class="text-ink/80">Строить наглядные дашборды для руководства</span></li>
+          <li class="flex gap-3"><i class="ph-bold ph-check-circle text-accent text-xl shrink-0"></i><span class="text-ink/80">Автоматизировать рутину макросами и Power Query</span></li>
+          <li class="flex gap-3"><i class="ph-bold ph-check-circle text-accent text-xl shrink-0"></i><span class="text-ink/80">Уверенно проходить тесты на Excel на собеседованиях</span></li>
+        </ul>
+      </div>
+      <div class="reveal grid grid-cols-2 gap-4">
+        <div class="rounded-shell bg-accent text-white p-7">
+          <div class="font-display text-4xl md:text-5xl font-bold"><span data-count="40" data-suffix="+">0</span></div>
+          <div class="mt-2 text-white/80 text-sm">практических уроков с заданиями</div>
+        </div>
+        <div class="rounded-shell bg-surface ring-1 ring-line p-7">
+          <div class="font-display text-4xl md:text-5xl font-bold text-ink"><span data-count="30" data-suffix="+">0</span></div>
+          <div class="mt-2 text-muted text-sm">шаблонов и готовых таблиц</div>
+        </div>
+        <div class="rounded-shell bg-surface ring-1 ring-line p-7">
+          <div class="font-display text-4xl md:text-5xl font-bold text-ink"><span data-count="8">0</span></div>
+          <div class="mt-2 text-muted text-sm">недель с поддержкой наставника</div>
+        </div>
+        <div class="rounded-shell bg-ink text-white p-7">
+          <div class="font-display text-4xl md:text-5xl font-bold">∞</div>
+          <div class="mt-2 text-white/70 text-sm">доступ к материалам навсегда</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTOR -->
+  <section id="mentor" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-[0.8fr_1.2fr] gap-10 items-center">
+      <div class="reveal overflow-hidden rounded-shell ring-1 ring-line">
+        <img src="https://picsum.photos/seed/formula-mentor/700/800" alt="Преподаватель курса" class="w-full h-full object-cover" />
+      </div>
+      <div class="reveal">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Преподаватель</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Дмитрий Власов</h2>
+        <p class="mt-2 text-accent font-medium">Финансовый аналитик, 12 лет в данных</p>
+        <p class="mt-5 text-muted leading-relaxed">Строил отчётность в крупном ритейле и банке, обучил Excel более 4 000 человек. Объясняет на реальных рабочих задачах, без академической воды.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="rounded-full bg-white ring-1 ring-line px-4 py-1.5 text-sm">Ex-аналитик X5</span>
+          <span class="rounded-full bg-white ring-1 ring-line px-4 py-1.5 text-sm">Сертификат Microsoft</span>
+          <span class="rounded-full bg-white ring-1 ring-line px-4 py-1.5 text-sm">Автор Telegram-канала</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal-group grid sm:grid-cols-3 gap-6 text-center mb-16">
+        <div class="reveal"><div class="font-display text-5xl md:text-6xl font-bold text-accent"><span data-count="4800" data-suffix="+">0</span></div><div class="mt-2 text-muted">выпускников курса</div></div>
+        <div class="reveal"><div class="font-display text-5xl md:text-6xl font-bold text-accent"><span data-count="92" data-suffix="%">0</span></div><div class="mt-2 text-muted">довольны результатом</div></div>
+        <div class="reveal"><div class="font-display text-5xl md:text-6xl font-bold text-accent"><span data-count="3" data-prefix="×">0</span></div><div class="mt-2 text-muted">быстрее собирают отчёты</div></div>
+      </div>
+      <div class="reveal-group grid md:grid-cols-2 gap-5">
+        <figure data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-7">
+          <blockquote class="text-ink leading-relaxed">«Раньше отчёт по продажам занимал полдня. После курса собираю его за 20 минут сводной таблицей. Начальник заметил».</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3"><img src="https://picsum.photos/seed/formula-rev1/80/80" class="w-10 h-10 rounded-full object-cover" alt="" /><div><div class="font-semibold text-sm text-ink">Мария, менеджер</div><div class="text-xs text-muted">отдел продаж</div></div></figcaption>
+        </figure>
+        <figure data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-7">
+          <blockquote class="text-ink leading-relaxed">«Прошёл курс ради повышения. Сделал дашборд для руководства — через месяц перевели на позицию аналитика».</blockquote>
+          <figcaption class="mt-5 flex items-center gap-3"><img src="https://picsum.photos/seed/formula-rev2/80/80" class="w-10 h-10 rounded-full object-cover" alt="" /><div><div class="font-semibold text-sm text-ink">Игорь, логист</div><div class="text-xs text-muted">стал аналитиком</div></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Тарифы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Выберите формат обучения</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5 items-stretch">
+        <div data-tilt class="reveal rounded-shell bg-white ring-1 ring-line p-8 flex flex-col">
+          <h3 class="font-display text-xl font-bold text-ink">Самостоятельно</h3>
+          <p class="mt-1 text-sm text-muted">Учитесь в своём темпе</p>
+          <div class="mt-6 font-display text-4xl font-bold text-ink">9 900 ₽</div>
+          <ul class="mt-6 space-y-3 text-sm text-ink/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>40+ уроков и материалы</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Шаблоны и домашние задания</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Доступ навсегда</li>
+          </ul>
+          <a href="#enroll" data-magnetic class="mt-8 inline-flex justify-center rounded-lg ring-1 ring-line text-ink font-semibold px-6 py-3 hover:ring-accent hover:text-accent transition-colors duration-300">Выбрать</a>
+        </div>
+        <div class="reveal rounded-shell bg-ink text-white p-8 md:-my-4 shadow-[0_30px_70px_-30px_rgba(22,163,74,0.5)] flex flex-col relative">
+          <div class="inline-flex w-fit items-center rounded-full bg-accent text-white text-xs font-semibold uppercase tracking-[0.15em] px-3 py-1">Хит</div>
+          <h3 class="mt-4 font-display text-xl font-bold">С наставником</h3>
+          <p class="mt-1 text-sm text-white/60">Проверка заданий и обратная связь</p>
+          <div class="mt-6 font-display text-4xl font-bold">19 900 ₽</div>
+          <ul class="mt-6 space-y-3 text-sm text-white/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Всё из тарифа «Самостоятельно»</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Личная проверка домашних заданий</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Чат с наставником и созвоны</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Сертификат о прохождении</li>
+          </ul>
+          <a href="#enroll" data-magnetic class="mt-8 inline-flex justify-center rounded-lg bg-accent text-white font-semibold px-6 py-3 hover:bg-accentdark transition-colors duration-300">Выбрать</a>
+        </div>
+        <div data-tilt class="reveal rounded-shell bg-white ring-1 ring-line p-8 flex flex-col">
+          <h3 class="font-display text-xl font-bold text-ink">Для команды</h3>
+          <p class="mt-1 text-sm text-muted">Обучение сотрудников</p>
+          <div class="mt-6 font-display text-4xl font-bold text-ink">от 60 000 ₽</div>
+          <ul class="mt-6 space-y-3 text-sm text-ink/80 flex-1">
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Обучение от 5 человек</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Программа под ваши задачи</li>
+            <li class="flex gap-2"><i class="ph-bold ph-check text-accent mt-0.5 shrink-0"></i>Отчёт по успеваемости</li>
+          </ul>
+          <a href="#enroll" data-magnetic class="mt-8 inline-flex justify-center rounded-lg ring-1 ring-line text-ink font-semibold px-6 py-3 hover:ring-accent hover:text-accent transition-colors duration-300">Обсудить</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal mb-10">
+        <span class="text-sm font-semibold uppercase tracking-[0.15em] text-accent">Вопросы</span>
+        <h2 class="mt-3 font-display text-3xl md:text-4xl font-bold tracking-tight text-ink leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="reveal divide-y divide-line">
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-semibold text-ink">Подойдёт ли курс новичку с нуля?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-surface text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да. Начинаем с самых основ — интерфейса и первых формул. Если вы умеете включать компьютер и открывать файл, этого достаточно для старта.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-semibold text-ink">Excel или Google Таблицы — что изучаем?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-surface text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">И то, и другое. Основная часть на Excel, отдельный модуль — про особенности Google Таблиц и совместную работу. Навыки переносятся между ними.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-semibold text-ink">Сколько времени нужно в неделю?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-surface text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">В среднем 3-4 часа: видеоуроки плюс практика. Темп гибкий, доступ к материалам остаётся навсегда, можно проходить медленнее.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-lg font-semibold text-ink">Будет ли сертификат?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-surface text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-muted leading-relaxed">Да, на тарифах с наставником после сдачи итогового проекта вы получаете сертификат, который можно приложить к резюме.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROLL CTA -->
+  <section id="enroll" class="px-4 md:px-8 py-24 md:py-32 bg-surface">
+    <div class="max-w-5xl mx-auto rounded-shell bg-ink text-white overflow-hidden grid md:grid-cols-2">
+      <div class="p-8 md:p-12 reveal">
+        <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight leading-tight">Запишитесь на курс «Формула»</h2>
+        <p class="mt-4 text-white/70 leading-relaxed">Оставьте контакты — пришлём программу, доступ к первому уроку бесплатно и ответим на вопросы по форматам.</p>
+        <ul class="mt-6 space-y-3 text-sm text-white/90">
+          <li class="flex items-center gap-2"><i class="ph-bold ph-gift text-accent"></i> Первый урок — бесплатно</li>
+          <li class="flex items-center gap-2"><i class="ph-bold ph-credit-card text-accent"></i> Рассрочка без переплат</li>
+        </ul>
+      </div>
+      <div class="p-8 md:p-12 bg-white/5 reveal">
+        <form id="lead-form" novalidate class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm text-white/80 mb-1.5">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Мария" class="w-full rounded-lg bg-white text-ink placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent" />
+            <p class="error-text hidden mt-1.5 text-sm text-red-300"></p>
+          </div>
+          <div>
+            <label for="phone" class="block text-sm text-white/80 mb-1.5">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full rounded-lg bg-white text-ink placeholder:text-muted/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent" />
+            <p class="error-text hidden mt-1.5 text-sm text-red-300"></p>
+          </div>
+          <button type="submit" data-magnetic class="w-full rounded-lg bg-accent text-white font-semibold py-3.5 hover:bg-accentdark transition-colors duration-300">Получить программу</button>
+          <p class="text-xs text-white/50">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+        </form>
+        <div id="form-success" class="hidden text-center py-10">
+          <div class="check-pop mx-auto grid place-items-center w-16 h-16 rounded-full bg-accent text-white"><i class="ph-bold ph-check text-3xl"></i></div>
+          <p class="mt-4 font-medium">Готово! Программа уже летит вам на телефон.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-4 md:px-8 py-16 bg-ink text-white/60">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
+    <div>
+      <div class="flex items-center gap-2 font-display text-xl font-bold text-white"><span class="grid place-items-center w-9 h-9 rounded-lg bg-accent text-white"><i class="ph-bold ph-table text-lg"></i></span>Формула</div>
+      <p class="mt-4 text-sm max-w-[34ch] leading-relaxed">Онлайн-курс по Excel и Google Таблицам для тех, кто работает с данными каждый день.</p>
+      <div class="mt-5 flex items-center gap-3">
+        <a href="#" aria-label="Telegram" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-telegram-logo"></i></a>
+        <a href="#" aria-label="YouTube" class="grid place-items-center w-10 h-10 rounded-full ring-1 ring-white/15 text-white hover:bg-accent transition-colors duration-300"><i class="ph-bold ph-youtube-logo"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Курс</div>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="#program" class="hover:text-accent transition-colors">Программа</a></li>
+        <li><a href="#skills" class="hover:text-accent transition-colors">Навыки</a></li>
+        <li><a href="#mentor" class="hover:text-accent transition-colors">Преподаватель</a></li>
+        <li><a href="#pricing" class="hover:text-accent transition-colors">Тарифы</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-white mb-4">Контакты</div>
+      <ul class="space-y-2.5 text-sm">
+        <li class="flex items-center gap-2"><i class="ph ph-envelope-simple"></i> hello@formula-course.ru</li>
+        <li class="flex items-center gap-2"><i class="ph ph-telegram-logo"></i> @formula_support</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-sm">© 2026 Курс «Формула». Все права защищены.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
