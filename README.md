@@ -3,7 +3,7 @@
 **Коллекция из 15 лендингов в 5 нишах — у каждого свой дизайн.**
 **A collection of 15 landing pages across 5 niches — each with its own design.**
 
-🌐 **Live / Живая версия:** **https://nikitap-alt.github.io/30Lending/**
+🌐 **Live / Живая версия:** **https://nikitap-alt.github.io/15Lending/**
 
 > 🇷🇺 [Русский](#-русский) · 🇬🇧 [English](#-english)
 
@@ -29,11 +29,11 @@
 ### 📂 Каталог
 | № | Категория | Лендинги |
 |---|---|---|
-| 01 | **Строительство и ремонт** | [Метраж](https://nikitap-alt.github.io/30Lending/01-construction-renovation/01-remont-kvartir-pod-klyuch/) · [Светло](https://nikitap-alt.github.io/30Lending/01-construction-renovation/02-natyazhnye-potolki/) · [Контур](https://nikitap-alt.github.io/30Lending/01-construction-renovation/03-dizajn-interera/) |
-| 02 | **Медицина и стоматология** | [Эмаль](https://nikitap-alt.github.io/30Lending/02-medical-dental/01-stomatologicheskaya-klinika/) · [Визит](https://nikitap-alt.github.io/30Lending/02-medical-dental/02-onlayn-konsultaciya-vracha/) · [Тишина](https://nikitap-alt.github.io/30Lending/02-medical-dental/03-massazh-i-spa/) |
-| 03 | **Онлайн-курсы** | [Формула](https://nikitap-alt.github.io/30Lending/03-online-courses/01-kursy-excel-google-sheets/) · [Бегло](https://nikitap-alt.github.io/30Lending/03-online-courses/02-shkola-anglijskogo/) · [Охват](https://nikitap-alt.github.io/30Lending/03-online-courses/03-onlajn-kurs-smm/) |
-| 04 | **Финансы и право** | [Сальдо](https://nikitap-alt.github.io/30Lending/04-finance-legal/01-buhgalterskoe-soprovozhdenie/) · [Корпус](https://nikitap-alt.github.io/30Lending/04-finance-legal/02-yuridicheskaya-firma/) · [Опора](https://nikitap-alt.github.io/30Lending/04-finance-legal/03-bankrotstvo-fizlic/) |
-| 05 | **Красота и уход** | [Глянец](https://nikitap-alt.github.io/30Lending/05-beauty-care/01-manikyur-pedikyur/) · [Взмах](https://nikitap-alt.github.io/30Lending/05-beauty-care/02-naraschivanie-resnic/) · [Гладь](https://nikitap-alt.github.io/30Lending/05-beauty-care/03-kosmetolog-uhod-za-kozhej/) |
+| 01 | **Строительство и ремонт** | [Метраж](https://nikitap-alt.github.io/15Lending/01-construction-renovation/01-remont-kvartir-pod-klyuch/) · [Светло](https://nikitap-alt.github.io/15Lending/01-construction-renovation/02-natyazhnye-potolki/) · [Контур](https://nikitap-alt.github.io/15Lending/01-construction-renovation/03-dizajn-interera/) |
+| 02 | **Медицина и стоматология** | [Эмаль](https://nikitap-alt.github.io/15Lending/02-medical-dental/01-stomatologicheskaya-klinika/) · [Визит](https://nikitap-alt.github.io/15Lending/02-medical-dental/02-onlayn-konsultaciya-vracha/) · [Тишина](https://nikitap-alt.github.io/15Lending/02-medical-dental/03-massazh-i-spa/) |
+| 03 | **Онлайн-курсы** | [Формула](https://nikitap-alt.github.io/15Lending/03-online-courses/01-kursy-excel-google-sheets/) · [Бегло](https://nikitap-alt.github.io/15Lending/03-online-courses/02-shkola-anglijskogo/) · [Охват](https://nikitap-alt.github.io/15Lending/03-online-courses/03-onlajn-kurs-smm/) |
+| 04 | **Финансы и право** | [Сальдо](https://nikitap-alt.github.io/15Lending/04-finance-legal/01-buhgalterskoe-soprovozhdenie/) · [Корпус](https://nikitap-alt.github.io/15Lending/04-finance-legal/02-yuridicheskaya-firma/) · [Опора](https://nikitap-alt.github.io/15Lending/04-finance-legal/03-bankrotstvo-fizlic/) |
+| 05 | **Красота и уход** | [Глянец](https://nikitap-alt.github.io/15Lending/05-beauty-care/01-manikyur-pedikyur/) · [Взмах](https://nikitap-alt.github.io/15Lending/05-beauty-care/02-naraschivanie-resnic/) · [Гладь](https://nikitap-alt.github.io/15Lending/05-beauty-care/03-kosmetolog-uhod-za-kozhej/) |
 
 <details>
 <summary>Подробнее о каждом лендинге</summary>
@@ -70,7 +70,7 @@
 
 ### 📁 Структура
 ```
-30Lending/
+15Lending/
 ├── index.html                          ← витрина-хаб (главная)
 ├── 01-construction-renovation/
 │   ├── 01-remont-kvartir-pod-klyuch/    (index.html · styles.css · script.js)
@@ -106,11 +106,11 @@ Each landing folder holds exactly three files: `index.html`, `styles.css`, `scri
 ### 📂 Catalog
 | # | Category | Landings |
 |---|---|---|
-| 01 | **Construction & renovation** | [Метраж](https://nikitap-alt.github.io/30Lending/01-construction-renovation/01-remont-kvartir-pod-klyuch/) (turnkey renovation) · [Светло](https://nikitap-alt.github.io/30Lending/01-construction-renovation/02-natyazhnye-potolki/) (stretch ceilings) · [Контур](https://nikitap-alt.github.io/30Lending/01-construction-renovation/03-dizajn-interera/) (interior design) |
-| 02 | **Medical & dental** | [Эмаль](https://nikitap-alt.github.io/30Lending/02-medical-dental/01-stomatologicheskaya-klinika/) (dental clinic) · [Визит](https://nikitap-alt.github.io/30Lending/02-medical-dental/02-onlayn-konsultaciya-vracha/) (online consultation) · [Тишина](https://nikitap-alt.github.io/30Lending/02-medical-dental/03-massazh-i-spa/) (massage & spa) |
-| 03 | **Online courses** | [Формула](https://nikitap-alt.github.io/30Lending/03-online-courses/01-kursy-excel-google-sheets/) (Excel/Sheets) · [Бегло](https://nikitap-alt.github.io/30Lending/03-online-courses/02-shkola-anglijskogo/) (English school) · [Охват](https://nikitap-alt.github.io/30Lending/03-online-courses/03-onlajn-kurs-smm/) (SMM course) |
-| 04 | **Finance & legal** | [Сальдо](https://nikitap-alt.github.io/30Lending/04-finance-legal/01-buhgalterskoe-soprovozhdenie/) (accounting) · [Корпус](https://nikitap-alt.github.io/30Lending/04-finance-legal/02-yuridicheskaya-firma/) (law firm) · [Опора](https://nikitap-alt.github.io/30Lending/04-finance-legal/03-bankrotstvo-fizlic/) (bankruptcy) |
-| 05 | **Beauty & care** | [Глянец](https://nikitap-alt.github.io/30Lending/05-beauty-care/01-manikyur-pedikyur/) (manicure) · [Взмах](https://nikitap-alt.github.io/30Lending/05-beauty-care/02-naraschivanie-resnic/) (lash extensions) · [Гладь](https://nikitap-alt.github.io/30Lending/05-beauty-care/03-kosmetolog-uhod-za-kozhej/) (skincare) |
+| 01 | **Construction & renovation** | [Метраж](https://nikitap-alt.github.io/15Lending/01-construction-renovation/01-remont-kvartir-pod-klyuch/) (turnkey renovation) · [Светло](https://nikitap-alt.github.io/15Lending/01-construction-renovation/02-natyazhnye-potolki/) (stretch ceilings) · [Контур](https://nikitap-alt.github.io/15Lending/01-construction-renovation/03-dizajn-interera/) (interior design) |
+| 02 | **Medical & dental** | [Эмаль](https://nikitap-alt.github.io/15Lending/02-medical-dental/01-stomatologicheskaya-klinika/) (dental clinic) · [Визит](https://nikitap-alt.github.io/15Lending/02-medical-dental/02-onlayn-konsultaciya-vracha/) (online consultation) · [Тишина](https://nikitap-alt.github.io/15Lending/02-medical-dental/03-massazh-i-spa/) (massage & spa) |
+| 03 | **Online courses** | [Формула](https://nikitap-alt.github.io/15Lending/03-online-courses/01-kursy-excel-google-sheets/) (Excel/Sheets) · [Бегло](https://nikitap-alt.github.io/15Lending/03-online-courses/02-shkola-anglijskogo/) (English school) · [Охват](https://nikitap-alt.github.io/15Lending/03-online-courses/03-onlajn-kurs-smm/) (SMM course) |
+| 04 | **Finance & legal** | [Сальдо](https://nikitap-alt.github.io/15Lending/04-finance-legal/01-buhgalterskoe-soprovozhdenie/) (accounting) · [Корпус](https://nikitap-alt.github.io/15Lending/04-finance-legal/02-yuridicheskaya-firma/) (law firm) · [Опора](https://nikitap-alt.github.io/15Lending/04-finance-legal/03-bankrotstvo-fizlic/) (bankruptcy) |
+| 05 | **Beauty & care** | [Глянец](https://nikitap-alt.github.io/15Lending/05-beauty-care/01-manikyur-pedikyur/) (manicure) · [Взмах](https://nikitap-alt.github.io/15Lending/05-beauty-care/02-naraschivanie-resnic/) (lash extensions) · [Гладь](https://nikitap-alt.github.io/15Lending/05-beauty-care/03-kosmetolog-uhod-za-kozhej/) (skincare) |
 
 <details>
 <summary>Per-landing details</summary>
@@ -147,7 +147,7 @@ The landings are static — just open `index.html` in a browser. All assets are 
 
 ### 📁 Structure
 ```
-30Lending/
+15Lending/
 ├── index.html                          ← showcase hub (home)
 ├── 01-construction-renovation/
 │   ├── 01-remont-kvartir-pod-klyuch/    (index.html · styles.css · script.js)
