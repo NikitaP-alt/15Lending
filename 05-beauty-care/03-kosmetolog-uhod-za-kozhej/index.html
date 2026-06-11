@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Гладь — кабинет косметологии и ухода за кожей</title>
+  <meta name="description" content="Кабинет косметологии Гладь: чистки, пилинги, биоревитализация и аппаратные методики. Врач-косметолог, диагностика кожи, индивидуальный план ухода." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#FAF8F6',
+            surface: '#FFFFFF',
+            ink: '#2B2521',
+            muted: '#897F77',
+            accent: '#D98B73',
+            accentdark: '#C06E55',
+            accentsoft: '#FBEDE7',
+            line: '#ECE6E0',
+          },
+          fontFamily: {
+            display: ['Familjen Grotesk', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            shell: '1.75rem',
+            core: '1.25rem',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-bg text-ink font-sans antialiased overflow-x-hidden">
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-display font-bold text-2xl tracking-tight">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent text-white"><i class="ph-fill ph-drop"></i></span>
+        Гладь
+      </a>
+      <div class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-muted">
+        <a href="#services" class="hover:text-ink transition-colors">Процедуры</a>
+        <a href="#match" class="hover:text-ink transition-colors">Подбор</a>
+        <a href="#price" class="hover:text-ink transition-colors">Цены</a>
+        <a href="#doctor" class="hover:text-ink transition-colors">Врач</a>
+        <a href="#faq" class="hover:text-ink transition-colors">Вопросы</a>
+      </div>
+      <a href="#booking" data-magnetic class="hidden lg:inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3 text-[15px] font-semibold hover:bg-accentdark transition-colors">
+        Записаться <i class="ph ph-arrow-up-right"></i>
+      </a>
+      <button id="menu-toggle" aria-label="Меню" aria-expanded="false" class="lg:hidden relative h-11 w-11 rounded-full bg-surface border border-line">
+        <span class="menu-line top"></span>
+        <span class="menu-line bottom"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-bg/95 backdrop-blur-xl opacity-0 pointer-events-none flex flex-col items-center justify-center gap-7 text-2xl font-display font-semibold lg:hidden">
+    <a href="#services" class="menu-item">Процедуры</a>
+    <a href="#match" class="menu-item">Подбор</a>
+    <a href="#price" class="menu-item">Цены</a>
+    <a href="#doctor" class="menu-item">Врач</a>
+    <a href="#booking" class="menu-item rounded-full bg-accent text-white px-8 py-3 text-lg">Записаться</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
+      <div class="blob-drift absolute -top-24 -right-20 h-[26rem] w-[26rem] rounded-full bg-accentsoft blur-3xl opacity-80"></div>
+      <div class="blob-drift-2 absolute top-44 -left-28 h-72 w-72 rounded-full bg-orange-50 blur-3xl opacity-70"></div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full bg-surface border border-line px-4 py-1.5 text-sm font-medium text-accentdark">
+            <i class="ph-fill ph-seal-check"></i> Врач-косметолог · лицензия Минздрава
+          </span>
+          <h1 class="word-reveal font-display font-bold text-5xl sm:text-6xl xl:text-7xl leading-[1] mt-6 tracking-tight">
+            Спокойный уход за&nbsp;здоровой кожей
+          </h1>
+          <p class="text-lg text-muted mt-6 max-w-md leading-relaxed">
+            Начинаем с&nbsp;диагностики, а&nbsp;не&nbsp;с&nbsp;продаж. Составим понятный план процедур под&nbsp;вашу кожу — без агрессии и&nbsp;лишнего.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 mt-9">
+            <a href="#booking" data-magnetic class="inline-flex items-center gap-2 rounded-full bg-accent text-white px-7 py-4 text-base font-semibold hover:bg-accentdark transition-colors shadow-lg shadow-accent/20">
+              Записаться на диагностику <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="#match" class="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-7 py-4 text-base font-semibold hover:border-accent transition-colors">
+              Подобрать процедуру
+            </a>
+          </div>
+          <div class="flex items-center gap-8 mt-10">
+            <div>
+              <div class="font-display font-bold text-3xl" data-count="16" data-suffix=" лет">0</div>
+              <div class="text-sm text-muted">стаж врача</div>
+            </div>
+            <div class="h-10 w-px bg-line"></div>
+            <div>
+              <div class="font-display font-bold text-3xl" data-count="9500" data-suffix="+">0</div>
+              <div class="text-sm text-muted">процедур проведено</div>
+            </div>
+            <div class="h-10 w-px bg-line"></div>
+            <div>
+              <div class="font-display font-bold text-3xl" data-count="4.9">0</div>
+              <div class="text-sm text-muted">оценка пациентов</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div data-tilt class="relative rounded-shell overflow-hidden bg-surface border border-line shadow-2xl shadow-orange-100/50">
+            <img src="https://picsum.photos/id/1062/800/940" alt="Процедура ухода за кожей" class="w-full h-[31rem] object-cover" loading="eager" />
+          </div>
+          <div class="absolute -bottom-5 -left-5 rounded-core bg-white shadow-xl px-5 py-4 flex items-center gap-3 max-w-[15rem]">
+            <span class="h-10 w-10 rounded-full bg-accentsoft flex items-center justify-center text-accent text-xl shrink-0"><i class="ph-fill ph-microscope"></i></span>
+            <div class="text-sm leading-tight"><span class="font-semibold">Диагностика кожи</span><br /><span class="text-muted">входит в первый визит</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee border-y border-line bg-surface py-4 text-muted">
+      <div class="marquee__track flex items-center gap-10 text-sm font-medium uppercase tracking-wider whitespace-nowrap">
+        <span>Чистка лица</span><span class="text-accent">◍</span>
+        <span>Пилинги</span><span class="text-accent">◍</span>
+        <span>Биоревитализация</span><span class="text-accent">◍</span>
+        <span>Мезотерапия</span><span class="text-accent">◍</span>
+        <span>Аппаратный лифтинг</span><span class="text-accent">◍</span>
+        <span>Уходовые программы</span><span class="text-accent">◍</span>
+        <span>Чистка лица</span><span class="text-accent">◍</span>
+        <span>Пилинги</span><span class="text-accent">◍</span>
+        <span>Биоревитализация</span><span class="text-accent">◍</span>
+        <span>Мезотерапия</span><span class="text-accent">◍</span>
+        <span>Аппаратный лифтинг</span><span class="text-accent">◍</span>
+        <span>Уходовые программы</span><span class="text-accent">◍</span>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Процедуры</span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3 tracking-tight">Что мы делаем</h2>
+          <p class="text-lg text-muted mt-4">Только методики с доказанной эффективностью. Подбираем под тип кожи и задачу, а не «по прайсу».</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-sparkle"></i></div>
+            <h3 class="font-display font-semibold text-xl mt-5">Чистка лица</h3>
+            <p class="text-muted mt-2 leading-relaxed">Ультразвуковая и комбинированная. Бережно убираем закупорки, кожа дышит и выравнивается.</p>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-leaf"></i></div>
+            <h3 class="font-display font-semibold text-xl mt-5">Пилинги</h3>
+            <p class="text-muted mt-2 leading-relaxed">Поверхностные и срединные. Обновляют кожу, осветляют пигментацию, сужают поры.</p>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-drop"></i></div>
+            <h3 class="font-display font-semibold text-xl mt-5">Биоревитализация</h3>
+            <p class="text-muted mt-2 leading-relaxed">Глубокое увлажнение гиалуроновой кислотой. Возвращает упругость и свежий тон.</p>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-syringe"></i></div>
+            <h3 class="font-display font-semibold text-xl mt-5">Мезотерапия</h3>
+            <p class="text-muted mt-2 leading-relaxed">Коктейли витаминов точечно в зоны. Работает с тусклостью, тонусом и мелкими морщинами.</p>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-waveform"></i></div>
+            <h3 class="font-display font-semibold text-xl mt-5">Аппаратные методики</h3>
+            <p class="text-muted mt-2 leading-relaxed">RF-лифтинг и микротоки. Подтягивают овал и стимулируют выработку коллагена.</p>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-heart"></i></div>
+            <h3 class="font-display font-semibold text-xl mt-5">Уходовые программы</h3>
+            <p class="text-muted mt-2 leading-relaxed">Курсовые протоколы под цель. Сопровождаем между визитами и корректируем домашний уход.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATCH (skin concern selector) -->
+    <section id="match" class="py-24 bg-surface border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Подбор</span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3 tracking-tight">Что беспокоит вашу кожу?</h2>
+          <p class="text-lg text-muted mt-4">Выберите запрос — покажем, с чего обычно начинаем. Точный план составит врач на диагностике.</p>
+        </div>
+
+        <div class="mt-10 grid lg:grid-cols-2 gap-8 items-start">
+          <div class="flex flex-wrap gap-3" id="concern-grid">
+            <button class="concern is-active" data-key="dry">Сухость и стянутость</button>
+            <button class="concern" data-key="acne">Акне и воспаления</button>
+            <button class="concern" data-key="pigment">Пигментация</button>
+            <button class="concern" data-key="aging">Морщины и тонус</button>
+            <button class="concern" data-key="pores">Расширенные поры</button>
+            <button class="concern" data-key="dull">Тусклый цвет лица</button>
+          </div>
+
+          <div class="rounded-shell bg-bg border border-line p-8" id="concern-card">
+            <div class="flex items-center gap-3">
+              <span class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-drop" id="concern-icon"></i></span>
+              <h3 class="font-display font-semibold text-2xl" id="concern-title">Сухость и стянутость</h3>
+            </div>
+            <p class="text-muted mt-5 leading-relaxed" id="concern-text">Коже не хватает влаги и липидного барьера. Начинаем с глубокого увлажнения и восстановления.</p>
+            <div class="mt-6 grid grid-cols-2 gap-4">
+              <div class="rounded-core bg-surface border border-line p-4">
+                <div class="text-xs uppercase tracking-wider text-muted">Рекомендуем</div>
+                <div class="font-display font-semibold text-lg mt-1" id="concern-proc">Биоревитализация</div>
+              </div>
+              <div class="rounded-core bg-surface border border-line p-4">
+                <div class="text-xs uppercase tracking-wider text-muted">Курс / цена</div>
+                <div class="font-display font-semibold text-lg mt-1 text-accent" id="concern-price">от 4 500₽</div>
+              </div>
+            </div>
+            <a href="#booking" data-magnetic class="mt-6 inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3 font-semibold hover:bg-accentdark transition-colors">
+              Записаться с этим запросом <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Как работаем</span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3 tracking-tight">Путь к результату</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+          <div class="reveal rounded-core border border-line p-7">
+            <div class="font-display font-bold text-3xl text-accent">01</div>
+            <h3 class="font-display font-semibold text-xl mt-3">Диагностика</h3>
+            <p class="text-muted mt-2 leading-relaxed text-[15px]">Осмотр под лампой, тип кожи, чувствительность, ваши цели и противопоказания.</p>
+          </div>
+          <div class="reveal rounded-core border border-line p-7">
+            <div class="font-display font-bold text-3xl text-accent">02</div>
+            <h3 class="font-display font-semibold text-xl mt-3">План</h3>
+            <p class="text-muted mt-2 leading-relaxed text-[15px]">Составляем протокол: какие процедуры, в каком порядке и с каким интервалом.</p>
+          </div>
+          <div class="reveal rounded-core border border-line p-7">
+            <div class="font-display font-bold text-3xl text-accent">03</div>
+            <h3 class="font-display font-semibold text-xl mt-3">Процедуры</h3>
+            <p class="text-muted mt-2 leading-relaxed text-[15px]">Работаем мягко и комфортно. Объясняем каждый шаг и ощущения заранее.</p>
+          </div>
+          <div class="reveal rounded-core border border-line p-7">
+            <div class="font-display font-bold text-3xl text-accent">04</div>
+            <h3 class="font-display font-semibold text-xl mt-3">Поддержка</h3>
+            <p class="text-muted mt-2 leading-relaxed text-[15px]">Настраиваем домашний уход и остаёмся на связи между визитами.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-24 bg-accentsoft">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-3 gap-10 items-start">
+        <div class="reveal">
+          <h2 class="font-display font-bold text-4xl sm:text-5xl tracking-tight">Спокойно, честно, по делу</h2>
+          <p class="text-lg text-ink/70 mt-4">Не назначаем лишнего и предупреждаем обо всех ощущениях заранее. Вы всегда понимаете, за что платите.</p>
+        </div>
+        <div class="lg:col-span-2 grid sm:grid-cols-3 gap-6">
+          <div class="reveal rounded-core bg-white p-7 text-center">
+            <div class="font-display font-bold text-4xl text-accent" data-count="96" data-suffix="%">0</div>
+            <div class="text-muted mt-2">продлевают курс</div>
+          </div>
+          <div class="reveal rounded-core bg-white p-7 text-center">
+            <div class="font-display font-bold text-4xl text-accent" data-count="100" data-suffix="%">0</div>
+            <div class="text-muted mt-2">сертифицированные препараты</div>
+          </div>
+          <div class="reveal rounded-core bg-white p-7 text-center">
+            <div class="font-display font-bold text-4xl text-accent" data-count="0" data-prefix="" data-suffix="₽">0</div>
+            <div class="text-muted mt-2">за диагностику в первый визит</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE -->
+    <section id="price" class="py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Цены</span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3 tracking-tight">Прозрачный прайс</h2>
+          <p class="text-lg text-muted mt-4">Стоимость курса называем после диагностики. Никаких скрытых доплат на процедуре.</p>
+        </div>
+        <div class="mt-12 rounded-shell bg-surface border border-line p-8 sm:p-10 reveal">
+          <ul class="divide-y divide-line">
+            <li class="price-row py-4"><span class="font-medium">Ультразвуковая чистка лица</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">3 200₽</span></li>
+            <li class="price-row py-4"><span class="font-medium">Поверхностный пилинг</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">2 800₽</span></li>
+            <li class="price-row py-4"><span class="font-medium">Биоревитализация (1 процедура)</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">4 500₽</span></li>
+            <li class="price-row py-4"><span class="font-medium">Мезотерапия</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">3 900₽</span></li>
+            <li class="price-row py-4"><span class="font-medium">RF-лифтинг (зона)</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">3 500₽</span></li>
+            <li class="price-row py-4"><span class="font-medium">Диагностика и план ухода</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap text-accent">бесплатно</span></li>
+          </ul>
+        </div>
+        <p class="text-center text-sm text-muted mt-6">* При покупке курса из 4+ процедур — скидка 10% и фиксация цены.</p>
+      </div>
+    </section>
+
+    <!-- DOCTOR -->
+    <section id="doctor" class="py-24 bg-surface border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <img src="https://picsum.photos/id/1027/800/800" alt="Врач-косметолог" class="rounded-shell object-cover w-full h-[26rem]" loading="lazy" />
+        </div>
+        <div class="reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Ваш врач</span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3 tracking-tight">Елена Корнеева</h2>
+          <p class="text-muted mt-2">Врач-дерматокосметолог · стаж 16 лет</p>
+          <p class="text-lg mt-6 leading-relaxed">«Кожа не любит резких экспериментов. Я за разумный, последовательный уход: сначала разбираемся в причине, потом действуем. Моя задача — чтобы вы видели результат и понимали, почему он появился».</p>
+          <div class="grid sm:grid-cols-3 gap-4 mt-8">
+            <div class="rounded-core bg-bg border border-line p-4 text-center">
+              <div class="font-display font-bold text-2xl text-accent">РМАПО</div>
+              <div class="text-sm text-muted mt-1">профильное образование</div>
+            </div>
+            <div class="rounded-core bg-bg border border-line p-4 text-center">
+              <div class="font-display font-bold text-2xl text-accent">20+</div>
+              <div class="text-sm text-muted mt-1">сертификатов</div>
+            </div>
+            <div class="rounded-core bg-bg border border-line p-4 text-center">
+              <div class="font-display font-bold text-2xl text-accent">∞</div>
+              <div class="text-sm text-muted mt-1">любовь к деталям</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Отзывы</span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3 tracking-tight">Что говорят пациенты</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Пришла с акне, которое мучило годами. Елена не стала пугать и впаривать — расписала курс на три месяца. Кожа спокойная впервые за долгое время».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/1066/80/80" alt="Светлана" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Светлана</div><div class="text-sm text-muted">курс от акне</div></div>
+            </div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Делаю биоревитализацию курсами. Кожа увлажнённая, тон ровный, макияж ложится иначе. Очень нравится, что всё мягко и без отёков на следующий день».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/1011/80/80" alt="Ирина" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Ирина</div><div class="text-sm text-muted">биоревитализация</div></div>
+            </div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Ходила на RF-лифтинг — овал реально подтянулся, без уколов и боли. Отдельное спасибо за честность: сказали, сколько процедур реально нужно».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/342/80/80" alt="Наталья" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Наталья</div><div class="text-sm text-muted">RF-лифтинг</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-surface border-y border-line">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8">
+        <div class="text-center reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Вопросы</span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl mt-3 tracking-tight">Частые вопросы</h2>
+        </div>
+        <div class="mt-12 space-y-3">
+          <div class="faq-item rounded-core bg-bg border border-line overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-lg">
+              С чего начать, если я ничего не знаю об уходе? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-muted leading-relaxed">С диагностики. Врач посмотрит кожу, задаст вопросы об образе жизни и уже знакомых средствах, а затем предложит минимальный понятный план — без перегруза процедурами.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-bg border border-line overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-lg">
+              Будет ли больно или будет восстановление? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-muted leading-relaxed">Большинство процедур комфортны. Если у методики есть период покраснения или шелушения, мы предупредим заранее и подберём время так, чтобы это не выпало на важные события.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-bg border border-line overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-lg">
+              Как быстро будет виден результат? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-muted leading-relaxed">Свежесть и увлажнённость заметны уже после первой процедуры. Работа с акне, пигментацией и тонусом — это курс: первые устойчивые изменения обычно видны через 3–4 недели.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-bg border border-line overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-lg">
+              А если у меня чувствительная кожа? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-muted leading-relaxed">Тогда тем более стоит начать с врача. Подберём щадящие протоколы и концентрации, при необходимости сделаем тест. Реактивная кожа — это не противопоказание, а повод действовать аккуратнее.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING CTA -->
+    <section id="booking" class="py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="rounded-shell bg-ink text-white overflow-hidden grid lg:grid-cols-2">
+          <div class="p-9 sm:p-12">
+            <h2 class="font-display font-bold text-4xl sm:text-5xl tracking-tight">Запишитесь на диагностику</h2>
+            <p class="text-white/70 mt-4 text-lg">Первый визит — осмотр и план ухода бесплатно. Оставьте номер, администратор перезвонит и подберёт удобное время.</p>
+            <ul class="mt-8 space-y-3 text-white/90">
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Без навязывания процедур</li>
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Только сертифицированные препараты</li>
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Понятный план и честная цена</li>
+            </ul>
+          </div>
+          <div class="bg-white text-ink p-9 sm:p-12">
+            <form id="lead-form" novalidate class="space-y-5">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-1.5">Ваше имя</label>
+                <input id="name" type="text" placeholder="Как к вам обращаться" class="w-full rounded-xl border border-line bg-bg px-4 py-3 outline-none focus:border-accent transition-colors" />
+                <p class="error-text hidden text-sm text-accentdark mt-1"></p>
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-1.5">Телефон</label>
+                <input id="phone" type="tel" placeholder="+7 (___) ___-__-__" class="w-full rounded-xl border border-line bg-bg px-4 py-3 outline-none focus:border-accent transition-colors" />
+                <p class="error-text hidden text-sm text-accentdark mt-1"></p>
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-medium mb-1.5">Запрос</label>
+                <select id="service" class="w-full rounded-xl border border-line bg-bg px-4 py-3 outline-none focus:border-accent transition-colors">
+                  <option>Диагностика и план ухода</option>
+                  <option>Чистка лица</option>
+                  <option>Пилинг</option>
+                  <option>Биоревитализация</option>
+                  <option>Мезотерапия</option>
+                  <option>Аппаратный лифтинг</option>
+                </select>
+              </div>
+              <button type="submit" data-magnetic class="w-full rounded-full bg-accent text-white px-7 py-4 font-semibold hover:bg-accentdark transition-colors">
+                Записаться
+              </button>
+              <p class="text-xs text-muted text-center">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+            </form>
+            <div id="form-success" class="hidden text-center py-10">
+              <div class="check-pop mx-auto h-16 w-16 rounded-full bg-accentsoft flex items-center justify-center text-accent text-4xl"><i class="ph-fill ph-check"></i></div>
+              <h3 class="font-display font-bold text-2xl mt-5">Заявка принята!</h3>
+              <p class="text-muted mt-2">Администратор перезвонит и подберёт удобное время.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-bg pt-16 pb-10 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <a href="#" class="flex items-center gap-2 font-display font-bold text-2xl">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent text-white"><i class="ph-fill ph-drop"></i></span> Гладь
+          </a>
+          <p class="text-muted mt-4 text-sm leading-relaxed">Кабинет косметологии и ухода за кожей. Диагностика, доказательный подход, спокойная атмосфера.</p>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Кабинет</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="#services" class="hover:text-ink">Процедуры</a></li>
+            <li><a href="#price" class="hover:text-ink">Цены</a></li>
+            <li><a href="#doctor" class="hover:text-ink">Врач</a></li>
+            <li><a href="#faq" class="hover:text-ink">Вопросы</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Контакты</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex items-center gap-2"><i class="ph ph-phone"></i> +7 (495) 318-22-40</li>
+            <li class="flex items-center gap-2"><i class="ph ph-map-pin"></i> Москва, Чистопрудный б-р, 5</li>
+            <li class="flex items-center gap-2"><i class="ph ph-clock"></i> Пн–Сб 10:00–20:00</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Мы в сети</div>
+          <div class="flex gap-3">
+            <a href="#" aria-label="Telegram" class="h-10 w-10 rounded-full bg-surface border border-line flex items-center justify-center hover:bg-accent hover:text-white transition-colors"><i class="ph ph-telegram-logo"></i></a>
+            <a href="#" aria-label="Instagram" class="h-10 w-10 rounded-full bg-surface border border-line flex items-center justify-center hover:bg-accent hover:text-white transition-colors"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="VK" class="h-10 w-10 rounded-full bg-surface border border-line flex items-center justify-center hover:bg-accent hover:text-white transition-colors"><i class="ph ph-chat-circle"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-line mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
+        <span>© 2026 Кабинет «Гладь». Все права защищены.</span>
+        <span>Лицензия № ЛО-77-01-000000</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

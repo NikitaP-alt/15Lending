@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Корпус — юридическая фирма: арбитраж и бизнес-споры</title>
+<meta name="description" content="Юридическая фирма «Корпус»: арбитражные и налоговые споры, договорная работа, банкротство юрлиц, взыскание долгов. Защищаем интересы бизнеса с 2009 года." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#14161C',
+          surface: '#1C1F28',
+          cream: '#F3F1EA',
+          ink: '#16181E',
+          muted: '#9CA0AD',
+          mutedink: '#6B6E78',
+          accent: '#9B2C3B',
+          accentlight: '#C0566A',
+          line: '#2B2F3A',
+          linelight: '#E2DFD6',
+        },
+        fontFamily: {
+          display: ['Playfair Display', 'serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+        borderRadius: { shell: '1.25rem', core: '1rem' },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}.word{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body class="font-sans bg-bg text-cream antialiased">
+
+<div id="scroll-progress"></div>
+
+<!-- NAVIGATION -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 md:px-8 h-16 md:h-20">
+    <a href="#top" class="flex items-center gap-2 font-display text-2xl font-semibold tracking-tight text-cream">
+      <span class="grid place-items-center w-9 h-9 rounded-lg bg-accent text-cream"><i class="ph-fill ph-scales text-lg"></i></span>
+      Корпус
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-cream/70">
+      <a href="#practices" class="hover:text-accentlight transition-colors duration-300">Практики</a>
+      <a href="#team" class="hover:text-accentlight transition-colors duration-300">Команда</a>
+      <a href="#cases" class="hover:text-accentlight transition-colors duration-300">Кейсы</a>
+      <a href="#faq" class="hover:text-accentlight transition-colors duration-300">Вопросы</a>
+    </div>
+    <a href="#contact" data-magnetic class="hidden md:inline-flex items-center gap-2 rounded-lg bg-accent text-cream text-sm font-semibold px-5 py-2.5 hover:bg-accentlight transition-colors duration-300">
+      Консультация
+    </a>
+    <button id="menu-toggle" class="md:hidden relative w-9 h-9 grid place-items-center shrink-0" aria-label="Открыть меню" aria-expanded="false">
+      <span class="menu-line top"></span>
+      <span class="menu-line bottom"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-bg/97 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none">
+  <a href="#practices" class="menu-item font-display text-4xl font-medium text-cream">Практики</a>
+  <a href="#team" class="menu-item font-display text-4xl font-medium text-cream">Команда</a>
+  <a href="#cases" class="menu-item font-display text-4xl font-medium text-cream">Кейсы</a>
+  <a href="#faq" class="menu-item font-display text-4xl font-medium text-cream">Вопросы</a>
+  <a href="#contact" class="menu-item mt-4 inline-flex rounded-lg bg-accent text-cream font-semibold px-7 py-3.5">Консультация</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative pt-32 md:pt-40 pb-20 px-4 md:px-8 overflow-hidden">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="blob-drift absolute -top-32 -left-32 w-[36rem] h-[36rem] rounded-full bg-accent/20 blur-[130px]"></div>
+    </div>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-accentlight">Юридическая фирма · с 2009 года</span>
+        <h1 class="word-reveal mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.08] text-cream">
+          Защищаем бизнес там, где на кону репутация и деньги
+        </h1>
+        <p class="mt-7 text-base md:text-lg text-muted leading-relaxed max-w-xl">
+          Арбитражные и налоговые споры, договорная работа, банкротство и взыскание. Берёмся за сложные дела и доводим до результата.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#contact" data-magnetic class="inline-flex items-center gap-2 rounded-lg bg-accent text-cream font-semibold px-7 py-3.5 hover:bg-accentlight transition-colors duration-300">
+            Записаться на консультацию
+            <i class="ph-bold ph-arrow-right"></i>
+          </a>
+          <a href="#cases" class="inline-flex items-center gap-2 rounded-lg ring-1 ring-cream/20 text-cream font-semibold px-7 py-3.5 hover:bg-surface transition-colors duration-300">
+            Наши кейсы
+          </a>
+        </div>
+      </div>
+      <div class="reveal relative">
+        <div class="overflow-hidden rounded-shell ring-1 ring-cream/10">
+          <img src="https://picsum.photos/seed/korpus-hero-office/900/780" alt="Офис юридической фирмы Корпус" class="w-full h-[360px] md:h-[500px] object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -left-4 sm:-left-6 flex items-center gap-3 bg-surface rounded-core ring-1 ring-line shadow-2xl px-5 py-4">
+          <div class="grid place-items-center w-11 h-11 rounded-full bg-accent/15 text-accentlight"><i class="ph-fill ph-trophy text-2xl"></i></div>
+          <div><div class="font-display text-lg font-semibold text-cream leading-none">94% дел</div><div class="text-sm text-muted mt-1">выиграно за 3 года</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="px-4 md:px-8 py-14 border-y border-line">
+    <div class="reveal-group max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-center md:text-left">
+      <div class="reveal"><div class="font-display text-4xl md:text-5xl font-semibold text-cream"><span data-count="2400" data-suffix="+">0</span></div><div class="mt-2 text-sm text-muted">выигранных дел</div></div>
+      <div class="reveal"><div class="font-display text-4xl md:text-5xl font-semibold text-cream"><span data-count="6.8" data-prefix="" data-suffix=" млрд ₽">0</span></div><div class="mt-2 text-sm text-muted">взыскано для клиентов</div></div>
+      <div class="reveal"><div class="font-display text-4xl md:text-5xl font-semibold text-cream"><span data-count="16">0</span></div><div class="mt-2 text-sm text-muted">лет практики</div></div>
+      <div class="reveal"><div class="font-display text-4xl md:text-5xl font-semibold text-cream"><span data-count="18">0</span></div><div class="mt-2 text-sm text-muted">юристов в команде</div></div>
+    </div>
+  </section>
+
+  <!-- PRACTICES -->
+  <section id="practices" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-accentlight">Практики</span>
+        <h2 class="mt-4 font-display text-3xl md:text-4xl font-medium tracking-tight text-cream leading-tight">Направления, в которых мы сильны</h2>
+      </div>
+      <div class="reveal-group grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8"><i class="ph ph-gavel text-3xl text-accentlight"></i><h3 class="mt-5 font-display text-xl font-medium text-cream">Арбитражные споры</h3><p class="mt-2 text-sm text-muted leading-relaxed">Ведём дела в арбитражных судах всех инстанций — от иска до исполнения решения.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8"><i class="ph ph-file-text text-3xl text-accentlight"></i><h3 class="mt-5 font-display text-xl font-medium text-cream">Договорная работа</h3><p class="mt-2 text-sm text-muted leading-relaxed">Готовим и проверяем договоры так, чтобы риски не превратились в суд.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8"><i class="ph ph-bank text-3xl text-accentlight"></i><h3 class="mt-5 font-display text-xl font-medium text-cream">Налоговые споры</h3><p class="mt-2 text-sm text-muted leading-relaxed">Оспариваем доначисления и сопровождаем налоговые проверки.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8"><i class="ph ph-building-office text-3xl text-accentlight"></i><h3 class="mt-5 font-display text-xl font-medium text-cream">Банкротство юрлиц</h3><p class="mt-2 text-sm text-muted leading-relaxed">Защищаем кредиторов и должников, оспариваем сделки, ведём процедуры.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8"><i class="ph ph-handshake text-3xl text-accentlight"></i><h3 class="mt-5 font-display text-xl font-medium text-cream">Корпоративное право</h3><p class="mt-2 text-sm text-muted leading-relaxed">Сделки M&A, корпоративные конфликты, структурирование бизнеса.</p></div>
+        <div data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8"><i class="ph ph-coins text-3xl text-accentlight"></i><h3 class="mt-5 font-display text-xl font-medium text-cream">Взыскание долгов</h3><p class="mt-2 text-sm text-muted leading-relaxed">Возвращаем дебиторскую задолженность, в том числе с поручителей.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM (light section) -->
+  <section id="team" class="px-4 md:px-8 py-24 md:py-32 bg-cream text-ink">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Команда</span>
+        <h2 class="mt-4 font-display text-3xl md:text-4xl font-medium tracking-tight text-ink leading-tight">Партнёры, которые ведут ваше дело лично</h2>
+      </div>
+      <div class="reveal-group grid sm:grid-cols-3 gap-6">
+        <article data-tilt class="reveal bg-white rounded-shell ring-1 ring-linelight overflow-hidden">
+          <img src="https://picsum.photos/seed/korpus-lawyer-1/600/640" alt="Управляющий партнёр" class="w-full h-72 object-cover" />
+          <div class="p-6"><h3 class="font-display text-xl font-medium text-ink">Виктор Снегирёв</h3><p class="text-sm text-accent font-medium mt-0.5">Управляющий партнёр</p><p class="mt-3 text-sm text-mutedink leading-relaxed">Арбитраж и налоговые споры. Стаж 21 год, кандидат юридических наук.</p></div>
+        </article>
+        <article data-tilt class="reveal bg-white rounded-shell ring-1 ring-linelight overflow-hidden">
+          <img src="https://picsum.photos/seed/korpus-lawyer-2/600/640" alt="Партнёр" class="w-full h-72 object-cover" />
+          <div class="p-6"><h3 class="font-display text-xl font-medium text-ink">Ольга Дёмина</h3><p class="text-sm text-accent font-medium mt-0.5">Партнёр, банкротство</p><p class="mt-3 text-sm text-mutedink leading-relaxed">Сопровождение процедур банкротства и субсидиарной ответственности.</p></div>
+        </article>
+        <article data-tilt class="reveal bg-white rounded-shell ring-1 ring-linelight overflow-hidden">
+          <img src="https://picsum.photos/seed/korpus-lawyer-3/600/640" alt="Партнёр" class="w-full h-72 object-cover" />
+          <div class="p-6"><h3 class="font-display text-xl font-medium text-ink">Игорь Власенко</h3><p class="text-sm text-accent font-medium mt-0.5">Партнёр, корпоративное право</p><p class="mt-3 text-sm text-mutedink leading-relaxed">Сделки M&A, корпоративные конфликты и структурирование групп компаний.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section id="cases" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-accentlight">Кейсы</span>
+        <h2 class="mt-4 font-display text-3xl md:text-4xl font-medium tracking-tight text-cream leading-tight">Результаты, которые говорят сами за себя</h2>
+      </div>
+      <div class="reveal-group grid md:grid-cols-3 gap-5">
+        <article data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8">
+          <div class="font-display text-3xl md:text-4xl font-semibold text-accentlight">14,2 млн ₽</div>
+          <p class="mt-3 text-cream font-medium">Взыскали с подрядчика</p>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Долг по договору поставки плюс неустойку. Решение устояло в апелляции.</p>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8">
+          <div class="font-display text-3xl md:text-4xl font-semibold text-accentlight">8,5 млн ₽</div>
+          <p class="mt-3 text-cream font-medium">Сняли доначисление ФНС</p>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Оспорили результаты выездной проверки, доказали реальность сделок.</p>
+        </article>
+        <article data-tilt class="reveal rounded-shell bg-surface ring-1 ring-line p-8">
+          <div class="font-display text-3xl md:text-4xl font-semibold text-accentlight">Субсидиарка</div>
+          <p class="mt-3 text-cream font-medium">Защитили директора</p>
+          <p class="mt-2 text-sm text-muted leading-relaxed">Отбили попытку привлечь руководителя к ответственности на 30 млн ₽.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="px-4 md:px-8 py-24 md:py-32 bg-cream text-ink">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal max-w-2xl mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Как мы работаем</span>
+        <h2 class="mt-4 font-display text-3xl md:text-4xl font-medium tracking-tight text-ink leading-tight">Четыре шага к результату</h2>
+      </div>
+      <div class="reveal-group grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+        <div class="reveal border-t border-linelight pt-6"><div class="font-display text-2xl text-accent">01</div><h3 class="mt-3 font-display text-xl font-medium text-ink">Консультация</h3><p class="mt-2 text-sm text-mutedink leading-relaxed">Разбираем ситуацию и честно оцениваем перспективы дела.</p></div>
+        <div class="reveal border-t border-linelight pt-6"><div class="font-display text-2xl text-accent">02</div><h3 class="mt-3 font-display text-xl font-medium text-ink">Стратегия</h3><p class="mt-2 text-sm text-mutedink leading-relaxed">Собираем доказательства и выстраиваем правовую позицию.</p></div>
+        <div class="reveal border-t border-linelight pt-6"><div class="font-display text-2xl text-accent">03</div><h3 class="mt-3 font-display text-xl font-medium text-ink">Ведение дела</h3><p class="mt-2 text-sm text-mutedink leading-relaxed">Представляем вас в суде и инстанциях, держим в курсе каждого шага.</p></div>
+        <div class="reveal border-t border-linelight pt-6"><div class="font-display text-2xl text-accent">04</div><h3 class="mt-3 font-display text-xl font-medium text-ink">Результат</h3><p class="mt-2 text-sm text-mutedink leading-relaxed">Добиваемся решения и доводим до реального исполнения.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-4xl mx-auto text-center reveal">
+      <i class="ph ph-quotes text-5xl text-accent/50"></i>
+      <blockquote class="mt-8 font-display text-2xl md:text-3xl font-medium leading-snug tracking-tight text-cream">
+        Дело считали проигранным три юриста до «Корпуса». Здесь нашли аргументы, которые перевернули процесс, и взыскали всё до копейки.
+      </blockquote>
+      <div class="mt-8 flex items-center justify-center gap-4">
+        <img src="https://picsum.photos/seed/korpus-client/120/120" class="w-14 h-14 rounded-full object-cover" alt="" />
+        <div class="text-left"><div class="font-medium text-cream">Дмитрий Х.</div><div class="text-sm text-muted">генеральный директор, производство</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="px-4 md:px-8 py-24 md:py-32 bg-cream text-ink">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal mb-10">
+        <span class="text-xs uppercase tracking-[0.25em] text-accent">Вопросы</span>
+        <h2 class="mt-4 font-display text-3xl md:text-4xl font-medium tracking-tight text-ink leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="reveal divide-y divide-linelight">
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-xl font-medium text-ink">Сколько стоит ведение дела?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-white text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-mutedink leading-relaxed">Стоимость зависит от сложности и инстанций. Возможна фиксированная цена, почасовая оплата или гонорар успеха — обсуждаем на консультации и фиксируем в договоре.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-xl font-medium text-ink">Берётесь ли за сложные и «безнадёжные» дела?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-white text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-mutedink leading-relaxed">Да, это наш профиль. Но честно оцениваем перспективы: если шансов нет, скажем об этом сразу, а не возьмём деньги за заведомо проигрышный процесс.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-xl font-medium text-ink">Кто конкретно будет вести моё дело?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-white text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-mutedink leading-relaxed">За каждым делом закреплён партнёр профильной практики и команда юристов. Вы всегда знаете, кто отвечает за результат, и общаетесь напрямую.</p></div></div></div>
+        <div class="faq-item py-5"><button class="faq-trigger w-full flex items-center justify-between gap-4 text-left"><span class="font-display text-xl font-medium text-ink">Работаете только в Москве?</span><span class="faq-icon shrink-0 grid place-items-center w-8 h-8 rounded-full bg-white text-accent"><i class="ph-bold ph-plus"></i></span></button><div class="faq-content"><div class="overflow-hidden"><p class="pt-4 text-mutedink leading-relaxed">Ведём дела по всей России. В большинстве регионов участвуем в заседаниях онлайн или через проверенных представителей на местах.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="px-4 md:px-8 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20">
+      <div class="reveal">
+        <span class="text-xs uppercase tracking-[0.25em] text-accentlight">Консультация</span>
+        <h2 class="mt-4 font-display text-4xl md:text-5xl font-medium tracking-tight leading-[1.05] text-cream">Обсудим вашу ситуацию конфиденциально</h2>
+        <p class="mt-6 text-muted leading-relaxed max-w-md">Оставьте контакты — перезвоним, зададим уточняющие вопросы и оценим перспективы дела. Первая консультация бесплатна.</p>
+        <div class="mt-10 space-y-4 text-cream/90">
+          <div class="flex items-center gap-3"><i class="ph ph-phone text-accentlight text-xl"></i> +7 (495) 215-09-44</div>
+          <div class="flex items-center gap-3"><i class="ph ph-envelope-simple text-accentlight text-xl"></i> office@korpus-legal.ru</div>
+          <div class="flex items-center gap-3"><i class="ph ph-map-pin text-accentlight text-xl"></i> Москва, Пресненская наб., 12</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <form id="lead-form" novalidate class="bg-surface ring-1 ring-line rounded-shell p-7 md:p-9">
+          <div class="space-y-5">
+            <div>
+              <label for="name" class="block text-sm text-muted mb-2">Ваше имя</label>
+              <input id="name" name="name" type="text" placeholder="Дмитрий" class="w-full rounded-lg bg-bg ring-1 ring-line text-cream placeholder:text-muted/50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition" />
+              <p class="error-text hidden mt-1.5 text-sm text-accentlight"></p>
+            </div>
+            <div>
+              <label for="phone" class="block text-sm text-muted mb-2">Телефон</label>
+              <input id="phone" name="phone" type="tel" placeholder="+7 999 123-45-67" class="w-full rounded-lg bg-bg ring-1 ring-line text-cream placeholder:text-muted/50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition" />
+              <p class="error-text hidden mt-1.5 text-sm text-accentlight"></p>
+            </div>
+            <button type="submit" data-magnetic class="w-full rounded-lg bg-accent text-cream font-semibold py-3.5 hover:bg-accentlight transition-colors duration-300">Получить консультацию</button>
+            <p class="text-xs text-muted">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          </div>
+        </form>
+        <div id="form-success" class="hidden text-center py-10">
+          <div class="check-pop mx-auto grid place-items-center w-16 h-16 rounded-full bg-accent text-cream"><i class="ph-bold ph-check text-3xl"></i></div>
+          <p class="mt-4 font-display text-2xl text-cream">Спасибо за обращение</p>
+          <p class="mt-1 text-sm text-muted">Юрист перезвонит в ближайшее время.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-4 md:px-8 py-16 border-t border-line">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
+    <div>
+      <div class="flex items-center gap-2 font-display text-2xl font-semibold text-cream"><span class="grid place-items-center w-9 h-9 rounded-lg bg-accent text-cream"><i class="ph-fill ph-scales text-lg"></i></span>Корпус</div>
+      <p class="mt-4 text-sm text-muted max-w-[34ch] leading-relaxed">Юридическая фирма для бизнеса. Арбитраж, налоговые споры, банкротство и взыскание с 2009 года.</p>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-cream mb-4">Практики</div>
+      <ul class="space-y-2.5 text-sm text-muted">
+        <li><a href="#practices" class="hover:text-accentlight transition-colors">Арбитраж</a></li>
+        <li><a href="#practices" class="hover:text-accentlight transition-colors">Налоговые споры</a></li>
+        <li><a href="#practices" class="hover:text-accentlight transition-colors">Банкротство</a></li>
+        <li><a href="#cases" class="hover:text-accentlight transition-colors">Кейсы</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-sm font-semibold text-cream mb-4">Контакты</div>
+      <ul class="space-y-2.5 text-sm text-muted">
+        <li class="flex items-center gap-2"><i class="ph ph-phone"></i> +7 (495) 215-09-44</li>
+        <li class="flex items-center gap-2"><i class="ph ph-envelope-simple"></i> office@korpus-legal.ru</li>
+        <li class="flex items-center gap-2"><i class="ph ph-map-pin"></i> Москва, Пресненская наб., 12</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-line text-sm text-muted">© 2026 Юридическая фирма «Корпус». Все права защищены.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

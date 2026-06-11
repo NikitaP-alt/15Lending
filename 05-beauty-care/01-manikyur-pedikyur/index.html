@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Глянец — студия маникюра и педикюра</title>
+  <meta name="description" content="Студия Глянец: аппаратный маникюр и педикюр, гель-лак, дизайн и уход. Стерильно, без спешки, запись онлайн." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#FFF7FB',
+            surface: '#FFFFFF',
+            ink: '#2A1320',
+            muted: '#8A6B79',
+            accent: '#DB2777',
+            accentdark: '#BE185D',
+            accentsoft: '#FCE7F3',
+            line: '#F3D9E6',
+          },
+          fontFamily: {
+            display: ['Gabarito', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            shell: '2rem',
+            core: '1.5rem',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-bg text-ink font-sans antialiased overflow-x-hidden">
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-display font-extrabold text-2xl tracking-tight">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent text-white text-lg">✦</span>
+        Глянец
+      </a>
+      <div class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-muted">
+        <a href="#services" class="hover:text-ink transition-colors">Услуги</a>
+        <a href="#swatches" class="hover:text-ink transition-colors">Оттенки</a>
+        <a href="#price" class="hover:text-ink transition-colors">Цены</a>
+        <a href="#gallery" class="hover:text-ink transition-colors">Работы</a>
+        <a href="#faq" class="hover:text-ink transition-colors">Вопросы</a>
+      </div>
+      <a href="#booking" data-magnetic class="hidden lg:inline-flex items-center gap-2 rounded-full bg-ink text-white px-6 py-3 text-[15px] font-semibold hover:bg-accentdark transition-colors">
+        Записаться <i class="ph ph-arrow-up-right"></i>
+      </a>
+      <button id="menu-toggle" aria-label="Меню" aria-expanded="false" class="lg:hidden relative h-11 w-11 rounded-full bg-surface border border-line">
+        <span class="menu-line top"></span>
+        <span class="menu-line bottom"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-bg/95 backdrop-blur-xl opacity-0 pointer-events-none flex flex-col items-center justify-center gap-7 text-2xl font-display font-semibold lg:hidden">
+    <a href="#services" class="menu-item">Услуги</a>
+    <a href="#swatches" class="menu-item">Оттенки</a>
+    <a href="#price" class="menu-item">Цены</a>
+    <a href="#gallery" class="menu-item">Работы</a>
+    <a href="#booking" class="menu-item rounded-full bg-accent text-white px-8 py-3 text-lg">Записаться</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
+      <div class="blob-drift absolute -top-24 -right-24 h-[28rem] w-[28rem] rounded-full bg-accentsoft blur-3xl opacity-70"></div>
+      <div class="blob-drift-2 absolute top-40 -left-32 h-80 w-80 rounded-full bg-pink-100 blur-3xl opacity-60"></div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full bg-surface border border-line px-4 py-1.5 text-sm font-medium text-accentdark">
+            <i class="ph-fill ph-sparkle"></i> Стерильно · крафт-пакеты при вас
+          </span>
+          <h1 class="word-reveal font-display font-extrabold text-5xl sm:text-6xl xl:text-7xl leading-[0.95] mt-6 tracking-tight">
+            Ногти, на&nbsp;которые хочется смотреть
+          </h1>
+          <p class="text-lg text-muted mt-6 max-w-md leading-relaxed">
+            Аппаратный маникюр и педикюр, идеальное покрытие и дизайн. Без спешки, без боли, с гарантией стойкости до&nbsp;3&nbsp;недель.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 mt-9">
+            <a href="#booking" data-magnetic class="inline-flex items-center gap-2 rounded-full bg-accent text-white px-7 py-4 text-base font-semibold hover:bg-accentdark transition-colors shadow-lg shadow-accent/25">
+              Записаться онлайн <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="#price" class="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-7 py-4 text-base font-semibold hover:border-accent transition-colors">
+              Смотреть цены
+            </a>
+          </div>
+          <div class="flex items-center gap-7 mt-10">
+            <div>
+              <div class="font-display font-extrabold text-3xl" data-count="14" data-suffix=" лет">0</div>
+              <div class="text-sm text-muted">на рынке</div>
+            </div>
+            <div class="h-10 w-px bg-line"></div>
+            <div>
+              <div class="font-display font-extrabold text-3xl" data-count="4.9">0</div>
+              <div class="text-sm text-muted">рейтинг в 2ГИС</div>
+            </div>
+            <div class="h-10 w-px bg-line"></div>
+            <div>
+              <div class="font-display font-extrabold text-3xl" data-count="21000" data-suffix="+">0</div>
+              <div class="text-sm text-muted">довольных гостей</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div data-tilt class="relative rounded-shell overflow-hidden bg-surface border border-line shadow-2xl shadow-pink-200/40">
+            <img src="https://picsum.photos/id/1027/800/900" alt="Маникюр в студии Глянец" class="w-full h-[30rem] object-cover" loading="eager" />
+            <div class="absolute bottom-4 left-4 right-4 rounded-core bg-white/90 backdrop-blur px-5 py-4 flex items-center justify-between">
+              <div>
+                <div class="font-display font-bold text-lg">Маникюр + покрытие</div>
+                <div class="text-sm text-muted">≈ 2 часа · топ OPI / Kodi</div>
+              </div>
+              <span class="font-display font-extrabold text-2xl text-accent">2 200₽</span>
+            </div>
+          </div>
+          <div class="absolute -top-5 -left-5 rounded-full bg-white shadow-xl px-5 py-3 flex items-center gap-2 text-sm font-semibold">
+            <i class="ph-fill ph-heart text-accent"></i> Стойкость до 3 недель
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee border-y border-line bg-surface py-4 text-muted">
+      <div class="marquee__track flex items-center gap-10 text-sm font-medium uppercase tracking-wider whitespace-nowrap">
+        <span>Аппаратный маникюр</span><span class="text-accent">✦</span>
+        <span>Гель-лак</span><span class="text-accent">✦</span>
+        <span>Педикюр</span><span class="text-accent">✦</span>
+        <span>Дизайн ногтей</span><span class="text-accent">✦</span>
+        <span>Наращивание</span><span class="text-accent">✦</span>
+        <span>Уход за кутикулой</span><span class="text-accent">✦</span>
+        <span>Аппаратный маникюр</span><span class="text-accent">✦</span>
+        <span>Гель-лак</span><span class="text-accent">✦</span>
+        <span>Педикюр</span><span class="text-accent">✦</span>
+        <span>Дизайн ногтей</span><span class="text-accent">✦</span>
+        <span>Наращивание</span><span class="text-accent">✦</span>
+        <span>Уход за кутикулой</span><span class="text-accent">✦</span>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Услуги</span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl mt-3 tracking-tight">Всё для рук и ног — в одной студии</h2>
+          <p class="text-lg text-muted mt-4">Работаем только аппаратом и одноразовыми пилками. Инструмент стерилизуем в сухожаре и крафт-пакетах — вскрываем при вас.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-hand-soap"></i></div>
+            <h3 class="font-display font-bold text-xl mt-5">Аппаратный маникюр</h3>
+            <p class="text-muted mt-2 leading-relaxed">Бережная обработка кутикулы без срезов и заусенцев. Идеально гладкая зона роста.</p>
+            <div class="mt-5 font-display font-bold text-accent">от 1 200₽</div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-paint-brush-household"></i></div>
+            <h3 class="font-display font-bold text-xl mt-5">Покрытие гель-лак</h3>
+            <p class="text-muted mt-2 leading-relaxed">Ровный плотный цвет в один-два слоя. 200+ оттенков OPI, Kodi и Luxio.</p>
+            <div class="mt-5 font-display font-bold text-accent">от 900₽</div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-footprints"></i></div>
+            <h3 class="font-display font-bold text-xl mt-5">Педикюр</h3>
+            <p class="text-muted mt-2 leading-relaxed">Аппаратный и комбинированный. Уберём натоптыши и трещины, сделаем стопы мягкими.</p>
+            <div class="mt-5 font-display font-bold text-accent">от 1 800₽</div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-sparkle"></i></div>
+            <h3 class="font-display font-bold text-xl mt-5">Дизайн и арт</h3>
+            <p class="text-muted mt-2 leading-relaxed">Френч, омбре, втирка, стразы, ручная роспись. Соберём образ под ваш повод.</p>
+            <div class="mt-5 font-display font-bold text-accent">от 300₽</div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-ruler"></i></div>
+            <h3 class="font-display font-bold text-xl mt-5">Наращивание</h3>
+            <p class="text-muted mt-2 leading-relaxed">Гель и полигель, любая длина и форма. Крепко держится, выглядит натурально.</p>
+            <div class="mt-5 font-display font-bold text-accent">от 2 600₽</div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="h-12 w-12 rounded-full bg-accentsoft flex items-center justify-center text-accent text-2xl"><i class="ph ph-drop"></i></div>
+            <h3 class="font-display font-bold text-xl mt-5">SPA-уход</h3>
+            <p class="text-muted mt-2 leading-relaxed">Парафинотерапия, питательные маски и массаж рук. Кожа как после отпуска.</p>
+            <div class="mt-5 font-display font-bold text-accent">от 700₽</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SWATCHES -->
+    <section id="swatches" class="py-24 bg-surface border-y border-line">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Палитра</span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl mt-3 tracking-tight">Выберите оттенок прямо сейчас</h2>
+          <p class="text-lg text-muted mt-4">Более 200 цветов премиальных брендов. Нажмите на каплю — покажем название, и мастер отложит лак к вашему визиту.</p>
+          <div class="mt-8 flex flex-wrap gap-4" id="swatch-grid">
+            <button class="swatch" data-name="Нюд «Молочный шёлк»" style="--c:#F3D9CB"></button>
+            <button class="swatch" data-name="Розовый кварц" style="--c:#F4B6C8"></button>
+            <button class="swatch is-active" data-name="Фуксия «Глянец»" style="--c:#DB2777"></button>
+            <button class="swatch" data-name="Бордо «Вишня»" style="--c:#7A1733"></button>
+            <button class="swatch" data-name="Сливовый туман" style="--c:#6D5C8A"></button>
+            <button class="swatch" data-name="Кофейный беж" style="--c:#A98467"></button>
+            <button class="swatch" data-name="Изумруд" style="--c:#0F766E"></button>
+            <button class="swatch" data-name="Графит-металлик" style="--c:#3A3A44"></button>
+            <button class="swatch" data-name="Красный «Сигнал»" style="--c:#D62828"></button>
+            <button class="swatch" data-name="Лавандовый дым" style="--c:#B8A6D9"></button>
+          </div>
+          <div class="mt-7 inline-flex items-center gap-3 rounded-core bg-accentsoft px-5 py-4">
+            <span class="h-10 w-10 rounded-full border-4 border-white shadow" id="swatch-dot" style="background:#DB2777"></span>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-muted">Выбран оттенок</div>
+              <div class="font-display font-bold text-lg" id="swatch-label">Фуксия «Глянец»</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <img src="https://picsum.photos/id/1080/500/600" alt="Дизайн ногтей" class="reveal rounded-core object-cover h-64 w-full" loading="lazy" />
+          <img src="https://picsum.photos/id/431/500/600" alt="Маникюр крупным планом" class="reveal rounded-core object-cover h-64 w-full mt-8" loading="lazy" />
+          <img src="https://picsum.photos/id/342/500/600" alt="Палитра лаков" class="reveal rounded-core object-cover h-64 w-full -mt-8" loading="lazy" />
+          <img src="https://picsum.photos/id/669/500/600" alt="Работа мастера" class="reveal rounded-core object-cover h-64 w-full" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE -->
+    <section id="price" class="py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Прайс</span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl mt-3 tracking-tight">Честные цены без сюрпризов</h2>
+          <p class="text-lg text-muted mt-4">Финальную стоимость называем до начала работы. Снятие старого покрытия — в подарок.</p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-2 gap-6">
+          <div class="reveal rounded-core bg-surface border border-line p-8">
+            <h3 class="font-display font-bold text-2xl flex items-center gap-2"><i class="ph ph-hand-soap text-accent"></i> Руки</h3>
+            <ul class="mt-6 space-y-4 text-[15px]">
+              <li class="price-row"><span>Маникюр без покрытия</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">1 200₽</span></li>
+              <li class="price-row"><span>Маникюр + гель-лак</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">2 200₽</span></li>
+              <li class="price-row"><span>Наращивание гелем</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">2 600₽</span></li>
+              <li class="price-row"><span>Французский маникюр</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">+ 500₽</span></li>
+              <li class="price-row"><span>Парафинотерапия</span><span class="price-dots"></span><span class="font-semibold whitespace-nowrap">700₽</span></li>
+            </ul>
+          </div>
+          <div class="reveal rounded-core bg-ink text-white p-8">
+            <h3 class="font-display font-bold text-2xl flex items-center gap-2"><i class="ph ph-footprints text-accent"></i> Ноги</h3>
+            <ul class="mt-6 space-y-4 text-[15px] text-pink-50">
+              <li class="price-row"><span>Педикюр без покрытия</span><span class="price-dots opacity-40"></span><span class="font-semibold whitespace-nowrap">1 800₽</span></li>
+              <li class="price-row"><span>Педикюр + гель-лак</span><span class="price-dots opacity-40"></span><span class="font-semibold whitespace-nowrap">2 700₽</span></li>
+              <li class="price-row"><span>Обработка трещин стоп</span><span class="price-dots opacity-40"></span><span class="font-semibold whitespace-nowrap">+ 400₽</span></li>
+              <li class="price-row"><span>Дизайн (за ноготь)</span><span class="price-dots opacity-40"></span><span class="font-semibold whitespace-nowrap">от 100₽</span></li>
+              <li class="price-row"><span>Комплекс «руки + ноги»</span><span class="price-dots opacity-40"></span><span class="font-semibold whitespace-nowrap text-accent">− 15%</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-center text-sm text-muted mt-6">* Снятие предыдущего покрытия и укрепление базой включены в стоимость маникюра.</p>
+      </div>
+    </section>
+
+    <!-- WHY / STATS -->
+    <section class="py-24 bg-accentsoft">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-3 gap-10 items-start">
+          <div class="reveal">
+            <h2 class="font-display font-extrabold text-4xl sm:text-5xl tracking-tight">Почему гости возвращаются</h2>
+            <p class="text-lg text-ink/70 mt-4">Мы не торопим, не давим на доп-услуги и отвечаем за результат. Если покрытие сколется в первые 5 дней — поправим бесплатно.</p>
+          </div>
+          <div class="lg:col-span-2 grid sm:grid-cols-3 gap-6">
+            <div class="reveal rounded-core bg-white p-7 text-center">
+              <div class="font-display font-extrabold text-4xl text-accent" data-count="98" data-suffix="%">0</div>
+              <div class="text-muted mt-2">записываются повторно</div>
+            </div>
+            <div class="reveal rounded-core bg-white p-7 text-center">
+              <div class="font-display font-extrabold text-4xl text-accent" data-count="3" data-suffix=" нед">0</div>
+              <div class="text-muted mt-2">средняя стойкость</div>
+            </div>
+            <div class="reveal rounded-core bg-white p-7 text-center">
+              <div class="font-display font-extrabold text-4xl text-accent" data-count="9" data-suffix=" мастеров">0</div>
+              <div class="text-muted mt-2">в команде студии</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex flex-wrap items-end justify-between gap-4 reveal">
+          <div>
+            <span class="text-sm font-semibold text-accent uppercase tracking-wider">Работы</span>
+            <h2 class="font-display font-extrabold text-4xl sm:text-5xl mt-3 tracking-tight">Наши последние работы</h2>
+          </div>
+          <a href="#booking" class="text-accent font-semibold inline-flex items-center gap-1 hover:gap-2 transition-all">Хочу так же <i class="ph ph-arrow-right"></i></a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+          <img src="https://picsum.photos/id/1062/400/500" alt="Работа 1" class="reveal rounded-core object-cover h-56 w-full" loading="lazy" />
+          <img src="https://picsum.photos/id/325/400/500" alt="Работа 2" class="reveal rounded-core object-cover h-56 w-full" loading="lazy" />
+          <img src="https://picsum.photos/id/1059/400/500" alt="Работа 3" class="reveal rounded-core object-cover h-56 w-full" loading="lazy" />
+          <img src="https://picsum.photos/id/64/400/500" alt="Работа 4" class="reveal rounded-core object-cover h-56 w-full" loading="lazy" />
+          <img src="https://picsum.photos/id/65/400/500" alt="Работа 5" class="reveal rounded-core object-cover h-56 w-full" loading="lazy" />
+          <img src="https://picsum.photos/id/823/400/500" alt="Работа 6" class="reveal rounded-core object-cover h-56 w-full" loading="lazy" />
+          <img src="https://picsum.photos/id/177/400/500" alt="Работа 7" class="reveal rounded-core object-cover h-56 w-full" loading="lazy" />
+          <img src="https://picsum.photos/id/659/400/500" alt="Работа 8" class="reveal rounded-core object-cover h-56 w-full" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-surface border-y border-line">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Отзывы</span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl mt-3 tracking-tight">Что говорят гости</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+          <div data-tilt class="reveal rounded-core bg-bg border border-line p-7">
+            <div class="flex gap-1 text-accent text-lg"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Хожу к Кате уже год. Маникюр держится ровно три недели, кутикула не нарастает. Наконец-то нашла своего мастера».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/1011/80/80" alt="Алина" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Алина</div><div class="text-sm text-muted">в студии 1 год</div></div>
+            </div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-bg border border-line p-7">
+            <div class="flex gap-1 text-accent text-lg"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Сделали педикюр после долгого лета на каблуках — стопы как новые. Чисто, аккуратно, инструмент вскрывали при мне».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/1027/80/80" alt="Марина" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Марина</div><div class="text-sm text-muted">первый визит</div></div>
+            </div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-bg border border-line p-7">
+            <div class="flex gap-1 text-accent text-lg"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Хотела сложный дизайн к свадьбе — нарисовали именно то, что я показала на фото. Гости спрашивали, где делала».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/1066/80/80" alt="Вероника" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Вероника</div><div class="text-sm text-muted">свадебный образ</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8">
+        <div class="text-center reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Вопросы</span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl mt-3 tracking-tight">Частые вопросы</h2>
+        </div>
+        <div class="mt-12 space-y-3">
+          <div class="faq-item rounded-core bg-surface border border-line overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-lg">
+              Сколько держится гель-лак? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-muted leading-relaxed">В среднем 2–3 недели. Если носите аккуратно и пользуетесь маслом для кутикулы — держится дольше. Сколы в первые 5 дней правим бесплатно.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-surface border border-line overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-lg">
+              Как вы стерилизуете инструмент? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-muted leading-relaxed">Три этапа: дезинфекция, ультразвук и сухожаровой шкаф. Инструмент хранится в крафт-пакетах и вскрывается прямо при вас. Пилки и баф — одноразовые.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-surface border border-line overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-lg">
+              Можно прийти со своим дизайном? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-muted leading-relaxed">Конечно. Покажите фото-референс — мастер подскажет, как повторить и сколько это займёт времени. Сложный арт лучше согласовать заранее при записи.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-surface border border-line overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-semibold text-lg">
+              Что если я опаздываю? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-muted leading-relaxed">Опоздание до 15 минут не страшно. Если больше — предупредите, мы постараемся сохранить вашу запись или предложим ближайшее свободное окно.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING CTA -->
+    <section id="booking" class="py-24 bg-surface border-t border-line">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="rounded-shell bg-ink text-white overflow-hidden grid lg:grid-cols-2">
+          <div class="p-9 sm:p-12">
+            <h2 class="font-display font-extrabold text-4xl sm:text-5xl tracking-tight">Запишитесь на удобное время</h2>
+            <p class="text-pink-100/80 mt-4 text-lg">Оставьте номер — администратор перезвонит в течение 15 минут, подберём мастера и слот. Первый визит — скидка 10%.</p>
+            <ul class="mt-8 space-y-3 text-pink-50">
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Без предоплаты</li>
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Напомним за день до визита</li>
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Перенос записи в один клик</li>
+            </ul>
+          </div>
+          <div class="bg-white text-ink p-9 sm:p-12">
+            <form id="lead-form" novalidate class="space-y-5">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-1.5">Ваше имя</label>
+                <input id="name" type="text" placeholder="Как к вам обращаться" class="w-full rounded-xl border border-line bg-bg px-4 py-3 outline-none focus:border-accent transition-colors" />
+                <p class="error-text hidden text-sm text-accentdark mt-1"></p>
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-1.5">Телефон</label>
+                <input id="phone" type="tel" placeholder="+7 (___) ___-__-__" class="w-full rounded-xl border border-line bg-bg px-4 py-3 outline-none focus:border-accent transition-colors" />
+                <p class="error-text hidden text-sm text-accentdark mt-1"></p>
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-medium mb-1.5">Услуга</label>
+                <select id="service" class="w-full rounded-xl border border-line bg-bg px-4 py-3 outline-none focus:border-accent transition-colors">
+                  <option>Маникюр + покрытие</option>
+                  <option>Педикюр</option>
+                  <option>Наращивание</option>
+                  <option>Комплекс «руки + ноги»</option>
+                  <option>Дизайн / арт</option>
+                </select>
+              </div>
+              <button type="submit" data-magnetic class="w-full rounded-full bg-accent text-white px-7 py-4 font-semibold hover:bg-accentdark transition-colors">
+                Записаться
+              </button>
+              <p class="text-xs text-muted text-center">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+            </form>
+            <div id="form-success" class="hidden text-center py-10">
+              <div class="check-pop mx-auto h-16 w-16 rounded-full bg-accentsoft flex items-center justify-center text-accent text-4xl"><i class="ph-fill ph-check"></i></div>
+              <h3 class="font-display font-bold text-2xl mt-5">Заявка принята!</h3>
+              <p class="text-muted mt-2">Администратор перезвонит в течение 15 минут.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-bg pt-16 pb-10 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <a href="#" class="flex items-center gap-2 font-display font-extrabold text-2xl">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent text-white text-lg">✦</span> Глянец
+          </a>
+          <p class="text-muted mt-4 text-sm leading-relaxed">Студия маникюра и педикюра. Стерильно, без спешки, с любовью к деталям.</p>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Студия</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="#services" class="hover:text-ink">Услуги</a></li>
+            <li><a href="#price" class="hover:text-ink">Цены</a></li>
+            <li><a href="#gallery" class="hover:text-ink">Работы</a></li>
+            <li><a href="#faq" class="hover:text-ink">Вопросы</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Контакты</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex items-center gap-2"><i class="ph ph-phone"></i> +7 (495) 120-45-67</li>
+            <li class="flex items-center gap-2"><i class="ph ph-map-pin"></i> Москва, ул. Цветочная, 12</li>
+            <li class="flex items-center gap-2"><i class="ph ph-clock"></i> Ежедневно 9:00–21:00</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Мы в сети</div>
+          <div class="flex gap-3">
+            <a href="#" aria-label="Telegram" class="h-10 w-10 rounded-full bg-surface border border-line flex items-center justify-center hover:bg-accent hover:text-white transition-colors"><i class="ph ph-telegram-logo"></i></a>
+            <a href="#" aria-label="Instagram" class="h-10 w-10 rounded-full bg-surface border border-line flex items-center justify-center hover:bg-accent hover:text-white transition-colors"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="VK" class="h-10 w-10 rounded-full bg-surface border border-line flex items-center justify-center hover:bg-accent hover:text-white transition-colors"><i class="ph ph-chat-circle"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-line mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
+        <span>© 2026 Студия «Глянец». Все права защищены.</span>
+        <span>Сделано с ✦ для красивых рук</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

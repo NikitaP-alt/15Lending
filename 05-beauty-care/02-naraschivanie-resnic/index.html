@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Взмах — студия наращивания ресниц</title>
+  <meta name="description" content="Студия Взмах: наращивание ресниц 2D, 3D и мега-объём, ламинирование. Гипоаллергенные материалы, носка до 4 недель, запись онлайн." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700;6..96,800;6..96,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0F0B0E',
+            surface: '#17131A',
+            cream: '#F5EFE9',
+            ink: '#1A151D',
+            light: '#F5EFE9',
+            muted: '#A89B9F',
+            mutedink: '#6E6470',
+            accent: '#C9A57B',
+            accentlight: '#E0C9A6',
+            rose: '#D9A7B0',
+            line: '#2A232C',
+            linelight: '#E5DCD2',
+          },
+          fontFamily: {
+            display: ['Bodoni Moda', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            shell: '1.5rem',
+            core: '1.125rem',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-bg text-cream font-sans antialiased overflow-x-hidden">
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="font-display font-semibold text-2xl tracking-wide">Взмах</a>
+      <div class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-muted">
+        <a href="#volumes" class="hover:text-cream transition-colors">Объёмы</a>
+        <a href="#result" class="hover:text-cream transition-colors">До / после</a>
+        <a href="#process" class="hover:text-cream transition-colors">Как проходит</a>
+        <a href="#price" class="hover:text-cream transition-colors">Цены</a>
+        <a href="#faq" class="hover:text-cream transition-colors">Вопросы</a>
+      </div>
+      <a href="#booking" data-magnetic class="hidden lg:inline-flex items-center gap-2 rounded-full bg-accent text-ink px-6 py-3 text-[15px] font-semibold hover:bg-accentlight transition-colors">
+        Записаться <i class="ph ph-arrow-up-right"></i>
+      </a>
+      <button id="menu-toggle" aria-label="Меню" aria-expanded="false" class="lg:hidden relative h-11 w-11 rounded-full bg-surface border border-line">
+        <span class="menu-line top"></span>
+        <span class="menu-line bottom"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-bg/95 backdrop-blur-xl opacity-0 pointer-events-none flex flex-col items-center justify-center gap-7 text-3xl font-display lg:hidden">
+    <a href="#volumes" class="menu-item">Объёмы</a>
+    <a href="#result" class="menu-item">До / после</a>
+    <a href="#process" class="menu-item">Как проходит</a>
+    <a href="#price" class="menu-item">Цены</a>
+    <a href="#booking" class="menu-item rounded-full bg-accent text-ink px-8 py-3 text-xl">Записаться</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
+      <div class="blob-drift absolute -top-28 right-0 h-[30rem] w-[30rem] rounded-full bg-accent/10 blur-3xl"></div>
+      <div class="blob-drift-2 absolute top-32 -left-24 h-80 w-80 rounded-full bg-rose/10 blur-3xl"></div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-line px-4 py-1.5 text-sm font-medium text-accent">
+            <i class="ph-fill ph-sparkle"></i> Гипоаллергенный клей · сертификаты
+          </span>
+          <h1 class="word-reveal font-display text-5xl sm:text-6xl xl:text-7xl leading-[1.02] mt-6 tracking-tight">
+            Взгляд, который говорит&nbsp;за&nbsp;вас
+          </h1>
+          <p class="text-lg text-muted mt-6 max-w-md leading-relaxed">
+            Наращивание ресниц от&nbsp;натурального эффекта до&nbsp;роскошного объёма. Подберём изгиб и&nbsp;длину под&nbsp;форму ваших глаз. Носка до&nbsp;4&nbsp;недель.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 mt-9">
+            <a href="#booking" data-magnetic class="inline-flex items-center gap-2 rounded-full bg-accent text-ink px-7 py-4 text-base font-semibold hover:bg-accentlight transition-colors">
+              Записаться онлайн <i class="ph ph-arrow-right"></i>
+            </a>
+            <a href="#result" class="inline-flex items-center gap-2 rounded-full border border-line px-7 py-4 text-base font-semibold hover:border-accent transition-colors">
+              Смотреть «до / после»
+            </a>
+          </div>
+          <div class="flex items-center gap-8 mt-10">
+            <div>
+              <div class="font-display text-3xl text-accent" data-count="4" data-suffix=" нед">0</div>
+              <div class="text-sm text-muted">средняя носка</div>
+            </div>
+            <div class="h-10 w-px bg-line"></div>
+            <div>
+              <div class="font-display text-3xl text-accent" data-count="12000" data-suffix="+">0</div>
+              <div class="text-sm text-muted">взглядов создано</div>
+            </div>
+            <div class="h-10 w-px bg-line"></div>
+            <div>
+              <div class="font-display text-3xl text-accent" data-count="4.9">0</div>
+              <div class="text-sm text-muted">рейтинг гостей</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div data-tilt class="relative rounded-shell overflow-hidden border border-line">
+            <img src="https://picsum.photos/id/1062/820/960" alt="Крупный план ресниц" class="w-full h-[32rem] object-cover" loading="eager" />
+            <div class="absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+              <div>
+                <div class="font-display text-2xl">Объём 3D</div>
+                <div class="text-sm text-muted">изгиб M · длина 8–12 мм</div>
+              </div>
+              <span class="rounded-full bg-accent text-ink px-4 py-2 text-sm font-semibold">Хит студии</span>
+            </div>
+          </div>
+          <div class="absolute -top-5 -left-5 rounded-full bg-surface border border-line shadow-xl px-5 py-3 flex items-center gap-2 text-sm font-semibold">
+            <i class="ph-fill ph-eye text-accent"></i> Подбор под форму глаз
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee border-y border-line py-4 text-muted">
+      <div class="marquee__track flex items-center gap-10 text-sm font-medium uppercase tracking-[0.2em] whitespace-nowrap">
+        <span>Классика</span><span class="text-accent">·</span>
+        <span>Объём 2D</span><span class="text-accent">·</span>
+        <span>Объём 3D</span><span class="text-accent">·</span>
+        <span>Мега-объём</span><span class="text-accent">·</span>
+        <span>Ламинирование</span><span class="text-accent">·</span>
+        <span>Ботокс ресниц</span><span class="text-accent">·</span>
+        <span>Классика</span><span class="text-accent">·</span>
+        <span>Объём 2D</span><span class="text-accent">·</span>
+        <span>Объём 3D</span><span class="text-accent">·</span>
+        <span>Мега-объём</span><span class="text-accent">·</span>
+        <span>Ламинирование</span><span class="text-accent">·</span>
+        <span>Ботокс ресниц</span><span class="text-accent">·</span>
+      </div>
+    </div>
+
+    <!-- VOLUMES -->
+    <section id="volumes" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-[0.2em]">Объёмы</span>
+          <h2 class="font-display text-4xl sm:text-5xl mt-3 tracking-tight">Найдём ваш идеальный эффект</h2>
+          <p class="text-lg text-muted mt-4">От лёгкой классики «как свои, только лучше» до драматичного мега-объёма для съёмки и торжеств.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="font-display text-5xl text-accent">1D</div>
+            <h3 class="font-display text-2xl mt-4">Классика</h3>
+            <p class="text-muted mt-2 leading-relaxed text-[15px]">Одна ресница на одну свою. Естественно, будто природная густота. Для офиса и каждый день.</p>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="font-display text-5xl text-accent">2D</div>
+            <h3 class="font-display text-2xl mt-4">Лёгкий объём</h3>
+            <p class="text-muted mt-2 leading-relaxed text-[15px]">Два тонких волоска в пучке. Выразительно, но всё ещё деликатно. Самый частый выбор.</p>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-accent text-ink p-7">
+            <div class="font-display text-5xl">3D</div>
+            <h3 class="font-display text-2xl mt-4">Объём 3D</h3>
+            <p class="text-ink/75 mt-2 leading-relaxed text-[15px]">Плотный, ухоженный взгляд. Идеальный баланс эффекта и лёгкости. Хит студии.</p>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-surface border border-line p-7">
+            <div class="font-display text-5xl text-accent">5D+</div>
+            <h3 class="font-display text-2xl mt-4">Мега-объём</h3>
+            <p class="text-muted mt-2 leading-relaxed text-[15px]">Максимальная густота и драма. Для фотосессий, свадеб и тех, кто любит ярко.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section id="result" class="py-24 bg-surface border-y border-line">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-[0.2em]">До / после</span>
+          <h2 class="font-display text-4xl sm:text-5xl mt-3 tracking-tight">Потяните ползунок</h2>
+          <p class="text-lg text-muted mt-4">Один сеанс — и взгляд раскрывается. Без туши, без подкручивания, с первого утра идеально.</p>
+          <ul class="mt-8 space-y-4">
+            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-xl mt-0.5"></i><span>Подбираем длину, изгиб и толщину под вашу анатомию</span></li>
+            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-xl mt-0.5"></i><span>Работаем только сертифицированными гипоаллергенными материалами</span></li>
+            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-xl mt-0.5"></i><span>Бесплатная коррекция в первые 3 дня, если что-то не так</span></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="ba-slider rounded-shell overflow-hidden border border-line select-none" id="ba">
+            <img class="ba-img" src="https://picsum.photos/id/64/900/700" alt="После наращивания" />
+            <div class="ba-before"><img class="ba-img" src="https://picsum.photos/id/823/900/700" alt="До наращивания" /></div>
+            <div class="ba-handle"><span class="ba-knob"><i class="ph-bold ph-arrows-left-right"></i></span></div>
+            <span class="ba-tag ba-tag-before">До</span>
+            <span class="ba-tag ba-tag-after">После</span>
+            <input type="range" min="0" max="100" value="50" class="ba-range" aria-label="Сравнение до и после" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS (light) -->
+    <section id="process" class="py-24 bg-cream text-ink">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-[0.2em]">Процедура</span>
+          <h2 class="font-display text-4xl sm:text-5xl mt-3 tracking-tight">Как проходит сеанс</h2>
+          <p class="text-lg text-mutedink mt-4">Около двух часов наедине с собой — можно подремать под тихую музыку. Ниже — что происходит на кушетке.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+          <div class="reveal">
+            <div class="font-display text-3xl text-accent">01</div>
+            <h3 class="font-display text-xl mt-3">Консультация</h3>
+            <p class="text-mutedink mt-2 leading-relaxed text-[15px]">Обсуждаем желаемый эффект, смотрим на форму глаз и состояние своих ресниц.</p>
+          </div>
+          <div class="reveal">
+            <div class="font-display text-3xl text-accent">02</div>
+            <h3 class="font-display text-xl mt-3">Подготовка</h3>
+            <p class="text-mutedink mt-2 leading-relaxed text-[15px]">Очищаем ресницы, фиксируем нижние патчами. Никакого дискомфорта для кожи.</p>
+          </div>
+          <div class="reveal">
+            <div class="font-display text-3xl text-accent">03</div>
+            <h3 class="font-display text-xl mt-3">Наращивание</h3>
+            <p class="text-mutedink mt-2 leading-relaxed text-[15px]">Поресничная работа под увеличением. Каждый пучок ставится на отдельный волосок.</p>
+          </div>
+          <div class="reveal">
+            <div class="font-display text-3xl text-accent">04</div>
+            <h3 class="font-display text-xl mt-3">Закрепление</h3>
+            <p class="text-mutedink mt-2 leading-relaxed text-[15px]">Просушиваем, расчёсываем и даём памятку по уходу. Готово — любуйтесь.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE -->
+    <section id="price" class="py-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-[0.2em]">Цены</span>
+          <h2 class="font-display text-4xl sm:text-5xl mt-3 tracking-tight">Прозрачный прайс</h2>
+          <p class="text-lg text-muted mt-4">Стоимость зависит только от объёма. Снятие чужой работы и консультация — бесплатно.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-14">
+          <div data-tilt class="reveal rounded-shell border border-line p-8 flex flex-col">
+            <h3 class="font-display text-2xl">Классика</h3>
+            <p class="text-muted text-sm mt-1">натуральный эффект</p>
+            <div class="font-display text-4xl text-accent mt-6">1 900₽</div>
+            <ul class="mt-6 space-y-3 text-[15px] text-muted flex-1">
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> Эффект «свои, но лучше»</li>
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> Носка до 3 недель</li>
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> ~1,5 часа</li>
+            </ul>
+            <a href="#booking" class="mt-7 rounded-full border border-line py-3 text-center font-semibold hover:border-accent transition-colors">Выбрать</a>
+          </div>
+          <div data-tilt class="reveal rounded-shell border-2 border-accent bg-surface p-8 flex flex-col relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent text-ink px-4 py-1 text-xs font-semibold uppercase tracking-wider">Выбор гостей</span>
+            <h3 class="font-display text-2xl">Объём 2D–3D</h3>
+            <p class="text-muted text-sm mt-1">выразительно и легко</p>
+            <div class="font-display text-4xl text-accent mt-6">2 800₽</div>
+            <ul class="mt-6 space-y-3 text-[15px] text-muted flex-1">
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> Плотный ухоженный взгляд</li>
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> Носка до 4 недель</li>
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> Подбор изгиба под глаза</li>
+            </ul>
+            <a href="#booking" data-magnetic class="mt-7 rounded-full bg-accent text-ink py-3 text-center font-semibold hover:bg-accentlight transition-colors">Выбрать</a>
+          </div>
+          <div data-tilt class="reveal rounded-shell border border-line p-8 flex flex-col">
+            <h3 class="font-display text-2xl">Мега-объём</h3>
+            <p class="text-muted text-sm mt-1">драма и густота</p>
+            <div class="font-display text-4xl text-accent mt-6">3 700₽</div>
+            <ul class="mt-6 space-y-3 text-[15px] text-muted flex-1">
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> Максимальная плотность</li>
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> Для съёмок и торжеств</li>
+              <li class="flex gap-2"><i class="ph ph-check text-accent"></i> ~2,5 часа</li>
+            </ul>
+            <a href="#booking" class="mt-7 rounded-full border border-line py-3 text-center font-semibold hover:border-accent transition-colors">Выбрать</a>
+          </div>
+        </div>
+        <p class="text-center text-sm text-muted mt-6">Коррекция (до 60% объёма) — от 1 400₽. Ламинирование + ботокс — 2 200₽.</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-surface border-y border-line">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-[0.2em]">Отзывы</span>
+          <h2 class="font-display text-4xl sm:text-5xl mt-3 tracking-tight">Гости о взгляде</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+          <div data-tilt class="reveal rounded-core bg-bg border border-line p-7">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Делаю 3D у Леры третий месяц. Держится ровно четыре недели, ни одна не отвалилась раньше. Утром просто открываю глаза — и я уже на макияже».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/1027/80/80" alt="Дарья" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Дарья</div><div class="text-sm text-muted">объём 3D</div></div>
+            </div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-bg border border-line p-7">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Боялась, что будет тяжело и неестественно. Подобрали классику — выглядит как мои собственные, только гуще. Глаза совсем не устают».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/1066/80/80" alt="Ольга" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Ольга</div><div class="text-sm text-muted">классика</div></div>
+            </div>
+          </div>
+          <div data-tilt class="reveal rounded-core bg-bg border border-line p-7">
+            <div class="flex gap-1 text-accent"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p class="mt-4 leading-relaxed">«Делала мега-объём к свадьбе. На всех фото взгляд просто роскошный. Мастер аккуратная, процедура прошла как спа — уснула на кушетке».</p>
+            <div class="flex items-center gap-3 mt-6">
+              <img src="https://picsum.photos/id/1011/80/80" alt="Камилла" class="h-11 w-11 rounded-full object-cover" loading="lazy" />
+              <div><div class="font-semibold">Камилла</div><div class="text-sm text-muted">мега-объём</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (light) -->
+    <section id="faq" class="py-24 bg-cream text-ink">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8">
+        <div class="text-center reveal">
+          <span class="text-sm font-semibold text-accent uppercase tracking-[0.2em]">Вопросы</span>
+          <h2 class="font-display text-4xl sm:text-5xl mt-3 tracking-tight">Частые вопросы</h2>
+        </div>
+        <div class="mt-12 space-y-3">
+          <div class="faq-item rounded-core bg-white border border-linelight overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg">
+              Это вредно для своих ресниц? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-mutedink leading-relaxed">Нет, если соблюдена технология и подобран адекватный объём. Мастер не перегружает свои ресницы — толщина и количество рассчитываются индивидуально, чтобы натуральные оставались здоровыми.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-white border border-linelight overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg">
+              Сколько держится результат? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-mutedink leading-relaxed">В среднем 3–4 недели. Дальше рекомендуем коррекцию, пока сохранилось около половины объёма — это быстрее и дешевле, чем наращивание заново.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-white border border-linelight overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg">
+              Можно ли мочить и краситься? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-mutedink leading-relaxed">Через сутки — да. Тушь не нужна, а вот жирные средства для снятия макияжа лучше исключить: они растворяют клей. Полную памятку выдаём после процедуры.</div></div>
+          </div>
+          <div class="faq-item rounded-core bg-white border border-linelight overflow-hidden">
+            <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg">
+              А если есть аллергия? <i class="faq-icon ph ph-plus text-accent shrink-0"></i>
+            </button>
+            <div class="faq-content"><div class="px-6 pb-5 text-mutedink leading-relaxed">Используем гипоаллергенные клеи, в том числе для чувствительных глаз. Если в анамнезе были реакции — предупредите заранее, подберём щадящий материал и сделаем тест.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING CTA -->
+    <section id="booking" class="py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="rounded-shell border border-line overflow-hidden grid lg:grid-cols-2">
+          <div class="p-9 sm:p-12 bg-surface">
+            <h2 class="font-display text-4xl sm:text-5xl tracking-tight">Запишитесь на взгляд мечты</h2>
+            <p class="text-muted mt-4 text-lg">Оставьте номер — мастер перезвонит, поможет выбрать объём и предложит удобное время. Первый визит — скидка 15%.</p>
+            <ul class="mt-8 space-y-3 text-cream/90">
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Без предоплаты</li>
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Напоминание за день до визита</li>
+              <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-accent text-xl"></i> Бесплатная коррекция первые 3 дня</li>
+            </ul>
+          </div>
+          <div class="bg-cream text-ink p-9 sm:p-12">
+            <form id="lead-form" novalidate class="space-y-5">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-1.5">Ваше имя</label>
+                <input id="name" type="text" placeholder="Как к вам обращаться" class="w-full rounded-xl border border-linelight bg-white px-4 py-3 outline-none focus:border-accent transition-colors" />
+                <p class="error-text hidden text-sm text-red-600 mt-1"></p>
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-1.5">Телефон</label>
+                <input id="phone" type="tel" placeholder="+7 (___) ___-__-__" class="w-full rounded-xl border border-linelight bg-white px-4 py-3 outline-none focus:border-accent transition-colors" />
+                <p class="error-text hidden text-sm text-red-600 mt-1"></p>
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-medium mb-1.5">Объём</label>
+                <select id="service" class="w-full rounded-xl border border-linelight bg-white px-4 py-3 outline-none focus:border-accent transition-colors">
+                  <option>Классика</option>
+                  <option>Объём 2D–3D</option>
+                  <option>Мега-объём</option>
+                  <option>Ламинирование / ботокс</option>
+                  <option>Коррекция</option>
+                </select>
+              </div>
+              <button type="submit" data-magnetic class="w-full rounded-full bg-ink text-cream px-7 py-4 font-semibold hover:bg-black transition-colors">
+                Записаться
+              </button>
+              <p class="text-xs text-mutedink text-center">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+            </form>
+            <div id="form-success" class="hidden text-center py-10">
+              <div class="check-pop mx-auto h-16 w-16 rounded-full bg-accent/20 flex items-center justify-center text-accent text-4xl"><i class="ph-fill ph-check"></i></div>
+              <h3 class="font-display text-2xl mt-5">Заявка принята!</h3>
+              <p class="text-mutedink mt-2">Мастер перезвонит в ближайшее время.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pt-16 pb-10 border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <span class="font-display text-2xl tracking-wide">Взмах</span>
+          <p class="text-muted mt-4 text-sm leading-relaxed">Студия наращивания и ламинирования ресниц. Безопасные материалы, индивидуальный подбор, тёплая атмосфера.</p>
+        </div>
+        <div>
+          <div class="font-semibold mb-3 text-cream">Студия</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li><a href="#volumes" class="hover:text-cream">Объёмы</a></li>
+            <li><a href="#result" class="hover:text-cream">До / после</a></li>
+            <li><a href="#price" class="hover:text-cream">Цены</a></li>
+            <li><a href="#faq" class="hover:text-cream">Вопросы</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-3 text-cream">Контакты</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex items-center gap-2"><i class="ph ph-phone"></i> +7 (495) 230-71-09</li>
+            <li class="flex items-center gap-2"><i class="ph ph-map-pin"></i> Москва, Большая Садовая, 8</li>
+            <li class="flex items-center gap-2"><i class="ph ph-clock"></i> Ежедневно 10:00–21:00</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-3 text-cream">Мы в сети</div>
+          <div class="flex gap-3">
+            <a href="#" aria-label="Telegram" class="h-10 w-10 rounded-full border border-line flex items-center justify-center hover:bg-accent hover:text-ink transition-colors"><i class="ph ph-telegram-logo"></i></a>
+            <a href="#" aria-label="Instagram" class="h-10 w-10 rounded-full border border-line flex items-center justify-center hover:bg-accent hover:text-ink transition-colors"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="VK" class="h-10 w-10 rounded-full border border-line flex items-center justify-center hover:bg-accent hover:text-ink transition-colors"><i class="ph ph-chat-circle"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-line mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
+        <span>© 2026 Студия «Взмах». Все права защищены.</span>
+        <span>Красота во взгляде</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
