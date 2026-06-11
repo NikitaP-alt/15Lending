@@ -1,4 +1,4 @@
-# 30Lending
+# 15Lending
 
 **Коллекция из 15 лендингов в 5 нишах — у каждого свой дизайн.**
 **A collection of 15 landing pages across 5 niches — each with its own design.**
